@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\yigitt\\\\Documents\\\\GitHub\\\\kpsstarihweb\" && npx tsc --noEmit 2>&1)"
+    ]
+  }
+}
