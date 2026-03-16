@@ -1,6 +1,7 @@
 "use client";
 
 import { PERIODS } from "@/constants/periods";
+import { motion } from "framer-motion";
 
 interface PeriodFilterProps {
   activePeriodId: string | null;
@@ -12,34 +13,41 @@ export default function PeriodFilter({
   onSelect,
 }: PeriodFilterProps) {
   return (
-    <div className="flex flex-wrap gap-2">
-      <button
+    <div className="flex flex-nowrap gap-2">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => onSelect(null)}
-        className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+        className={`px-4 py-2 rounded-full text-xs font-sans uppercase tracking-[0.15em] font-bold transition-all whitespace-nowrap shadow-sm ${
           activePeriodId === null
-            ? "bg-white text-zinc-900"
-            : "bg-zinc-800 text-zinc-400 hover:text-white"
+            ? "bg-foreground text-zinc-900 shadow-white/20"
+            : "bg-white/10 text-zinc-300 hover:text-foreground hover:bg-white/20"
         }`}
       >
-        Tümü
-      </button>
+        TÜMÜNÜ GÖSTER
+      </motion.button>
+      
+      <div className="w-px bg-white/10 mx-1 self-stretch" />
+      
       {PERIODS.map((period) => (
-        <button
+        <motion.button
           key={period.id}
-          onClick={() => onSelect(period.id)}
-          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-            activePeriodId === period.id
-              ? "text-white"
-              : "bg-zinc-800 text-zinc-400 hover:text-white"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => onSelect(period.slug)}
+          className={`px-4 py-2 rounded-full text-xs font-sans uppercase tracking-[0.1em] font-semibold transition-all whitespace-nowrap border ${
+            activePeriodId === period.slug
+              ? "text-white border-transparent shadow-lg"
+              : "bg-black/20 text-zinc-400 hover:text-white border-white/5 hover:border-white/20 hover:bg-white/10"
           }`}
           style={
-            activePeriodId === period.id
-              ? { backgroundColor: period.color }
+            activePeriodId === period.slug
+              ? { backgroundColor: period.color, boxShadow: `0 4px 14px 0 ${period.color}66` }
               : undefined
           }
         >
           {period.name}
-        </button>
+        </motion.button>
       ))}
     </div>
   );
