@@ -2,13 +2,13 @@ import type { Period } from "@/types";
 
 export const PERIODS: Period[] = [
   {
-    id: "ilk-turk-devletleri",
-    slug: "ilk-turk-devletleri",
-    name: "İlk Türk Devletleri",
-    startYear: 220,
+    id: "islamiyet-oncesi-turk-tarihi",
+    slug: "islamiyet-oncesi-turk-tarihi",
+    name: "İslamiyet Öncesi Türk Tarihi",
+    startYear: -700,
     endYear: 1040,
-    color: "#8B4513",
-    description: "Hunlar'dan Karahanlılar'a ilk Türk devletleri dönemi",
+    color: "#E8A045",
+    description: "İskitlerden Oğuzlara İslamiyet öncesi Türk devletleri dönemi",
   },
   {
     id: "buyuk-selcuklu",

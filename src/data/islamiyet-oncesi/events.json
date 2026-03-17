@@ -1,0 +1,209 @@
+[
+  {
+    "id": "alper-tunga-kirus",
+    "civId": "iskitler",
+    "title": "Alper Tunga–Kirus Savaşları",
+    "year": -530,
+    "type": "savaş",
+    "coordinates": [55, 38],
+    "description": "İskit hükümdarı Alper Tunga ile İran hükümdarı Kirus arasında yıllarca süren savaşlar. Bu mücadeleler İran destanı Şehname'de Efrasiyap adıyla anlatılmıştır."
+  },
+  {
+    "id": "mete-han-tahti",
+    "civId": "asya-hunlari",
+    "title": "Mete Han'ın Tahta Çıkması",
+    "year": -209,
+    "type": "kuruluş",
+    "coordinates": [105, 47],
+    "description": "Mete Han, babasını devirerek Hun tahtına çıktı. Orduda onlu sistemi kurdu ve Orta Asya'da siyasi birliği sağlayan ilk Türk hükümdarı oldu."
+  },
+  {
+    "id": "cin-seddi",
+    "civId": "asya-hunlari",
+    "title": "Çin Seddi'nin İnşası",
+    "year": -214,
+    "type": "siyasi",
+    "coordinates": [116, 40],
+    "description": "Çin İmparatoru, Hun akınlarını engellemek için dev savunma duvarını inşa ettirdi. Bu, Türklerin Çin üzerindeki baskısının somut bir göstergesidir."
+  },
+  {
+    "id": "kavimler-gocu",
+    "civId": "asya-hunlari",
+    "title": "Kavimler Göçü",
+    "year": 375,
+    "type": "göç",
+    "coordinates": [60, 48],
+    "description": "Kuzey Hun lideri Balamir önderliğinde 200.000 kişilik topluluk Avrupa'ya göç etti. Bu göç; Roma'yı ikiye böldü, İlk Çağ'ı kapattı ve Orta Çağ'ı başlattı."
+  },
+  {
+    "id": "margos-barisi",
+    "civId": "avrupa-hunlari",
+    "title": "Margos Barışı",
+    "year": 434,
+    "type": "antlaşma",
+    "coordinates": [22, 44],
+    "description": "Atilla ile Bizans arasında imzalanan ilk önemli antlaşma. Bizans, Hunlara yıllık vergi ödemeyi kabul etti."
+  },
+  {
+    "id": "anatolyos-antlasmasi",
+    "civId": "avrupa-hunlari",
+    "title": "Anatolyos Antlaşması",
+    "year": 447,
+    "type": "antlaşma",
+    "coordinates": [29, 41],
+    "description": "Margos Barışı'nın çiğnenmesi üzerine imzalanan yeni antlaşma. Bizans'ın ödediği yıllık vergi üç katına çıkarıldı."
+  },
+  {
+    "id": "roma-bagisl",
+    "civId": "avrupa-hunlari",
+    "title": "Roma'nın Bağışlanması",
+    "year": 452,
+    "type": "siyasi",
+    "coordinates": [12, 44],
+    "description": "Atilla, Papa I. Leo'nun ricası üzerine Roma'ya girmekten vazgeçti. Bu olay Hristiyanlar tarafından mucize olarak yorumlandı ve Atilla'ya 'Tanrı'nın Kamçısı' unvanı verildi."
+  },
+  {
+    "id": "istanbul-kusatma-avarlar",
+    "civId": "avarlar",
+    "title": "İstanbul'un Kuşatılması",
+    "year": 626,
+    "type": "savaş",
+    "coordinates": [29, 41],
+    "description": "Avarlar, İstanbul'u (Konstantinopolis) kuşattı. İstanbul'u kuşatan ilk Türk devleti olan Avarlar bu kuşatmada başarılı olamadı."
+  },
+  {
+    "id": "malazgirt-pecenekler",
+    "civId": "pecenekler",
+    "title": "Malazgirt — Peçenekler Taraf Değiştirdi",
+    "year": 1071,
+    "type": "savaş",
+    "coordinates": [42, 39],
+    "description": "Malazgirt Savaşı'nda Bizans saflarındaki Peçenekler, savaş sırasında Selçuklu tarafına geçti. Bu hamle savaşın Selçuklular lehine sonuçlanmasında belirleyici oldu."
+  },
+  {
+    "id": "meric-muharebesi",
+    "civId": "pecenekler",
+    "title": "Meriç Muharebesi",
+    "year": 1091,
+    "type": "yıkılış",
+    "coordinates": [26, 41],
+    "description": "Bizans'ın Kumanlarla ittifak kurarak Meriç Nehri kıyısında Peçenekleri mağlup etmesiyle Peçenekler fiilen siyasi sahneden silindi."
+  },
+  {
+    "id": "istanbul-kusatma-tuna",
+    "civId": "tuna-bulgarlari",
+    "title": "İstanbul'un Kuşatılması",
+    "year": 813,
+    "type": "savaş",
+    "coordinates": [29, 41],
+    "description": "Tuna Bulgarları, Bizans'a karşı güçlü bir hamle yaparak İstanbul'u kuşattı."
+  },
+  {
+    "id": "boris-han-hiristiyanlık",
+    "civId": "tuna-bulgarlari",
+    "title": "Hristiyanlığın Kabulü — Boris Han",
+    "year": 864,
+    "type": "din",
+    "coordinates": [25, 43],
+    "description": "Boris Han döneminde Tuna Bulgarları Hristiyanlığı kabul etti. Bu, devletin Türk kimliğinden uzaklaşma sürecinin başlangıcıdır."
+  },
+  {
+    "id": "almishan-islamiyet",
+    "civId": "itil-bulgarlari",
+    "title": "İslamiyet'in Kabulü — Almış Han",
+    "year": 922,
+    "type": "din",
+    "coordinates": [49, 56],
+    "description": "Almış Han döneminde İtil Bulgarları İslamiyet'i benimsedi. Böylece Doğu Avrupa'da Türk-İslam kültürünün ilk temsilcisi oldular."
+  },
+  {
+    "id": "hazarlar-musevilik",
+    "civId": "hazarlar",
+    "title": "Museviliğin Kabulü",
+    "year": 740,
+    "type": "din",
+    "coordinates": [50, 44],
+    "description": "Hazar Kağanı ve soylular Museviliği kabul etti. Tarihte Museviliği benimseyen tek Türk devleti olma özelliğini taşıyan Hazarlar bu dönemde 'Hazar Barış Çağı'nı yaşattı."
+  },
+  {
+    "id": "bumin-kagaan-kurulus",
+    "civId": "birinci-goktürk",
+    "title": "Göktürk Devleti'nin Kuruluşu — Bumin Kağan",
+    "year": 552,
+    "type": "kuruluş",
+    "coordinates": [95, 47],
+    "description": "Bumin Kağan, Avarları yenerek Göktürk Devleti'ni kurdu ve 'İl Kağan' unvanını aldı. 'Türk' adıyla kurulan ilk devlet tarihe geçti."
+  },
+  {
+    "id": "istemi-yabgu-akhun",
+    "civId": "birinci-goktürk",
+    "title": "Akhunların Yıkılışı — İstemi Yabgu",
+    "year": 557,
+    "type": "savaş",
+    "coordinates": [65, 38],
+    "description": "Göktürk'ün batı kanadını yöneten İstemi Yabgu, Sasanilerle ittifak kurarak Akhunları ortadan kaldırdı; böylece İpek Yolu'na hâkim oldu."
+  },
+  {
+    "id": "kursat-ayaklanmasi",
+    "civId": "birinci-goktürk",
+    "title": "Kürşat Ayaklanması",
+    "year": 639,
+    "type": "siyasi",
+    "coordinates": [116, 40],
+    "description": "Çin esareti altındaki Türklerin Kürşat önderliğinde başlattığı millî istiklal ayaklanması. Türk tarihinin bilinen ilk bağımsızlık mücadelesidir."
+  },
+  {
+    "id": "kutluk-kurulus",
+    "civId": "ikinci-goktürk",
+    "title": "II. Göktürk Devleti'nin Kuruluşu",
+    "year": 682,
+    "type": "kuruluş",
+    "coordinates": [95, 47],
+    "description": "Kutluk Kağan, 50 yıllık Çin esaretinin ardından Türkleri yeniden bir araya toplayarak Göktürk Devleti'ni ihya etti."
+  },
+  {
+    "id": "orhun-abideleri",
+    "civId": "ikinci-goktürk",
+    "title": "Orhun Abideleri'nin Dikilmesi",
+    "year": 732,
+    "type": "kültür",
+    "coordinates": [102, 47],
+    "description": "Türk edebiyatının bilinen ilk yazılı eseri ve ilk siyasetname olan Orhun Abideleri dikildi. Vezir Tonyukuk ve Yollug Tigin tarafından Orhunca ve Çin alfabesiyle yazılmıştır."
+  },
+  {
+    "id": "tarim-havzasi-uygur",
+    "civId": "uygurlar",
+    "title": "Tarım Havzası'nın Ele Geçirilmesi",
+    "year": 751,
+    "type": "siyasi",
+    "coordinates": [84, 41],
+    "description": "Uygur hükümdarı Moyen Çor, Çin ile Abbasi arasındaki Talas Savaşı'nın yarattığı güç boşluğundan yararlanarak stratejik Tarım Havzası'nı ele geçirdi."
+  },
+  {
+    "id": "mani-dini-uygur",
+    "civId": "uygurlar",
+    "title": "Mani Dininin Kabulü — Bögü Kağan",
+    "year": 762,
+    "type": "din",
+    "coordinates": [100, 44],
+    "description": "Bögü Kağan döneminde Uygurlar Mani dinini benimsedi. Bu kabul; hayvansal gıda yasağı, yerleşik hayata geçiş, şehirlerin 'Balıg' adını alması, minyatür sanatı ve hareketli matbaa kullanımı gibi köklü değişikliklere yol açtı."
+  },
+  {
+    "id": "kirgiz-uygur-yikilisi",
+    "civId": "uygurlar",
+    "title": "Kırgızlar Tarafından Yıkılış",
+    "year": 840,
+    "type": "yıkılış",
+    "coordinates": [91, 51],
+    "description": "Kırgızlar, Uygur Devleti'ne son verdi. Uygurların bir kısmı Çin'e, diğerleri güneye kaçtı."
+  },
+  {
+    "id": "talas-savasi-karluk",
+    "civId": "karluklar",
+    "title": "Talas Savaşı",
+    "year": 751,
+    "type": "savaş",
+    "coordinates": [71, 43],
+    "description": "Çin ile Abbasi kuvvetleri arasındaki Talas Savaşı'nda Karluklar Abbasi saflarına geçti. Bu karar savaşın Abbasi zaferiyle sonuçlanmasını sağladı ve Orta Asya'da İslamiyet'in yayılmasının önünü açtı."
+  }
+]

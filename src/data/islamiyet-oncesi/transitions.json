@@ -1,0 +1,58 @@
+[
+  {
+    "from": "iskitler",
+    "to": "asya-hunlari",
+    "type": "bağlantı",
+    "label": "Orta Asya'da siyasi devamlılık",
+    "year": -200
+  },
+  {
+    "from": "asya-hunlari",
+    "to": "avrupa-hunlari",
+    "type": "göç",
+    "label": "Balamir'in Avrupa'ya göçü (375)",
+    "year": 375
+  },
+  {
+    "from": "asya-hunlari",
+    "to": "birinci-goktürk",
+    "type": "hakimiyet-geçişi",
+    "label": "Orta Asya siyasi hakimiyeti geçişi",
+    "year": 552
+  },
+  {
+    "from": "avrupa-hunlari",
+    "to": "avarlar",
+    "type": "bağlantı",
+    "label": "Avrupa'da Türk siyasi hakimiyetinin devamı",
+    "year": 562
+  },
+  {
+    "from": "birinci-goktürk",
+    "to": "ikinci-goktürk",
+    "type": "restorasyon",
+    "label": "Kutluk Kağan devleti yeniden kurdu (682)",
+    "year": 682
+  },
+  {
+    "from": "ikinci-goktürk",
+    "to": "uygurlar",
+    "type": "yıkılış",
+    "label": "Karluk-Basmil-Uygur ittifakı Göktürklere son verdi (744)",
+    "year": 744
+  },
+  {
+    "from": "uygurlar",
+    "to": "kirgizlar",
+    "type": "yıkılış",
+    "label": "Kırgızlar Uygurlara son verdi (840)",
+    "year": 840
+  },
+  {
+    "from": "karluklar",
+    "to": "oguzlar",
+    "type": "bağlantı",
+    "label": "İslamiyet'i kabul eden Türk boyları Selçukluları kurdu",
+    "year": 1000
+  }
+]

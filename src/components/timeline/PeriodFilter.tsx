@@ -1,7 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { PERIODS } from "@/constants/periods";
 import { motion } from "framer-motion";
+
+const DEDICATED_ROUTES: Record<string, string> = {
+  "islamiyet-oncesi-turk-tarihi": "/egitim/islamiyet-oncesi-turk-tarihi",
+};
 
 interface PeriodFilterProps {
   activePeriodId: string | null;
@@ -12,6 +17,16 @@ export default function PeriodFilter({
   activePeriodId,
   onSelect,
 }: PeriodFilterProps) {
+  const router = useRouter();
+
+  function handlePeriodClick(slug: string) {
+    if (DEDICATED_ROUTES[slug]) {
+      router.push(DEDICATED_ROUTES[slug]);
+    } else {
+      onSelect(slug);
+    }
+  }
+
   return (
     <div className="flex flex-nowrap gap-2">
       <motion.button
@@ -34,7 +49,7 @@ export default function PeriodFilter({
           key={period.id}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={() => onSelect(period.slug)}
+          onClick={() => handlePeriodClick(period.slug)}
           className={`px-4 py-2 rounded-full text-xs font-sans uppercase tracking-[0.1em] font-semibold transition-all whitespace-nowrap border ${
             activePeriodId === period.slug
               ? "text-white border-transparent shadow-lg"

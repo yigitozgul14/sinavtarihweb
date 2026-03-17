@@ -1,0 +1,328 @@
+[
+  {
+    "id": "iskitler",
+    "name": "İskitler (Sakalar)",
+    "startYear": -700,
+    "endYear": -200,
+    "color": "#E8A045",
+    "centroid": [32, 47],
+    "mapFocus": { "center": [32, 47], "scale": 450 },
+    "territoryCodes": [804, 643],
+    "ruler": "Alper Tunga",
+    "location": "Kırım, Karadeniz'in Kuzeyi",
+    "summary": "Orta Asya bozkırlarında ve Karadeniz'in kuzeyinde hüküm süren atlı göçebe topluluk. Türk tarihinin bilinen en eski topluluklarından biridir.",
+    "facts": [
+      "Üzengiyi ilk defa kullanan topluluktur",
+      "İlk defa balbal (mezar taşı) dikmiştir",
+      "Maden işlemeciliğinde üstün başarılar sergilemişlerdir — 'Bozkırın Kuyumcuları' olarak anılırlar",
+      "En önemli hükümdarı Alper Tunga'dır",
+      "Alper Tunga, İran hükümdarı Kirus ile yıllarca savaşmıştır; bu savaşlar Şehname destanında 'Efrasiyap' adıyla anlatılmıştır"
+    ]
+  },
+  {
+    "id": "asya-hunlari",
+    "name": "Asya Hun Devleti",
+    "startYear": -220,
+    "endYear": 216,
+    "color": "#E05A2B",
+    "centroid": [105, 47],
+    "mapFocus": { "center": [105, 47], "scale": 380 },
+    "territoryCodes": [496, 156, 398],
+    "ruler": "Mete Han (Tan-hu)",
+    "location": "Orta Asya, Moğolistan",
+    "summary": "Tarihte bilinen ilk Türk devletidir. Orta Asya'da siyasi birliği sağlayan ve Türk devlet geleneğinin temelini atan imparatorluk.",
+    "facts": [
+      "Kurucusu Teoman'dır; tarihte bilinen ilk Türk devletidir",
+      "Çin, Hun akınlarını durdurmak için Çin Seddi'ni inşa etmiştir",
+      "En önemli hükümdarı Mete Han'dır; orduda onlu sistemi kurarak ilk düzenli orduyu oluşturmuştur",
+      "Mete Han, Orta Asya'da siyasi birliği sağlayan ilk Türk hükümdarıdır",
+      "Moğollara karşı tutumu ile vatan sevgisini ilk dile getiren Türk hükümdarı olmuştur",
+      "Balamir önderliğinde 200.000 kişilik göç dalgasıyla Kavimler Göçü'nü başlatmıştır",
+      "Kavimler Göçü; Roma'yı ikiye böldü, İlk Çağ'ı kapattı, Orta Çağ'ı açtı, kiliseyi güçlendirdi"
+    ]
+  },
+  {
+    "id": "avrupa-hunlari",
+    "name": "Avrupa Hun Devleti",
+    "startYear": 375,
+    "endYear": 469,
+    "color": "#D63A3A",
+    "centroid": [18, 47],
+    "mapFocus": { "center": [18, 47], "scale": 420 },
+    "territoryCodes": [348, 642, 40, 276],
+    "ruler": "Atilla",
+    "location": "Orta Avrupa (Macaristan, Romanya, Avusturya)",
+    "summary": "Balamir tarafından kurulan, Atilla döneminde Avrupa'nın büyük bölümüne hükmeden güçlü Türk devleti.",
+    "facts": [
+      "Kurucusu Balamir, en önemli hükümdarı Atilla'dır",
+      "Bizans ile Margos Barışı imzalanmıştır (434)",
+      "Batı Roma'nın isteğiyle Burgundlara karşı savaşıldı; bu mücadele Alman Nibelungen Destanı'na konu oldu",
+      "Bizans ile Anatolyos Antlaşması imzalanmış, Bizans'ın ödediği vergi artmıştır (447)",
+      "Atilla, Papa I. Leo'nun ricası üzerine Roma'yı bağışlamıştır (452)",
+      "Hristiyanlar tarafından 'Tanrı'nın Kamçısı' unvanı verilmiştir"
+    ]
+  },
+  {
+    "id": "avarlar",
+    "name": "Avarlar",
+    "startYear": 562,
+    "endYear": 823,
+    "color": "#9B5EC0",
+    "centroid": [20, 46],
+    "mapFocus": { "center": [20, 46], "scale": 400 },
+    "territoryCodes": [348, 100, 642, 688],
+    "ruler": "Bayan Han",
+    "location": "Orta Avrupa, Balkanlar",
+    "summary": "İstanbul'u kuşatan ilk Türk devleti. Hem Orta Asya hem de Avrupa'da devlet kurmuşlardır.",
+    "facts": [
+      "İstanbul'u kuşatan ilk Türk devletidir; iki kez kuşatmışlardır",
+      "Kurucusu Bayan Han'dır",
+      "Hem Orta Asya hem de Avrupa'da devlet kurmuşlardır"
+    ]
+  },
+  {
+    "id": "uzlar",
+    "name": "Uzlar (Oğuzlar)",
+    "startYear": 850,
+    "endYear": 1050,
+    "color": "#6B9E2E",
+    "centroid": [55, 46],
+    "mapFocus": { "center": [55, 46], "scale": 420 },
+    "territoryCodes": [398, 804],
+    "ruler": "-",
+    "location": "Hazar Denizi ve Aral Gölü arası, Doğu Avrupa",
+    "summary": "Hazar ile Aral arasında yaşayan Türk topluluğu.",
+    "facts": [
+      "Malazgirt Savaşı sırasında taraf değiştirmişlerdir"
+    ]
+  },
+  {
+    "id": "pecenekler",
+    "name": "Peçenekler",
+    "startYear": 860,
+    "endYear": 1091,
+    "color": "#4A7FBF",
+    "centroid": [30, 46],
+    "mapFocus": { "center": [30, 46], "scale": 420 },
+    "territoryCodes": [804, 642, 100],
+    "ruler": "-",
+    "location": "Karadeniz'in Kuzeyi, Balkanlar",
+    "summary": "Tarih boyunca bağımsız devlet kuramayıp boy halinde yaşayan ama büyük savaşlarda belirleyici rol oynayan Türk topluluğu.",
+    "facts": [
+      "Tarih boyunca devlet kuramayıp boy halinde yaşadılar",
+      "Malazgirt Savaşı'nda Selçuklu tarafına geçerek savaşın kazanılmasını sağladılar (1071)",
+      "Bizans'ın Kumanlarla anlaşıp Meriç Nehri'nde mağlup etmesiyle yıkıldılar (1091)"
+    ]
+  },
+  {
+    "id": "macarlar",
+    "name": "Macarlar",
+    "startYear": 895,
+    "endYear": 2026,
+    "color": "#2E9E2E",
+    "centroid": [19, 47],
+    "mapFocus": { "center": [19, 47], "scale": 500 },
+    "territoryCodes": [348],
+    "ruler": "Arpad",
+    "location": "Panonya Ovası (Macaristan)",
+    "summary": "Türk soyundan gelip Orta Avrupa'da bugün de devam eden kadim topluluk.",
+    "facts": [
+      "Soylarını Atilla'ya dayandırırlar",
+      "Bilinen ilk liderleri Arpad'dır",
+      "Türk tarihinde ilk defa Türkoloji Enstitüsü'nü kurmuşlardır"
+    ]
+  },
+  {
+    "id": "tuna-bulgarlari",
+    "name": "Tuna Bulgarları",
+    "startYear": 681,
+    "endYear": 864,
+    "color": "#A07830",
+    "centroid": [25, 43],
+    "mapFocus": { "center": [25, 43], "scale": 500 },
+    "territoryCodes": [100, 642],
+    "ruler": "Asparuh / Boris Han",
+    "location": "Balkanlar, Bugünkü Bulgaristan",
+    "summary": "Asparuh tarafından kurulan; ilerleyen dönemlerde İstanbul'u kuşatan ve Hristiyanlığı kabul eden Türk devleti.",
+    "facts": [
+      "Asparuh tarafından kurulmuştur",
+      "İstanbul'u kuşatmışlardır",
+      "Boris Han döneminde Hristiyanlığı kabul etmişlerdir (864)",
+      "Çar unvanını kullanan ilk Türk hükümdarı Simon olmuştur"
+    ]
+  },
+  {
+    "id": "itil-bulgarlari",
+    "name": "İtil (Volga) Bulgarları",
+    "startYear": 650,
+    "endYear": 1236,
+    "color": "#C8A030",
+    "centroid": [49, 56],
+    "mapFocus": { "center": [49, 56], "scale": 480 },
+    "territoryCodes": [643],
+    "ruler": "Almış Han",
+    "location": "İdil/Volga Nehri çevresi (Kazan bölgesi)",
+    "summary": "Almış Han döneminde İslamiyet'i kabul eden, Doğu Avrupa'da Türk-İslam kültürünün ilk temsilcisi olan devlet.",
+    "facts": [
+      "Almış Han döneminde İslamiyet'i kabul etmişlerdir (922)",
+      "Doğu Avrupa'da Türk-İslam kültürünün ilk temsilcileri olmuşlardır"
+    ]
+  },
+  {
+    "id": "hazarlar",
+    "name": "Hazarlar",
+    "startYear": 650,
+    "endYear": 965,
+    "color": "#20A89A",
+    "centroid": [50, 44],
+    "mapFocus": { "center": [50, 44], "scale": 430 },
+    "territoryCodes": [643, 398, 31],
+    "ruler": "-",
+    "location": "Kafkaslar, Hazar Denizi ve Karadeniz arası",
+    "summary": "Museviliği kabul eden tek Türk devleti. Farklı dinlere olan hoşgörüsüyle 'Hazar Barış Çağı' adı verilen dönemi yaşatmıştır.",
+    "facts": [
+      "Museviliği kabul eden tek Türk devletidir",
+      "Yaşadıkları dönem farklı dinlere gösterdikleri saygıdan ötürü 'Hazar Barış Çağı' olarak anılır",
+      "Ordusuna ücretli asker alan ilk Türk devletidir",
+      "Müslüman Araplarla savaşarak bölgede İslamiyet'in yayılmasını engellemiştir",
+      "Yedi kişiden oluşan bir Hakimler Heyeti oluşturulmuştur"
+    ]
+  },
+  {
+    "id": "kipçaklar",
+    "name": "Kıpçaklar (Kumanlar)",
+    "startYear": 1000,
+    "endYear": 1241,
+    "color": "#BF6030",
+    "centroid": [45, 48],
+    "mapFocus": { "center": [45, 48], "scale": 360 },
+    "territoryCodes": [804, 398, 643],
+    "ruler": "-",
+    "location": "Doğu Avrupa, Deşt-i Kıpçak (Kazakistan bozkırları)",
+    "summary": "Geniş bozkır coğrafyasına hükmeden, Peçenekleri yenen ve Rus destanlarına konu olan güçlü Türk topluluğu.",
+    "facts": [
+      "Bizans ile anlaşarak Peçenekleri yenilgiye uğratmışlardır (1091)",
+      "Oğuzlarla savaşları Dede Korkut Hikayeleri'ne konu olmuştur",
+      "Ruslarla mücadeleleri İgor Destanı'na konu olmuştur",
+      "Kendilerine ait sözlük Codex Cumanicus'u oluşturdular"
+    ]
+  },
+  {
+    "id": "birinci-goktürk",
+    "name": "I. Göktürk Devleti",
+    "startYear": 552,
+    "endYear": 630,
+    "color": "#3A6FE0",
+    "centroid": [90, 47],
+    "mapFocus": { "center": [90, 47], "scale": 360 },
+    "territoryCodes": [496, 398, 417],
+    "ruler": "Bumin Kağan / Mukan Kağan",
+    "location": "Orta Asya (Merkez: Ötüken, Moğolistan)",
+    "summary": "'Türk' adıyla kurulan ilk devlet. Asya Hunlarından sonra Orta Asya'da siyasi birliği sağlayan ikinci büyük Türk devleti.",
+    "facts": [
+      "'Türk' adıyla kurulan ilk Türk devletidir",
+      "Bumin Kağan, Avarları yenerek devleti kurmuştur; 'İl Kağan' unvanını almıştır",
+      "En parlak dönemini Mukan Kağan döneminde yaşamıştır",
+      "İstemi Yabgu, ipek yoluna hâkim olmak için Sasanilerle birleşip Akhunlara son vermiş, ardından Bizans ile anlaşıp Sasanileri çöküşe getirmiştir",
+      "Orta Asya'dan Bizans'a elçi gönderen ilk devlettir",
+      "Kürşat Ayaklanması, Çin esareti altındaki Türklerin başlattığı ilk millî kurtuluş ayaklanmasıdır (639)"
+    ]
+  },
+  {
+    "id": "ikinci-goktürk",
+    "name": "II. Göktürk (Kutluklar)",
+    "startYear": 682,
+    "endYear": 744,
+    "color": "#5090F0",
+    "centroid": [95, 47],
+    "mapFocus": { "center": [95, 47], "scale": 370 },
+    "territoryCodes": [496, 398],
+    "ruler": "Kutluk Kağan / Bilge Kağan",
+    "location": "Orta Asya (Merkez: Ötüken)",
+    "summary": "50 yıllık Çin esaretinin ardından Kutluk Kağan tarafından yeniden kurulan Türk devleti. Türk tarihinin en önemli yazılı eserleri bu dönemde yaratılmıştır.",
+    "facts": [
+      "Kurucusu Kutluk Kağan'dır; 'İlteriş' unvanıyla tahta çıkmıştır",
+      "Orhun Abideleri'nde kuruluşa değinilmiştir",
+      "Bilge Kağan, Çin'e seferler düzenleyerek yenilgiye uğratmıştır",
+      "Vezir Tonyukuk, Bilge Kağan'ın Budist tapınak ve surlar inşa etme planına karşı çıkmış; Türklerin göçebe kimliğini korumasını savunmuştur",
+      "Karluk, Basmil ve Uygur ittifakı tarafından yıkılmıştır (744)"
+    ]
+  },
+  {
+    "id": "uygurlar",
+    "name": "Uygurlar",
+    "startYear": 744,
+    "endYear": 840,
+    "color": "#C850A0",
+    "centroid": [100, 44],
+    "mapFocus": { "center": [100, 44], "scale": 380 },
+    "territoryCodes": [496, 156],
+    "ruler": "Kutluk Bilge Kül Kağan / Bögü Kağan",
+    "location": "Moğolistan ve Doğu Türkistan",
+    "summary": "Yerleşik yaşama geçen ve Türk tarihine pek çok 'ilk'i kazandıran medeniyet. Mani dini etkisiyle sanat, yazı ve kültürde büyük atılımlar gerçekleştirmiştir.",
+    "facts": [
+      "'Dokuz Oğuzlar' olarak da anılır",
+      "Kurucusu Kutluk Bilge Kül Kağan'dır",
+      "Bögü Kağan döneminde Mani dinini benimsediler (762)",
+      "Mani diniyle: yerleşik hayata geçildi, hayvansal gıda yasaklandı, şehirlere 'Balıg' adı verildi, resim sanatı ve minyatür yaygınlaştı, hareketli matbaa kullanıldı",
+      "Türk tarihinde ilk kütüphane, ilk örgün eğitim kurumu, ilk kâğıt para kullanımı bu dönemde gerçekleşti",
+      "Türk tiyatrosunun temelini attılar; töreleri yazılı hâle getirdiler; Türk bankacılık kurumunun temellerini attılar",
+      "Kırgızlar tarafından yıkıldılar (840)"
+    ]
+  },
+  {
+    "id": "kirgizlar",
+    "name": "Kırgızlar",
+    "startYear": 840,
+    "endYear": 1212,
+    "color": "#30A850",
+    "centroid": [91, 54],
+    "mapFocus": { "center": [91, 54], "scale": 400 },
+    "territoryCodes": [643, 417],
+    "ruler": "-",
+    "location": "Yenisey Irmağı çevresi ve Moğolistan",
+    "summary": "Uygurlara son veren ve Cengiz Han'a itaat eden ilk Türk topluluğu.",
+    "facts": [
+      "Cengiz Han'a itaat eden ilk Türk topluluklarından biridir",
+      "Manas Destanı ve Yenisey Kitabeleri bu topluluktan kalmıştır",
+      "Milletlerarası yarışma düzenleyen ilk topluluktur"
+    ]
+  },
+  {
+    "id": "karluklar",
+    "name": "Karluklar",
+    "startYear": 766,
+    "endYear": 1212,
+    "color": "#E08020",
+    "centroid": [75, 44],
+    "mapFocus": { "center": [75, 44], "scale": 420 },
+    "territoryCodes": [398, 417],
+    "ruler": "-",
+    "location": "Altaylar ve Tanrı Dağları arası (Orta Asya)",
+    "summary": "Talas Savaşı'nda Abbasileri destekleyen ve İslamiyet'i kabul eden ilk Türk boylarından biri.",
+    "facts": [
+      "Talas Savaşı'nda Abbasileri desteklediler (751)",
+      "Cengiz Han'a itaat eden ilk Müslüman Türk topluluğudur",
+      "Karahanlıların kuruluşunda etkili olmuşlardır",
+      "İslamiyet'i kabul eden ilk Türk boyudur"
+    ]
+  },
+  {
+    "id": "oguzlar",
+    "name": "Oğuzlar",
+    "startYear": 900,
+    "endYear": 1300,
+    "color": "#C83040",
+    "centroid": [58, 40],
+    "mapFocus": { "center": [58, 40], "scale": 400 },
+    "territoryCodes": [860, 795, 364],
+    "ruler": "-",
+    "location": "Maveraünnehir, Horasan ve Anadolu",
+    "summary": "Büyük Selçuklu, Anadolu Selçuklu ve Osmanlı devletlerini kuran Türk boyu. Türk tarihinin en köklü ve geniş coğrafyaya yayılan koludur.",
+    "facts": [
+      "Büyük Selçuklu Devleti'ni kurmuşlardır",
+      "Anadolu Selçuklu ve Osmanlı devletini kuran boydur",
+      "Oğuzlar ile Kıpçakların mücadeleleri Dede Korkut Hikayeleri'ne konu olmuştur"
+    ]
+  }
+]
