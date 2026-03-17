@@ -1,7 +1,11 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
+
+const DEDICATED_ROUTES: Record<string, string> = {
+  "islamiyet-oncesi-turk-tarihi": "/egitim/islamiyet-oncesi-turk-tarihi",
+};
 import WorldMap from "@/components/Map/WorldMap";
 import PeriodFilter from "@/components/timeline/PeriodFilter";
 import EventCard from "@/components/event/EventCard";
@@ -12,16 +16,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function MapInterface() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const { filteredEvents, activePeriodId, setActivePeriodId } = useTimeline();
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
 
   useEffect(() => {
     const periodSlug = searchParams.get('period');
-    if (periodSlug) {
-      setActivePeriodId(periodSlug);
-      setSelectedEvent(null);
+    if (!periodSlug) return;
+    if (DEDICATED_ROUTES[periodSlug]) {
+      router.replace(DEDICATED_ROUTES[periodSlug]);
+      return;
     }
-  }, [searchParams, setActivePeriodId]);
+    setActivePeriodId(periodSlug);
+    setSelectedEvent(null);
+  }, [searchParams, setActivePeriodId, router]);
 
   return (
     <main className="relative w-screen h-screen overflow-hidden bg-background">

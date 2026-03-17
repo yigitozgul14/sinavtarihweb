@@ -5,11 +5,14 @@
     "startYear": -700,
     "endYear": -200,
     "color": "#E8A045",
-    "centroid": [32, 47],
-    "mapFocus": { "center": [32, 47], "scale": 450 },
-    "territoryCodes": [804, 643],
+    "centroid": [34, 47],
+    "mapFocus": { "center": [34, 47], "scale": 450 },
+    "territoryPolygon": [
+      [28, 52], [35, 53], [44, 51], [50, 48],
+      [48, 44], [40, 43], [34, 43], [29, 45], [28, 52]
+    ],
     "ruler": "Alper Tunga",
-    "location": "Kırım, Karadeniz'in Kuzeyi",
+    "location": "Kırım, Karadeniz'in Kuzeyi (Pont Bozkırı)",
     "summary": "Orta Asya bozkırlarında ve Karadeniz'in kuzeyinde hüküm süren atlı göçebe topluluk. Türk tarihinin bilinen en eski topluluklarından biridir.",
     "facts": [
       "Üzengiyi ilk defa kullanan topluluktur",
@@ -25,11 +28,15 @@
     "startYear": -220,
     "endYear": 216,
     "color": "#E05A2B",
-    "centroid": [105, 47],
-    "mapFocus": { "center": [105, 47], "scale": 380 },
-    "territoryCodes": [496, 156, 398],
+    "centroid": [103, 47],
+    "mapFocus": { "center": [103, 47], "scale": 370 },
+    "territoryPolygon": [
+      [84, 54], [96, 56], [110, 54], [118, 48],
+      [116, 42], [108, 40], [92, 42], [82, 46],
+      [82, 50], [84, 54]
+    ],
     "ruler": "Mete Han (Tan-hu)",
-    "location": "Orta Asya, Moğolistan",
+    "location": "Orta Asya, Moğolistan (Merkez: Ötüken)",
     "summary": "Tarihte bilinen ilk Türk devletidir. Orta Asya'da siyasi birliği sağlayan ve Türk devlet geleneğinin temelini atan imparatorluk.",
     "facts": [
       "Kurucusu Teoman'dır; tarihte bilinen ilk Türk devletidir",
@@ -47,11 +54,14 @@
     "startYear": 375,
     "endYear": 469,
     "color": "#D63A3A",
-    "centroid": [18, 47],
-    "mapFocus": { "center": [18, 47], "scale": 420 },
-    "territoryCodes": [348, 642, 40, 276],
+    "centroid": [20, 47],
+    "mapFocus": { "center": [20, 47], "scale": 420 },
+    "territoryPolygon": [
+      [14, 50], [22, 52], [32, 50], [36, 47],
+      [30, 44], [22, 43], [16, 45], [14, 48], [14, 50]
+    ],
     "ruler": "Atilla",
-    "location": "Orta Avrupa (Macaristan, Romanya, Avusturya)",
+    "location": "Orta Avrupa — Panonya Ovası (bugünkü Macaristan)",
     "summary": "Balamir tarafından kurulan, Atilla döneminde Avrupa'nın büyük bölümüne hükmeden güçlü Türk devleti.",
     "facts": [
       "Kurucusu Balamir, en önemli hükümdarı Atilla'dır",
@@ -68,11 +78,14 @@
     "startYear": 562,
     "endYear": 823,
     "color": "#9B5EC0",
-    "centroid": [20, 46],
-    "mapFocus": { "center": [20, 46], "scale": 400 },
-    "territoryCodes": [348, 100, 642, 688],
+    "centroid": [19, 46],
+    "mapFocus": { "center": [19, 46], "scale": 420 },
+    "territoryPolygon": [
+      [14, 48], [20, 50], [26, 48], [28, 46],
+      [24, 43], [18, 42], [14, 44], [13, 46], [14, 48]
+    ],
     "ruler": "Bayan Han",
-    "location": "Orta Avrupa, Balkanlar",
+    "location": "Orta Avrupa — Panonya ve Balkanlar",
     "summary": "İstanbul'u kuşatan ilk Türk devleti. Hem Orta Asya hem de Avrupa'da devlet kurmuşlardır.",
     "facts": [
       "İstanbul'u kuşatan ilk Türk devletidir; iki kez kuşatmışlardır",
@@ -86,11 +99,14 @@
     "startYear": 850,
     "endYear": 1050,
     "color": "#6B9E2E",
-    "centroid": [55, 46],
-    "mapFocus": { "center": [55, 46], "scale": 420 },
-    "territoryCodes": [398, 804],
+    "centroid": [53, 46],
+    "mapFocus": { "center": [53, 46], "scale": 430 },
+    "territoryPolygon": [
+      [44, 50], [54, 52], [62, 50], [62, 45],
+      [54, 43], [44, 44], [42, 47], [44, 50]
+    ],
     "ruler": "-",
-    "location": "Hazar Denizi ve Aral Gölü arası, Doğu Avrupa",
+    "location": "Hazar Denizi ve Aral Gölü arası — Doğu Avrupa bozkırı",
     "summary": "Hazar ile Aral arasında yaşayan Türk topluluğu.",
     "facts": [
       "Malazgirt Savaşı sırasında taraf değiştirmişlerdir"
@@ -102,11 +118,14 @@
     "startYear": 860,
     "endYear": 1091,
     "color": "#4A7FBF",
-    "centroid": [30, 46],
-    "mapFocus": { "center": [30, 46], "scale": 420 },
-    "territoryCodes": [804, 642, 100],
+    "centroid": [34, 48],
+    "mapFocus": { "center": [34, 48], "scale": 430 },
+    "territoryPolygon": [
+      [28, 52], [38, 54], [46, 52], [46, 46],
+      [38, 44], [30, 45], [26, 48], [28, 52]
+    ],
     "ruler": "-",
-    "location": "Karadeniz'in Kuzeyi, Balkanlar",
+    "location": "Karadeniz'in Kuzeyi — Ukrayna, Moldova, Romanya",
     "summary": "Tarih boyunca bağımsız devlet kuramayıp boy halinde yaşayan ama büyük savaşlarda belirleyici rol oynayan Türk topluluğu.",
     "facts": [
       "Tarih boyunca devlet kuramayıp boy halinde yaşadılar",
@@ -121,10 +140,13 @@
     "endYear": 2026,
     "color": "#2E9E2E",
     "centroid": [19, 47],
-    "mapFocus": { "center": [19, 47], "scale": 500 },
-    "territoryCodes": [348],
+    "mapFocus": { "center": [19, 47], "scale": 520 },
+    "territoryPolygon": [
+      [16, 48], [20, 49], [23, 48], [22, 46],
+      [18, 45], [16, 46], [16, 48]
+    ],
     "ruler": "Arpad",
-    "location": "Panonya Ovası (Macaristan)",
+    "location": "Panonya Ovası — Bugünkü Macaristan",
     "summary": "Türk soyundan gelip Orta Avrupa'da bugün de devam eden kadim topluluk.",
     "facts": [
       "Soylarını Atilla'ya dayandırırlar",
@@ -138,11 +160,14 @@
     "startYear": 681,
     "endYear": 864,
     "color": "#A07830",
-    "centroid": [25, 43],
-    "mapFocus": { "center": [25, 43], "scale": 500 },
-    "territoryCodes": [100, 642],
+    "centroid": [25, 44],
+    "mapFocus": { "center": [25, 44], "scale": 510 },
+    "territoryPolygon": [
+      [22, 48], [28, 48], [30, 46], [28, 42],
+      [22, 42], [20, 44], [22, 48]
+    ],
     "ruler": "Asparuh / Boris Han",
-    "location": "Balkanlar, Bugünkü Bulgaristan",
+    "location": "Balkanlar — Bugünkü Bulgaristan ve Güney Romanya",
     "summary": "Asparuh tarafından kurulan; ilerleyen dönemlerde İstanbul'u kuşatan ve Hristiyanlığı kabul eden Türk devleti.",
     "facts": [
       "Asparuh tarafından kurulmuştur",
@@ -157,11 +182,14 @@
     "startYear": 650,
     "endYear": 1236,
     "color": "#C8A030",
-    "centroid": [49, 56],
-    "mapFocus": { "center": [49, 56], "scale": 480 },
-    "territoryCodes": [643],
+    "centroid": [50, 55],
+    "mapFocus": { "center": [50, 55], "scale": 490 },
+    "territoryPolygon": [
+      [46, 58], [52, 58], [56, 56], [54, 52],
+      [48, 52], [44, 55], [44, 57], [46, 58]
+    ],
     "ruler": "Almış Han",
-    "location": "İdil/Volga Nehri çevresi (Kazan bölgesi)",
+    "location": "İdil/Volga Nehri çevresi — Kazan bölgesi (Tataristan)",
     "summary": "Almış Han döneminde İslamiyet'i kabul eden, Doğu Avrupa'da Türk-İslam kültürünün ilk temsilcisi olan devlet.",
     "facts": [
       "Almış Han döneminde İslamiyet'i kabul etmişlerdir (922)",
@@ -174,11 +202,14 @@
     "startYear": 650,
     "endYear": 965,
     "color": "#20A89A",
-    "centroid": [50, 44],
-    "mapFocus": { "center": [50, 44], "scale": 430 },
-    "territoryCodes": [643, 398, 31],
+    "centroid": [46, 46],
+    "mapFocus": { "center": [46, 46], "scale": 440 },
+    "territoryPolygon": [
+      [38, 50], [46, 52], [54, 50], [54, 44],
+      [48, 42], [42, 42], [36, 44], [36, 48], [38, 50]
+    ],
     "ruler": "-",
-    "location": "Kafkaslar, Hazar Denizi ve Karadeniz arası",
+    "location": "Kafkaslar, Hazar Denizi ve Don Nehri arası",
     "summary": "Museviliği kabul eden tek Türk devleti. Farklı dinlere olan hoşgörüsüyle 'Hazar Barış Çağı' adı verilen dönemi yaşatmıştır.",
     "facts": [
       "Museviliği kabul eden tek Türk devletidir",
@@ -194,11 +225,14 @@
     "startYear": 1000,
     "endYear": 1241,
     "color": "#BF6030",
-    "centroid": [45, 48],
-    "mapFocus": { "center": [45, 48], "scale": 360 },
-    "territoryCodes": [804, 398, 643],
+    "centroid": [48, 49],
+    "mapFocus": { "center": [48, 49], "scale": 340 },
+    "territoryPolygon": [
+      [30, 54], [46, 56], [64, 54], [70, 50],
+      [64, 44], [50, 44], [36, 46], [28, 50], [30, 54]
+    ],
     "ruler": "-",
-    "location": "Doğu Avrupa, Deşt-i Kıpçak (Kazakistan bozkırları)",
+    "location": "Deşt-i Kıpçak — Ukrayna'dan Kazakistan'a uzanan büyük bozkır",
     "summary": "Geniş bozkır coğrafyasına hükmeden, Peçenekleri yenen ve Rus destanlarına konu olan güçlü Türk topluluğu.",
     "facts": [
       "Bizans ile anlaşarak Peçenekleri yenilgiye uğratmışlardır (1091)",
@@ -213,17 +247,20 @@
     "startYear": 552,
     "endYear": 630,
     "color": "#3A6FE0",
-    "centroid": [90, 47],
-    "mapFocus": { "center": [90, 47], "scale": 360 },
-    "territoryCodes": [496, 398, 417],
+    "centroid": [92, 48],
+    "mapFocus": { "center": [92, 48], "scale": 340 },
+    "territoryPolygon": [
+      [68, 52], [86, 56], [108, 54], [116, 48],
+      [110, 42], [88, 40], [70, 42], [64, 48], [68, 52]
+    ],
     "ruler": "Bumin Kağan / Mukan Kağan",
-    "location": "Orta Asya (Merkez: Ötüken, Moğolistan)",
+    "location": "Orta Asya — Moğolistan'dan Hazar'a (Merkez: Ötüken)",
     "summary": "'Türk' adıyla kurulan ilk devlet. Asya Hunlarından sonra Orta Asya'da siyasi birliği sağlayan ikinci büyük Türk devleti.",
     "facts": [
       "'Türk' adıyla kurulan ilk Türk devletidir",
       "Bumin Kağan, Avarları yenerek devleti kurmuştur; 'İl Kağan' unvanını almıştır",
       "En parlak dönemini Mukan Kağan döneminde yaşamıştır",
-      "İstemi Yabgu, ipek yoluna hâkim olmak için Sasanilerle birleşip Akhunlara son vermiş, ardından Bizans ile anlaşıp Sasanileri çöküşe getirmiştir",
+      "İstemi Yabgu, Sasanilerle birleşip Akhunlara son vermiş, ardından Bizans ile anlaşıp Sasanileri çöküşe getirmiştir",
       "Orta Asya'dan Bizans'a elçi gönderen ilk devlettir",
       "Kürşat Ayaklanması, Çin esareti altındaki Türklerin başlattığı ilk millî kurtuluş ayaklanmasıdır (639)"
     ]
@@ -234,12 +271,15 @@
     "startYear": 682,
     "endYear": 744,
     "color": "#5090F0",
-    "centroid": [95, 47],
-    "mapFocus": { "center": [95, 47], "scale": 370 },
-    "territoryCodes": [496, 398],
+    "centroid": [94, 48],
+    "mapFocus": { "center": [94, 48], "scale": 360 },
+    "territoryPolygon": [
+      [74, 52], [90, 55], [106, 52], [112, 46],
+      [106, 42], [88, 42], [74, 46], [72, 50], [74, 52]
+    ],
     "ruler": "Kutluk Kağan / Bilge Kağan",
-    "location": "Orta Asya (Merkez: Ötüken)",
-    "summary": "50 yıllık Çin esaretinin ardından Kutluk Kağan tarafından yeniden kurulan Türk devleti. Türk tarihinin en önemli yazılı eserleri bu dönemde yaratılmıştır.",
+    "location": "Orta Asya — Moğolistan ve Orta Kazakistan (Merkez: Ötüken)",
+    "summary": "50 yıllık Çin esaretinin ardından Kutluk Kağan tarafından yeniden kurulan Türk devleti. Orhun Abideleri bu dönemde dikilmiştir.",
     "facts": [
       "Kurucusu Kutluk Kağan'dır; 'İlteriş' unvanıyla tahta çıkmıştır",
       "Orhun Abideleri'nde kuruluşa değinilmiştir",
@@ -254,19 +294,22 @@
     "startYear": 744,
     "endYear": 840,
     "color": "#C850A0",
-    "centroid": [100, 44],
-    "mapFocus": { "center": [100, 44], "scale": 380 },
-    "territoryCodes": [496, 156],
+    "centroid": [96, 46],
+    "mapFocus": { "center": [96, 46], "scale": 370 },
+    "territoryPolygon": [
+      [78, 52], [94, 56], [108, 52], [112, 45],
+      [106, 38], [90, 38], [78, 42], [76, 48], [78, 52]
+    ],
     "ruler": "Kutluk Bilge Kül Kağan / Bögü Kağan",
-    "location": "Moğolistan ve Doğu Türkistan",
-    "summary": "Yerleşik yaşama geçen ve Türk tarihine pek çok 'ilk'i kazandıran medeniyet. Mani dini etkisiyle sanat, yazı ve kültürde büyük atılımlar gerçekleştirmiştir.",
+    "location": "Moğolistan ve Doğu Türkistan — Tarım Havzası",
+    "summary": "Yerleşik yaşama geçen ve Türk tarihine pek çok 'ilk'i kazandıran medeniyet. Mani dini etkisiyle sanat, yazı ve kültürde büyük atılımlar gerçekleştirilmiştir.",
     "facts": [
       "'Dokuz Oğuzlar' olarak da anılır",
       "Kurucusu Kutluk Bilge Kül Kağan'dır",
       "Bögü Kağan döneminde Mani dinini benimsediler (762)",
-      "Mani diniyle: yerleşik hayata geçildi, hayvansal gıda yasaklandı, şehirlere 'Balıg' adı verildi, resim sanatı ve minyatür yaygınlaştı, hareketli matbaa kullanıldı",
+      "Mani diniyle: yerleşik hayata geçildi, hayvansal gıda yasaklandı, şehirlere 'Balıg' adı verildi, minyatür ve hareketli matbaa kullanıldı",
       "Türk tarihinde ilk kütüphane, ilk örgün eğitim kurumu, ilk kâğıt para kullanımı bu dönemde gerçekleşti",
-      "Türk tiyatrosunun temelini attılar; töreleri yazılı hâle getirdiler; Türk bankacılık kurumunun temellerini attılar",
+      "Türk tiyatrosunun temelini attılar; töreleri yazılı hâle getirdiler; bankacılık kurumunun temellerini attılar",
       "Kırgızlar tarafından yıkıldılar (840)"
     ]
   },
@@ -276,11 +319,14 @@
     "startYear": 840,
     "endYear": 1212,
     "color": "#30A850",
-    "centroid": [91, 54],
-    "mapFocus": { "center": [91, 54], "scale": 400 },
-    "territoryCodes": [643, 417],
+    "centroid": [88, 56],
+    "mapFocus": { "center": [88, 56], "scale": 400 },
+    "territoryPolygon": [
+      [72, 62], [84, 64], [96, 62], [98, 56],
+      [92, 52], [80, 50], [72, 54], [70, 58], [72, 62]
+    ],
     "ruler": "-",
-    "location": "Yenisey Irmağı çevresi ve Moğolistan",
+    "location": "Yenisey Irmağı çevresi — Güney Sibirya",
     "summary": "Uygurlara son veren ve Cengiz Han'a itaat eden ilk Türk topluluğu.",
     "facts": [
       "Cengiz Han'a itaat eden ilk Türk topluluklarından biridir",
@@ -294,11 +340,14 @@
     "startYear": 766,
     "endYear": 1212,
     "color": "#E08020",
-    "centroid": [75, 44],
-    "mapFocus": { "center": [75, 44], "scale": 420 },
-    "territoryCodes": [398, 417],
+    "centroid": [76, 45],
+    "mapFocus": { "center": [76, 45], "scale": 430 },
+    "territoryPolygon": [
+      [68, 50], [78, 52], [84, 50], [84, 44],
+      [76, 40], [68, 40], [64, 44], [66, 48], [68, 50]
+    ],
     "ruler": "-",
-    "location": "Altaylar ve Tanrı Dağları arası (Orta Asya)",
+    "location": "Tanrı Dağları ve Yedisu — Orta Kazakistan ve Kırgızistan",
     "summary": "Talas Savaşı'nda Abbasileri destekleyen ve İslamiyet'i kabul eden ilk Türk boylarından biri.",
     "facts": [
       "Talas Savaşı'nda Abbasileri desteklediler (751)",
@@ -315,9 +364,12 @@
     "color": "#C83040",
     "centroid": [58, 40],
     "mapFocus": { "center": [58, 40], "scale": 400 },
-    "territoryCodes": [860, 795, 364],
+    "territoryPolygon": [
+      [52, 48], [64, 50], [72, 46], [72, 38],
+      [60, 32], [50, 34], [46, 38], [48, 44], [52, 48]
+    ],
     "ruler": "-",
-    "location": "Maveraünnehir, Horasan ve Anadolu",
+    "location": "Maveraünnehir, Horasan — Özbekistan, Türkmenistan, Kuzey İran",
     "summary": "Büyük Selçuklu, Anadolu Selçuklu ve Osmanlı devletlerini kuran Türk boyu. Türk tarihinin en köklü ve geniş coğrafyaya yayılan koludur.",
     "facts": [
       "Büyük Selçuklu Devleti'ni kurmuşlardır",

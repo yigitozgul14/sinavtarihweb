@@ -31,9 +31,9 @@ export interface Civilization {
   startYear: number;
   endYear: number;
   color: string;
-  centroid: [number, number];    // [longitude, latitude] — arrow anchor
+  centroid: [number, number];              // [longitude, latitude] — arrow anchor
   mapFocus: MapFocus;
-  territoryCodes: number[];      // world-atlas numeric ISO-3166-1
+  territoryPolygon: [number, number][];    // approximate historical boundary [lon, lat][]
   ruler: string;
   location: string;
   summary: string;
