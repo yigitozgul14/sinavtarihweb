@@ -5,6 +5,7 @@ export type TransitionType = "göç" | "yıkılış" | "restorasyon" | "hakimiye
 export interface CivEvent {
   id: string;
   civId: string;
+  secondaryCivId?: string; // second civilization involved (e.g. opponent in a battle)
   title: string;
   year: number;
   type: CivEventType;

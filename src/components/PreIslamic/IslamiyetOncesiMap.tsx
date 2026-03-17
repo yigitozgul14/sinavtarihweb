@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Civilization, CivEvent, CivTransition } from "@/types";
 import TransitionArrow from "./TransitionArrow";
 import TerritoryPolygon from "./TerritoryPolygon";
-import EventArrow from "./EventArrow";
+import TravelingArrow from "./TravelingArrow";
 
 const GEO_URL =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
@@ -30,13 +30,6 @@ const EVENT_TYPE_ICON: Record<string, string> = {
 
 function formatYear(year: number): string {
   return year < 0 ? `MÖ ${Math.abs(year)}` : `MS ${year}`;
-}
-
-interface ActiveArrow {
-  id: string;
-  from: [number, number];
-  to: [number, number];
-  color: string;
 }
 
 interface IslamiyetOncesiMapProps {
@@ -59,10 +52,9 @@ export default function IslamiyetOncesiMap({
   onCivSelect,
 }: IslamiyetOncesiMapProps) {
   const [hoveredEvent, setHoveredEvent] = useState<CivEvent | null>(null);
-  const [currentZoom, setCurrentZoom] = useState(1);
-  const [controlledZoom, setControlledZoom] = useState(1);
-  const [activeArrows, setActiveArrows] = useState<ActiveArrow[]>([]);
-  const prevEventIds = useRef<Set<string>>(new Set());
+  const [zoom, setZoom] = useState(1);
+  // Track previous selectedCivId to detect prop changes during render (derived-state pattern)
+  const [prevSelectedCivId, setPrevSelectedCivId] = useState<string | null>(null);
 
   const selectedCiv = civilizations.find((c) => c.id === selectedCivId) ?? null;
 
@@ -73,39 +65,18 @@ export default function IslamiyetOncesiMap({
     : [];
 
   const visibleCivIds = new Set(visibleCivs.map((c) => c.id));
-  const visibleEvents = events.filter(
-    (e) => visibleCivIds.has(e.civId) && e.year <= currentYear
-  );
+  // Hide all events and arrows when a civ is selected — focus mode shows only that civ
+  const visibleEvents = selectedCivId
+    ? []
+    : events.filter((e) => visibleCivIds.has(e.civId) && e.year <= currentYear);
 
-  // Detect newly visible events → spawn arrow animation
-  useEffect(() => {
-    const currentIds = new Set(visibleEvents.map((e) => e.id));
-    const newlyVisible = visibleEvents.filter(
-      (e) => !prevEventIds.current.has(e.id)
-    );
-
-    newlyVisible.forEach((ev) => {
-      const civ = civilizations.find((c) => c.id === ev.civId);
-      if (!civ) return;
-      // Only show arrow if event location is different from centroid
-      const dx = Math.abs(ev.coordinates[0] - civ.centroid[0]);
-      const dy = Math.abs(ev.coordinates[1] - civ.centroid[1]);
-      if (dx < 2 && dy < 2) return;
-      setActiveArrows((prev) => [
-        ...prev,
-        { id: ev.id, from: civ.centroid, to: ev.coordinates, color: civ.color },
-      ]);
-    });
-
-    prevEventIds.current = currentIds;
-  }, [visibleEvents, civilizations]);
-
-  // Sync controlledZoom when selected civ changes
-  useEffect(() => {
-    const target = selectedCiv ? selectedCiv.mapFocus.scale / 280 : 1;
-    setControlledZoom(target);
-    setCurrentZoom(target);
-  }, [selectedCivId]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Derived-state pattern (react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes):
+  // detect selectedCivId prop change during render and update zoom synchronously.
+  // React restarts the render with the new state — no effect, no cascade.
+  if (selectedCivId !== prevSelectedCivId) {
+    setPrevSelectedCivId(selectedCivId);
+    setZoom(selectedCiv ? selectedCiv.mapFocus.scale / 280 : 1);
+  }
 
   // Map viewport: zoom to selected civ or default Eurasia overview
   const mapCenter: [number, number] = selectedCiv
@@ -113,7 +84,7 @@ export default function IslamiyetOncesiMap({
     : [65, 48];
 
   // Zoom-aware scale factor — sqrt for gentler reduction, min 0.45
-  const zScale = Math.max(0.45, 1 / Math.sqrt(currentZoom));
+  const zScale = Math.max(0.45, 1 / Math.sqrt(zoom));
 
   return (
     <div className="relative w-full h-full" style={{ background: "#FAF6F0" }}>
@@ -125,13 +96,10 @@ export default function IslamiyetOncesiMap({
       >
         <ZoomableGroup
           center={mapCenter}
-          zoom={controlledZoom}
+          zoom={zoom}
           maxZoom={8}
           minZoom={1}
-          onMoveEnd={({ zoom }: { zoom: number }) => {
-            setCurrentZoom(zoom);
-            setControlledZoom(zoom);
-          }}
+          onMoveEnd={({ zoom: z }: { zoom: number }) => setZoom(z)}
         >
           {/* ── Base world map (light cream) ── */}
           <Geographies geography={GEO_URL}>
@@ -162,7 +130,7 @@ export default function IslamiyetOncesiMap({
                 color={civ.color}
                 isSelected={civ.id === selectedCivId}
                 isAnySelected={selectedCivId !== null}
-                currentZoom={currentZoom}
+                currentZoom={zoom}
                 onClick={() =>
                   onCivSelect(civ.id === selectedCivId ? null : civ.id)
                 }
@@ -175,19 +143,36 @@ export default function IslamiyetOncesiMap({
             <TransitionArrow key={i} transition={t} civilizations={civilizations} />
           ))}
 
-          {/* ── Event entry arrows (temporary, animated) ── */}
-          {activeArrows.map((arrow) => (
-            <EventArrow
-              key={`arrow-${arrow.id}`}
-              from={arrow.from}
-              to={arrow.to}
-              color={arrow.color}
-              currentZoom={currentZoom}
-              onComplete={() =>
-                setActiveArrows((prev) => prev.filter((a) => a.id !== arrow.id))
-              }
-            />
-          ))}
+          {/* ── Traveling arrows — hidden when a civ is selected ── */}
+          <AnimatePresence>
+            {!selectedCivId && visibleCivs.flatMap((civ) => {
+              const civEvents = events
+                .filter((e) => e.civId === civ.id)
+                .sort((a, b) => a.year - b.year);
+
+              const nextEvent = civEvents.find((e) => e.year > currentYear);
+              if (!nextEvent) return [];
+
+              const prevEvent = civEvents.filter((e) => e.year <= currentYear).at(-1);
+              const fromYear = prevEvent?.year ?? civ.startYear;
+              const progress = Math.min(
+                1,
+                Math.max(0, (currentYear - fromYear) / (nextEvent.year - fromYear))
+              );
+
+              return [
+                <TravelingArrow
+                  key={`travel-${civ.id}-${nextEvent.id}`}
+                  from={civ.centroid}
+                  to={nextEvent.coordinates}
+                  progress={progress}
+                  color={civ.color}
+                  zoomScale={zScale}
+                  civId={civ.id}
+                />,
+              ];
+            })}
+          </AnimatePresence>
 
           {/* ── Civilization centroid dots + labels ── */}
           {visibleCivs.map((civ) => {
@@ -207,17 +192,39 @@ export default function IslamiyetOncesiMap({
                 coordinates={civ.centroid}
                 onClick={() => onCivSelect(isSelected ? null : civ.id)}
               >
-                {/* Pulse ring on selected */}
+                {/* Pulse ring + EU4-style territory name on selected */}
                 {isSelected && (
-                  <motion.circle
-                    fill="none"
-                    stroke={civ.color}
-                    strokeWidth={1.5 * zScale}
-                    strokeOpacity={0.4}
-                    initial={{ r: 8 * zScale, opacity: 0.8 }}
-                    animate={{ r: 22 * zScale, opacity: 0 }}
-                    transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
-                  />
+                  <>
+                    <motion.circle
+                      fill="none"
+                      stroke={civ.color}
+                      strokeWidth={1.5 * zScale}
+                      strokeOpacity={0.4}
+                      initial={{ r: 8 * zScale, opacity: 0.8 }}
+                      animate={{ r: 22 * zScale, opacity: 0 }}
+                      transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
+                    />
+                    {/* Large territory name — EU4 style */}
+                    <motion.text
+                      textAnchor="middle"
+                      y={-26 * zScale}
+                      fontSize={20 * zScale}
+                      fill="#FFFFFF"
+                      stroke={civ.color}
+                      strokeWidth={20 * zScale * 0.55}
+                      paintOrder="stroke"
+                      letterSpacing={2.5 * zScale}
+                      fontFamily="'Source Sans 3', sans-serif"
+                      fontWeight="900"
+                      style={{ pointerEvents: "none", userSelect: "none" }}
+                      initial={{ opacity: 0, scale: 0.85 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.4, delay: 0.1 }}
+                    >
+                      {civ.name.toUpperCase()}
+                    </motion.text>
+                  </>
                 )}
 
                 {/* Main dot — white border */}
@@ -283,6 +290,16 @@ export default function IslamiyetOncesiMap({
           <AnimatePresence>
             {visibleEvents.map((ev) => {
               const iconSize = 16 * zScale;
+              const borderR = iconSize * 0.85;
+              const borderW = 1.2 * zScale;
+
+              const ownerCiv = civilizations.find((c) => c.id === ev.civId);
+              const color1 = ownerCiv?.color ?? "#2A1F12";
+              const secondaryCiv = ev.secondaryCivId
+                ? civilizations.find((c) => c.id === ev.secondaryCivId)
+                : null;
+              const color2 = secondaryCiv?.color ?? null;
+
               return (
                 <Marker
                   key={ev.id}
@@ -292,22 +309,55 @@ export default function IslamiyetOncesiMap({
                 >
                   {/* Background circle for icon */}
                   <motion.circle
-                    r={iconSize * 0.85}
+                    r={borderR}
                     fill="rgba(250,246,240,0.85)"
-                    stroke="#2A1F12"
-                    strokeWidth={0.5 * zScale}
-                    strokeOpacity={0.3}
+                    stroke="none"
                     initial={{ r: 0, opacity: 0 }}
-                    animate={{ r: iconSize * 0.85, opacity: 1 }}
+                    animate={{ r: borderR, opacity: 1 }}
                     exit={{ r: 0, opacity: 0 }}
                     transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
                   />
+
+                  {/* Colored border — single civ or split two-civ */}
+                  {color2 ? (
+                    <motion.g
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 0.9 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+                    >
+                      <path
+                        d={`M 0,${-borderR} A ${borderR},${borderR} 0 0,0 0,${borderR}`}
+                        fill="none"
+                        stroke={color1}
+                        strokeWidth={borderW}
+                      />
+                      <path
+                        d={`M 0,${-borderR} A ${borderR},${borderR} 0 0,1 0,${borderR}`}
+                        fill="none"
+                        stroke={color2}
+                        strokeWidth={borderW}
+                      />
+                    </motion.g>
+                  ) : (
+                    <motion.circle
+                      r={borderR}
+                      fill="none"
+                      stroke={color1}
+                      strokeWidth={borderW}
+                      initial={{ opacity: 0, r: 0 }}
+                      animate={{ opacity: 0.9, r: borderR }}
+                      exit={{ opacity: 0, r: 0 }}
+                      transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+                    />
+                  )}
+
                   {/* Entry burst ring */}
                   <motion.circle
                     fill="none"
-                    stroke="#2A1F12"
+                    stroke={color1}
                     strokeWidth={0.7 * zScale}
-                    strokeOpacity={0.3}
+                    strokeOpacity={0.4}
                     initial={{ r: iconSize * 0.5, opacity: 0.9 }}
                     animate={{ r: iconSize * 2, opacity: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -334,11 +384,7 @@ export default function IslamiyetOncesiMap({
       {/* ── Zoom controls ── */}
       <div className="absolute top-4 right-4 z-10 flex flex-col gap-1">
         <button
-          onClick={() => {
-            const next = Math.min(8, controlledZoom * 1.5);
-            setControlledZoom(next);
-            setCurrentZoom(next);
-          }}
+          onClick={() => setZoom((z) => Math.min(8, z * 1.5))}
           className="w-8 h-8 rounded-lg flex items-center justify-center font-sans text-base font-medium transition-colors shadow-sm"
           style={{
             background: "rgba(250,246,240,0.95)",
@@ -350,11 +396,7 @@ export default function IslamiyetOncesiMap({
           +
         </button>
         <button
-          onClick={() => {
-            const next = Math.max(1, controlledZoom / 1.5);
-            setControlledZoom(next);
-            setCurrentZoom(next);
-          }}
+          onClick={() => setZoom((z) => Math.max(1, z / 1.5))}
           className="w-8 h-8 rounded-lg flex items-center justify-center font-sans text-base font-medium transition-colors shadow-sm"
           style={{
             background: "rgba(250,246,240,0.95)",
@@ -367,9 +409,9 @@ export default function IslamiyetOncesiMap({
         </button>
       </div>
 
-      {/* ── Event tooltip ── */}
+      {/* ── Event tooltip — only when no civ selected ── */}
       <AnimatePresence>
-        {hoveredEvent && (
+        {hoveredEvent && !selectedCivId && (
           <motion.div
             initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}

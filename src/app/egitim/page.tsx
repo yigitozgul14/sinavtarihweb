@@ -28,7 +28,6 @@ function MapInterface() {
       return;
     }
     setActivePeriodId(periodSlug);
-    setSelectedEvent(null);
   }, [searchParams, setActivePeriodId, router]);
 
   return (

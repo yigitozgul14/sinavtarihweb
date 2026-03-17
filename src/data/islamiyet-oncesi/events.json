@@ -83,6 +83,7 @@
   {
     "id": "meric-muharebesi",
     "civId": "pecenekler",
+    "secondaryCivId": "kipçaklar",
     "title": "Meriç Muharebesi",
     "year": 1091,
     "type": "yıkılış",
@@ -128,6 +129,7 @@
   {
     "id": "bumin-kagaan-kurulus",
     "civId": "birinci-goktürk",
+    "secondaryCivId": "avarlar",
     "title": "Göktürk Devleti'nin Kuruluşu — Bumin Kağan",
     "year": 552,
     "type": "kuruluş",
@@ -191,6 +193,7 @@
   {
     "id": "kirgiz-uygur-yikilisi",
     "civId": "uygurlar",
+    "secondaryCivId": "kirgizlar",
     "title": "Kırgızlar Tarafından Yıkılış",
     "year": 840,
     "type": "yıkılış",

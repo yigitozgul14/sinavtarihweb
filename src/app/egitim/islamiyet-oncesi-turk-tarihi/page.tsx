@@ -41,29 +41,24 @@ const transitions = transitionsData as CivTransition[];
 const MIN_YEAR = -700;
 const MAX_YEAR = 1300;
 
-// All significant years (civ starts/ends + events) — sorted
-const KEY_YEARS = [
-  // civ starts
-  -700, -220, 375, 552, 562, 650, 681, 682, 744, 766, 840, 850, 860, 895, 900, 1000,
-  // civ ends
-  -200, 216, 469, 630, 744, 823, 840, 864, 965, 1050, 1091, 1212, 1236, 1241, 1300,
-  // events
-  -530, -214, -209, 375, 434, 447, 452, 557, 626, 639, 682, 732, 740, 751, 762, 813, 864, 922, 1071, 1091,
-].filter((v, i, a) => a.indexOf(v) === i).sort((a, b) => a - b);
+// Her tick'te kaç yıl ilerlenecek — aktif medeniyetlerin en kısa ömürlüsüne göre adapte olur.
+// Hedef: en kısa ömürlü aktif medeniyet ekranda en az MIN_SCREEN_SECONDS saniye kalsın.
+const MIN_SCREEN_SECONDS = 4; // 1x hızda minimum ekran süresi
+const TICKS_PER_SECOND = 10;  // setInterval(100ms)
 
 function getIncrement(year: number, speed: number): number {
-  const nextKey = KEY_YEARS.find((y) => y > year);
-  if (!nextKey) return speed * 5;
+  const activeCivs = civilizations.filter(
+    (c) => c.startYear <= year && c.endYear >= year
+  );
+  if (activeCivs.length === 0) return speed * 5;
 
-  const gap = nextKey - year;
-  let baseInc: number;
-  if (gap <= 30) baseInc = speed * 5;
-  else if (gap <= 100) baseInc = speed * 15;
-  else if (gap <= 300) baseInc = speed * 35;
-  else baseInc = speed * 60;
+  const minLifespan = Math.min(...activeCivs.map((c) => c.endYear - c.startYear));
 
-  // Never overshoot the next key year
-  return Math.min(baseInc, gap);
+  // Bu lifespan'in en az MIN_SCREEN_SECONDS / speed saniye görünmesi için gereken max increment
+  const maxIncrement = minLifespan / (MIN_SCREEN_SECONDS * TICKS_PER_SECOND / speed);
+
+  // Alt sınır: çok yavaş donmaması için; üst sınır: base hız
+  return Math.min(speed * 5, Math.max(speed * 0.5, maxIncrement));
 }
 
 export default function IslamiyetOncesiTurkTarihiPage() {
@@ -74,23 +69,47 @@ export default function IslamiyetOncesiTurkTarihiPage() {
 
   const selectedCiv = civilizations.find((c) => c.id === selectedCivId) ?? null;
 
+  const handleCivSelect = useCallback((id: string | null) => {
+    setSelectedCivId(id);
+    if (id !== null) setIsPlaying(false);
+  }, []);
+
   const visibleCivs = civilizations.filter(
     (c) => currentYear >= c.startYear && currentYear <= c.endYear
   );
 
-  // Playback interval
+  // Playback — requestAnimationFrame for smooth 60fps progress
   useEffect(() => {
     if (!isPlaying) return;
-    const id = setInterval(() => {
+
+    let rafId: number;
+    let lastTimestamp: number | null = null;
+
+    function frame(timestamp: number) {
+      if (lastTimestamp === null) {
+        lastTimestamp = timestamp;
+        rafId = requestAnimationFrame(frame);
+        return;
+      }
+
+      // Cap delta to 100ms to avoid big jumps when tab was hidden
+      const delta = Math.min(timestamp - lastTimestamp, 100);
+      lastTimestamp = timestamp;
+
       setCurrentYear((y) => {
         if (y >= MAX_YEAR) {
           setIsPlaying(false);
           return MAX_YEAR;
         }
-        return y + getIncrement(y, speed);
+        // getIncrement returns years-per-100ms; scale by actual elapsed fraction
+        return y + getIncrement(y, speed) * (delta / 100);
       });
-    }, 100);
-    return () => clearInterval(id);
+
+      rafId = requestAnimationFrame(frame);
+    }
+
+    rafId = requestAnimationFrame(frame);
+    return () => cancelAnimationFrame(rafId);
   }, [isPlaying, speed]);
 
   // Spacebar toggle
@@ -141,7 +160,7 @@ export default function IslamiyetOncesiTurkTarihiPage() {
           visibleCivs={visibleCivs}
           currentYear={currentYear}
           selectedCivId={selectedCivId}
-          onCivSelect={setSelectedCivId}
+          onCivSelect={handleCivSelect}
         />
 
         {/* Active cultures panel (left overlay) */}
