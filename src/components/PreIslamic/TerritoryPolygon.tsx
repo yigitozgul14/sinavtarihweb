@@ -9,6 +9,7 @@ interface TerritoryPolygonProps {
   isSelected: boolean;
   isAnySelected: boolean;
   currentZoom: number;
+  phaseOpacity: number; // 0→1: fading in (pre-start buffer) or fading out (post-end buffer)
   onClick: () => void;
 }
 
@@ -18,6 +19,7 @@ export default function TerritoryPolygon({
   isSelected,
   isAnySelected,
   currentZoom,
+  phaseOpacity,
   onClick,
 }: TerritoryPolygonProps) {
   const { projection } = useMapContext();
@@ -38,8 +40,8 @@ export default function TerritoryPolygon({
   const baseFill = isSelected ? 0.55 : isAnySelected ? 0.08 : 0.35;
   const baseStroke = isSelected ? 1.0 : isAnySelected ? 0.15 : 0.7;
 
-  const fillOpacity = baseFill * zoomFactor;
-  const strokeOpacity = baseStroke * zoomFactor;
+  const fillOpacity = baseFill * zoomFactor * phaseOpacity;
+  const strokeOpacity = baseStroke * zoomFactor * phaseOpacity;
   const strokeWidth = isSelected ? 1.6 : 0.8;
 
   return (

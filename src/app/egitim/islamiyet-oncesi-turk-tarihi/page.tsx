@@ -46,6 +46,39 @@ const MAX_YEAR = 1300;
 const MIN_SCREEN_SECONDS = 4; // 1x hızda minimum ekran süresi
 const TICKS_PER_SECOND = 10;  // setInterval(100ms)
 
+const MAX_BUFFER = 50;
+
+// Compute asymmetric fade window per civ based on transition gaps.
+// fadeIn  = how many years before startYear the civ starts appearing
+// fadeOut = how many years after  endYear  the civ keeps appearing
+// Clamped to half the gap toward the related (transition) successor/predecessor,
+// so directly-connected civs never visually overlap.
+function getCivFadeWindow(
+  civ: Civilization,
+  allCivs: Civilization[],
+  allTransitions: CivTransition[]
+): { fadeIn: number; fadeOut: number } {
+  const successorIds = allTransitions.filter((t) => t.from === civ.id).map((t) => t.to);
+  const predecessorIds = allTransitions.filter((t) => t.to === civ.id).map((t) => t.from);
+
+  const successors = allCivs.filter((c) => successorIds.includes(c.id));
+  const predecessors = allCivs.filter((c) => predecessorIds.includes(c.id));
+
+  const gapAfter =
+    successors.length > 0
+      ? Math.min(...successors.map((s) => Math.max(0, s.startYear - civ.endYear)))
+      : Infinity;
+  const gapBefore =
+    predecessors.length > 0
+      ? Math.min(...predecessors.map((p) => Math.max(0, civ.startYear - p.endYear)))
+      : Infinity;
+
+  return {
+    fadeIn:  Math.min(MAX_BUFFER, Math.floor(gapBefore / 2)),
+    fadeOut: Math.min(MAX_BUFFER, Math.floor(gapAfter  / 2)),
+  };
+}
+
 function getIncrement(year: number, speed: number): number {
   const activeCivs = civilizations.filter(
     (c) => c.startYear <= year && c.endYear >= year
@@ -74,9 +107,11 @@ export default function IslamiyetOncesiTurkTarihiPage() {
     if (id !== null) setIsPlaying(false);
   }, []);
 
-  const visibleCivs = civilizations.filter(
-    (c) => currentYear >= c.startYear && currentYear <= c.endYear
-  );
+  // Each civ's fade window is clamped to avoid overlapping with transition-connected civs.
+  const visibleCivs = civilizations.filter((c) => {
+    const { fadeIn, fadeOut } = getCivFadeWindow(c, civilizations, transitions);
+    return currentYear >= c.startYear - fadeIn && currentYear <= c.endYear + fadeOut;
+  });
 
   // Playback — requestAnimationFrame for smooth 60fps progress
   useEffect(() => {

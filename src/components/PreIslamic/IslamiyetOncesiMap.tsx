@@ -32,6 +32,37 @@ function formatYear(year: number): string {
   return year < 0 ? `MÖ ${Math.abs(year)}` : `MS ${year}`;
 }
 
+const MAX_BUFFER = 50;
+
+function getCivFadeWindow(
+  civ: { id: string; startYear: number; endYear: number },
+  allCivs: { id: string; startYear: number; endYear: number }[],
+  allTransitions: CivTransition[]
+): { fadeIn: number; fadeOut: number } {
+  const successorIds   = allTransitions.filter((t) => t.from === civ.id).map((t) => t.to);
+  const predecessorIds = allTransitions.filter((t) => t.to   === civ.id).map((t) => t.from);
+  const successors   = allCivs.filter((c) => successorIds.includes(c.id));
+  const predecessors = allCivs.filter((c) => predecessorIds.includes(c.id));
+  const gapAfter  = successors.length   > 0 ? Math.min(...successors.map((s)   => Math.max(0, s.startYear - civ.endYear)))   : Infinity;
+  const gapBefore = predecessors.length > 0 ? Math.min(...predecessors.map((p) => Math.max(0, civ.startYear - p.endYear))) : Infinity;
+  return {
+    fadeIn:  Math.min(MAX_BUFFER, Math.floor(gapBefore / 2)),
+    fadeOut: Math.min(MAX_BUFFER, Math.floor(gapAfter  / 2)),
+  };
+}
+
+// 0→1 fading in, 1 active, 1→0 fading out — uses asymmetric fade windows
+function getPhaseOpacity(
+  civ: { startYear: number; endYear: number },
+  currentYear: number,
+  fadeIn: number,
+  fadeOut: number
+): number {
+  if (currentYear < civ.startYear) return fadeIn  === 0 ? 1 : (currentYear - (civ.startYear - fadeIn))  / fadeIn;
+  if (currentYear > civ.endYear)   return fadeOut === 0 ? 1 : 1 - (currentYear - civ.endYear) / fadeOut;
+  return 1;
+}
+
 interface IslamiyetOncesiMapProps {
   civilizations: Civilization[];
   events: CivEvent[];
@@ -86,6 +117,11 @@ export default function IslamiyetOncesiMap({
   // Zoom-aware scale factor — sqrt for gentler reduction, min 0.45
   const zScale = Math.max(0.45, 1 / Math.sqrt(zoom));
 
+  // Officially active civs (within their real startYear–endYear) — used for arrows/events
+  const activeCivs = visibleCivs.filter(
+    (c) => currentYear >= c.startYear && currentYear <= c.endYear
+  );
+
   return (
     <div className="relative w-full h-full" style={{ background: "#FAF6F0" }}>
       <ComposableMap
@@ -123,19 +159,23 @@ export default function IslamiyetOncesiMap({
 
           {/* ── Territory polygons — zoom-based opacity ── */}
           <AnimatePresence>
-            {visibleCivs.map((civ) => (
-              <TerritoryPolygon
-                key={`territory-${civ.id}`}
-                points={civ.territoryPolygon}
-                color={civ.color}
-                isSelected={civ.id === selectedCivId}
-                isAnySelected={selectedCivId !== null}
-                currentZoom={zoom}
-                onClick={() =>
-                  onCivSelect(civ.id === selectedCivId ? null : civ.id)
-                }
-              />
-            ))}
+            {visibleCivs.map((civ) => {
+              const { fadeIn, fadeOut } = getCivFadeWindow(civ, civilizations, transitions);
+              return (
+                <TerritoryPolygon
+                  key={`territory-${civ.id}`}
+                  points={civ.territoryPolygon}
+                  color={civ.color}
+                  isSelected={civ.id === selectedCivId}
+                  isAnySelected={selectedCivId !== null}
+                  currentZoom={zoom}
+                  phaseOpacity={getPhaseOpacity(civ, currentYear, fadeIn, fadeOut)}
+                  onClick={() =>
+                    onCivSelect(civ.id === selectedCivId ? null : civ.id)
+                  }
+                />
+              );
+            })}
           </AnimatePresence>
 
           {/* ── Transition arrows (selected civ only) ── */}
@@ -143,9 +183,9 @@ export default function IslamiyetOncesiMap({
             <TransitionArrow key={i} transition={t} civilizations={civilizations} />
           ))}
 
-          {/* ── Traveling arrows — hidden when a civ is selected ── */}
+          {/* ── Traveling arrows — only for officially active civs, hidden when a civ is selected ── */}
           <AnimatePresence>
-            {!selectedCivId && visibleCivs.flatMap((civ) => {
+            {!selectedCivId && activeCivs.flatMap((civ) => {
               const civEvents = events
                 .filter((e) => e.civId === civ.id)
                 .sort((a, b) => a.year - b.year);
@@ -185,6 +225,8 @@ export default function IslamiyetOncesiMap({
             const yearSize = 6 * zScale;
             const nameY = -11 * zScale;
             const yearY = -3 * zScale;
+            const { fadeIn: fi, fadeOut: fo } = getCivFadeWindow(civ, civilizations, transitions);
+            const phase = getPhaseOpacity(civ, currentYear, fi, fo);
 
             return (
               <Marker
@@ -192,6 +234,7 @@ export default function IslamiyetOncesiMap({
                 coordinates={civ.centroid}
                 onClick={() => onCivSelect(isSelected ? null : civ.id)}
               >
+              <g opacity={phase}>
                 {/* Pulse ring + EU4-style territory name on selected */}
                 {isSelected && (
                   <>
@@ -282,6 +325,7 @@ export default function IslamiyetOncesiMap({
                     </motion.text>
                   </>
                 )}
+              </g>
               </Marker>
             );
           })}
