@@ -3,7 +3,9 @@
     "allow": [
       "Bash(cd \"C:\\\\Users\\\\yigitt\\\\Documents\\\\GitHub\\\\kpsstarihweb\" && npx tsc --noEmit 2>&1)",
       "Bash(npx tsc:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(grep -E '\\\\.\\(tsx?|json\\)$')",
+      "Bash(npm run:*)"
     ]
   }
 }
