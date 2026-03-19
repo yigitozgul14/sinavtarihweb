@@ -1,3 +1,5 @@
+"use client";
+
 import type { HistoricalEvent } from "@/types";
 import Badge from "@/components/ui/Badge";
 import { motion } from "framer-motion";
