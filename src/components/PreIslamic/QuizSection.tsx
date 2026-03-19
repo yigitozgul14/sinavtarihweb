@@ -1,8 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import quizQuestions from "@/data/islamiyet-oncesi/quizQuestions";
+import type { QuizQuestion } from "@/data/islamiyet-oncesi/quizQuestions";
+
+const QUIZ_SIZE = 30;
+
+function pickRandom(pool: QuizQuestion[], count: number): QuizQuestion[] {
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count);
+}
 
 interface QuizSectionProps {
   onBack: () => void;
@@ -11,12 +19,18 @@ interface QuizSectionProps {
 type AnswerState = number | null; // seçilen şık index'i
 
 export default function QuizSection({ onBack }: QuizSectionProps) {
-  const total = quizQuestions.length;
+  const [sessionKey, setSessionKey] = useState(0);
+  const questions = useMemo(
+    () => pickRandom(quizQuestions, QUIZ_SIZE),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [sessionKey]
+  );
+  const total = questions.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerState[]>(new Array(total).fill(null));
   const [showResult, setShowResult] = useState(false);
 
-  const question = quizQuestions[currentIndex];
+  const question = questions[currentIndex];
   const selectedAnswer = answers[currentIndex];
   const isAnswered = selectedAnswer !== null;
 
@@ -38,12 +52,13 @@ export default function QuizSection({ onBack }: QuizSectionProps) {
   }
 
   function handleRetry() {
+    setSessionKey((k) => k + 1);
     setAnswers(new Array(total).fill(null));
     setCurrentIndex(0);
     setShowResult(false);
   }
 
-  const score = answers.filter((a, i) => a === quizQuestions[i].correctIndex).length;
+  const score = answers.filter((a, i) => a === questions[i].correctIndex).length;
 
   if (showResult) {
     return <ResultScreen score={score} total={total} onRetry={handleRetry} onBack={onBack} />;
@@ -117,14 +132,7 @@ export default function QuizSection({ onBack }: QuizSectionProps) {
             }}
           >
             <div style={{ fontFamily: "var(--font-sans)", fontSize: 10, color: "#C8A96E", letterSpacing: "0.15em", marginBottom: 12 }}>
-              {currentIndex + 1 <= 10 ? "DEVLET" :
-               currentIndex + 1 <= 13 ? "SOSYAL HAYAT" :
-               currentIndex + 1 <= 17 ? "HUKUK" :
-               currentIndex + 1 <= 20 ? "ORDU" :
-               currentIndex + 1 <= 21 ? "BİLİM" :
-               currentIndex + 1 <= 26 ? "DİN VE İNANIŞ" :
-               currentIndex + 1 <= 28 ? "MÜZİK VE SPOR" :
-               currentIndex + 1 <= 31 ? "EKONOMİ" : "EDEBİYAT VE YAZI"}
+              SORU {currentIndex + 1}
             </div>
             <p style={{ fontFamily: "var(--font-display)", fontSize: 20, color: "#EEE6E2", lineHeight: 1.5, margin: 0 }}>
               {question.question}
