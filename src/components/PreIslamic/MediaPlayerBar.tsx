@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import type { CivEvent, Civilization } from "@/types";
+
 interface MediaPlayerBarProps {
   currentYear: number;
   minYear: number;
@@ -9,11 +12,24 @@ interface MediaPlayerBarProps {
   onYearChange: (year: number) => void;
   onTogglePlay: () => void;
   onSpeedChange: (s: 0.5 | 1 | 2) => void;
+  events?: CivEvent[];
+  civilizations?: Civilization[];
 }
 
 function formatYear(year: number): string {
   return year < 0 ? `MÖ ${Math.abs(year)}` : `MS ${year}`;
 }
+
+const EVENT_ICONS: Record<string, string> = {
+  savaş: "⚔",
+  antlaşma: "📜",
+  din: "✦",
+  göç: "→",
+  kültür: "◈",
+  siyasi: "◉",
+  kuruluş: "★",
+  yıkılış: "✕",
+};
 
 export default function MediaPlayerBar({
   currentYear,
@@ -24,7 +40,10 @@ export default function MediaPlayerBar({
   onYearChange,
   onTogglePlay,
   onSpeedChange,
+  events = [],
+  civilizations = [],
 }: MediaPlayerBarProps) {
+  const [hoveredEventId, setHoveredEventId] = useState<string | null>(null);
   const progress = ((currentYear - minYear) / (maxYear - minYear)) * 100;
 
   return (
@@ -89,6 +108,66 @@ export default function MediaPlayerBar({
             onChange={(e) => onYearChange(Number(e.target.value))}
             className="absolute inset-0 w-full opacity-0 cursor-pointer h-6"
           />
+          {/* Event milestone markers */}
+          {events.map((e) => {
+            const pct = ((e.year - minYear) / (maxYear - minYear)) * 100;
+            if (pct < 0 || pct > 100) return null;
+            const civ = civilizations.find((c) => c.id === e.civId);
+            const isHovered = hoveredEventId === e.id;
+            const isPast = currentYear >= e.year;
+            return (
+              <div
+                key={e.id}
+                className="absolute flex flex-col items-center pointer-events-auto"
+                style={{ left: `${pct}%`, bottom: "0px", transform: "translateX(-50%)" }}
+                onMouseEnter={() => setHoveredEventId(e.id)}
+                onMouseLeave={() => setHoveredEventId(null)}
+              >
+                {/* Tooltip */}
+                {isHovered && (
+                  <div
+                    className="absolute bottom-full mb-2 z-30 whitespace-nowrap px-2 py-1.5 rounded-lg border text-left"
+                    style={{
+                      background: "rgba(18,23,31,0.95)",
+                      borderColor: civ ? `${civ.color}44` : "rgba(255,255,255,0.1)",
+                      boxShadow: "0 4px 16px rgba(0,0,0,0.4)",
+                    }}
+                  >
+                    <div className="flex items-center gap-1.5">
+                      <span style={{ color: civ?.color ?? "#E8C88A", fontSize: 10 }}>
+                        {EVENT_ICONS[e.type] ?? "●"}
+                      </span>
+                      <span
+                        className="font-sans text-[10px] font-semibold"
+                        style={{ color: civ?.color ?? "#E8C88A" }}
+                      >
+                        {e.year < 0 ? `MÖ ${Math.abs(e.year)}` : `MS ${e.year}`}
+                      </span>
+                      {civ && (
+                        <span className="font-sans text-[10px] text-white/40">
+                          · {civ.name}
+                        </span>
+                      )}
+                    </div>
+                    <p className="font-sans text-[11px] text-white/80 mt-0.5 max-w-[200px] leading-tight">
+                      {e.title}
+                    </p>
+                  </div>
+                )}
+                {/* Marker line */}
+                <div
+                  className="w-[2px] rounded-full transition-all"
+                  style={{
+                    height: isHovered ? "14px" : "8px",
+                    background: civ?.color ?? "#E8C88A",
+                    opacity: isPast ? 0.75 : 0.3,
+                    marginBottom: "1px",
+                  }}
+                />
+              </div>
+            );
+          })}
+
           {/* Thumb indicator */}
           <div
             className="absolute w-3 h-3 rounded-full bg-ochre shadow-md pointer-events-none transition-transform group-hover:scale-125"

@@ -63,13 +63,13 @@ export default function CivilizationDetail({
       >
         <div className="flex items-start justify-between gap-2">
           <div>
-            <p className="font-sans text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: civ.color }}>
+            <p className="font-sans text-xs uppercase tracking-[0.2em] mb-1" style={{ color: civ.color }}>
               {formatYear(civ.startYear)} — {formatYear(civ.endYear)}
             </p>
-            <h2 className="font-display text-2xl text-primary font-light leading-tight">
+            <h2 className="font-display text-3xl text-primary font-light leading-tight">
               {civ.name}
             </h2>
-            <p className="font-sans text-xs text-secondary mt-1">{civ.location}</p>
+            <p className="font-sans text-sm text-secondary mt-1">{civ.location}</p>
           </div>
           <button
             onClick={onClose}
@@ -80,13 +80,13 @@ export default function CivilizationDetail({
         </div>
 
         {civ.ruler !== "-" && (
-          <p className="font-sans text-xs mt-3 text-secondary/80">
+          <p className="font-sans text-sm mt-3 text-secondary/80">
             <span className="text-secondary/50">Önemli Hükümdar: </span>
             <span className="text-primary/90">{civ.ruler}</span>
           </p>
         )}
 
-        <p className="font-sans text-xs text-secondary/70 leading-relaxed mt-3">
+        <p className="font-sans text-sm text-secondary/70 leading-relaxed mt-3">
           {civ.summary}
         </p>
       </div>
@@ -95,17 +95,17 @@ export default function CivilizationDetail({
       <div className="overflow-y-auto custom-scrollbar max-h-[55vh] p-5 space-y-5">
         {/* Facts */}
         <div>
-          <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-secondary/50 mb-2">
+          <p className="font-sans text-xs uppercase tracking-[0.18em] text-secondary/50 mb-2">
             Önemli Bilgiler
           </p>
           <ul className="space-y-2">
             {civ.facts.map((fact, i) => (
               <li key={i} className="flex items-start gap-2">
                 <span
-                  className="mt-1 w-1 h-1 rounded-full flex-shrink-0"
+                  className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                   style={{ backgroundColor: civ.color }}
                 />
-                <p className="font-sans text-xs text-secondary/80 leading-relaxed">
+                <p className="font-sans text-sm text-secondary/80 leading-relaxed">
                   {fact}
                 </p>
               </li>
@@ -116,7 +116,7 @@ export default function CivilizationDetail({
         {/* Events */}
         {civEvents.length > 0 && (
           <div>
-            <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-secondary/50 mb-2">
+            <p className="font-sans text-xs uppercase tracking-[0.18em] text-secondary/50 mb-2">
               Önemli Olaylar
             </p>
             <div className="space-y-2">
@@ -131,7 +131,7 @@ export default function CivilizationDetail({
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <span
-                      className="px-1.5 py-0.5 rounded text-[9px] font-sans font-bold uppercase tracking-wider"
+                      className="px-2 py-0.5 rounded text-[10px] font-sans font-bold uppercase tracking-wider"
                       style={{
                         background: `${EVENT_TYPE_COLOR[ev.type] ?? "#888"}22`,
                         color: EVENT_TYPE_COLOR[ev.type] ?? "#888",
@@ -139,14 +139,14 @@ export default function CivilizationDetail({
                     >
                       {EVENT_TYPE_LABEL[ev.type] ?? ev.type}
                     </span>
-                    <span className="font-sans text-[10px] text-secondary/60">
+                    <span className="font-sans text-xs text-secondary/60">
                       {formatYear(ev.year)}
                     </span>
                   </div>
-                  <p className="font-sans text-xs text-primary/90 font-medium">
+                  <p className="font-sans text-sm text-primary/90 font-medium">
                     {ev.title}
                   </p>
-                  <p className="font-sans text-[11px] text-secondary/70 leading-relaxed mt-1">
+                  <p className="font-sans text-xs text-secondary/70 leading-relaxed mt-1">
                     {ev.description}
                   </p>
                 </div>
@@ -158,27 +158,27 @@ export default function CivilizationDetail({
         {/* Connections */}
         {(incoming.length > 0 || outgoing.length > 0) && (
           <div>
-            <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-secondary/50 mb-2">
+            <p className="font-sans text-xs uppercase tracking-[0.18em] text-secondary/50 mb-2">
               Bağlantılar
             </p>
             <div className="space-y-1.5">
               {incoming.map((t, i) => {
                 const fromCiv = civilizations.find((c) => c.id === t.from);
                 return (
-                  <div key={`in-${i}`} className="flex items-center gap-2 text-xs font-sans text-secondary/70">
-                    <span className="text-[10px]">←</span>
+                  <div key={`in-${i}`} className="flex items-center gap-2 text-sm font-sans text-secondary/70">
+                    <span className="text-xs">←</span>
                     <span style={{ color: fromCiv?.color }}>{fromCiv?.name}</span>
-                    <span className="text-secondary/40 text-[10px]">{t.label}</span>
+                    <span className="text-secondary/40 text-xs">{t.label}</span>
                   </div>
                 );
               })}
               {outgoing.map((t, i) => {
                 const toCiv = civilizations.find((c) => c.id === t.to);
                 return (
-                  <div key={`out-${i}`} className="flex items-center gap-2 text-xs font-sans text-secondary/70">
-                    <span className="text-[10px]">→</span>
+                  <div key={`out-${i}`} className="flex items-center gap-2 text-sm font-sans text-secondary/70">
+                    <span className="text-xs">→</span>
                     <span style={{ color: toCiv?.color }}>{toCiv?.name}</span>
-                    <span className="text-secondary/40 text-[10px]">{t.label}</span>
+                    <span className="text-secondary/40 text-xs">{t.label}</span>
                   </div>
                 );
               })}

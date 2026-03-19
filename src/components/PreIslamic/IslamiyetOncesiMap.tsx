@@ -84,6 +84,7 @@ export default function IslamiyetOncesiMap({
 }: IslamiyetOncesiMapProps) {
   const [hoveredEvent, setHoveredEvent] = useState<CivEvent | null>(null);
   const [zoom, setZoom] = useState(1);
+  const [center, setCenter] = useState<[number, number]>([65, 48]);
   // Track previous selectedCivId to detect prop changes during render (derived-state pattern)
   const [prevSelectedCivId, setPrevSelectedCivId] = useState<string | null>(null);
 
@@ -107,12 +108,8 @@ export default function IslamiyetOncesiMap({
   if (selectedCivId !== prevSelectedCivId) {
     setPrevSelectedCivId(selectedCivId);
     setZoom(selectedCiv ? selectedCiv.mapFocus.scale / 280 : 1);
+    setCenter(selectedCiv ? selectedCiv.mapFocus.center : [65, 48]);
   }
-
-  // Map viewport: zoom to selected civ or default Eurasia overview
-  const mapCenter: [number, number] = selectedCiv
-    ? selectedCiv.mapFocus.center
-    : [65, 48];
 
   // Zoom-aware scale factor — sqrt for gentler reduction, min 0.45
   const zScale = Math.max(0.45, 1 / Math.sqrt(zoom));
@@ -131,11 +128,14 @@ export default function IslamiyetOncesiMap({
         style={{ width: "100%", height: "100%", background: "transparent" }}
       >
         <ZoomableGroup
-          center={mapCenter}
+          center={center}
           zoom={zoom}
           maxZoom={8}
           minZoom={1}
-          onMoveEnd={({ zoom: z }: { zoom: number }) => setZoom(z)}
+          onMoveEnd={({ coordinates, zoom: z }: { coordinates: [number, number]; zoom: number }) => {
+            setCenter(coordinates);
+            setZoom(z);
+          }}
         >
           {/* ── Base world map (light cream) ── */}
           <Geographies geography={GEO_URL}>
@@ -359,7 +359,7 @@ export default function IslamiyetOncesiMap({
                     initial={{ r: 0, opacity: 0 }}
                     animate={{ r: borderR, opacity: 1 }}
                     exit={{ r: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+                    transition={{ duration: 0.35, type: "tween", ease: "easeOut" }}
                   />
 
                   {/* Colored border — single civ or split two-civ */}
@@ -392,7 +392,7 @@ export default function IslamiyetOncesiMap({
                       initial={{ opacity: 0, r: 0 }}
                       animate={{ opacity: 0.9, r: borderR }}
                       exit={{ opacity: 0, r: 0 }}
-                      transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
+                      transition={{ duration: 0.35, type: "tween", ease: "easeOut" }}
                     />
                   )}
 
