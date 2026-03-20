@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, use } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -73,9 +73,9 @@ function getPeriodTitle(donem: string): string {
     .join(" ");
 }
 
-export default function PeriodPage({ params }: { params: { donem: string } }) {
+export default function PeriodPage({ params }: { params: Promise<{ donem: string }> }) {
   const router = useRouter();
-  const { donem } = params;
+  const { donem } = use(params);
 
   const [bundle, setBundle] = useState<PeriodDataBundle | null>(null);
   const [selectedEntityId, setSelectedEntityId] = useState<string | null>(null);

@@ -28,6 +28,19 @@ export function usePeriodPlayback({
   const prevYearRef = useRef<number>(minYear);
   const isPlayingRef = useRef(false);
 
+  // Bundle yüklenince (minYear değişince) state'i sıfırla
+  useEffect(() => {
+    if (autoResumeTimeoutRef.current) {
+      clearTimeout(autoResumeTimeoutRef.current);
+      autoResumeTimeoutRef.current = null;
+    }
+    setCurrentYear(minYear);
+    setIsPlaying(false);
+    setHighlightedEvent(null);
+    pausedForEventsRef.current = new Set();
+    prevYearRef.current = minYear;
+  }, [minYear]);
+
   // Keep ref in sync for use inside effects
   useEffect(() => {
     isPlayingRef.current = isPlaying;

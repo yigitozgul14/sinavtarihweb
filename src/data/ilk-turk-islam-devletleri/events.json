@@ -1,0 +1,294 @@
+[
+  {
+    "id": "karahanli-kuruluş",
+    "civId": "karahanlilar",
+    "title": "Karahanlı Devleti'nin Kuruluşu",
+    "year": 840,
+    "type": "kuruluş",
+    "coordinates": [72, 42],
+    "description": "Karluk, Yağma ve Çiğil boylarının birliğiyle Bilge Kül Kadir Han önderliğinde Orta Asya'da ilk Müslüman Türk devleti kuruldu."
+  },
+  {
+    "id": "karahanli-islam",
+    "civId": "karahanlilar",
+    "title": "İslamiyet'in Resmi Kabulü",
+    "year": 960,
+    "type": "din",
+    "coordinates": [70, 41],
+    "description": "Karahanlılar, yaklaşık 200.000 çadır halkıyla İslamiyet'i toplu olarak kabul etti. İlk Müslüman Türk devleti olarak tarihe geçtiler."
+  },
+  {
+    "id": "karahanli-kutadgu",
+    "civId": "karahanlilar",
+    "title": "Kutadgu Bilig'in Yazılması",
+    "year": 1069,
+    "type": "kültür",
+    "coordinates": [76, 40],
+    "description": "Yusuf Has Hacib tarafından Kaşgar'da kaleme alınan Kutadgu Bilig (Mutluluk Veren Bilgi), Türk-İslam edebiyatının ilk büyük eseridir. Karahanlı hükümdarına sunulmuştur."
+  },
+  {
+    "id": "karahanli-divan",
+    "civId": "karahanlilar",
+    "title": "Divan-ı Lügat-it Türk'ün Yazılması",
+    "year": 1074,
+    "type": "kültür",
+    "coordinates": [76, 40],
+    "description": "Kaşgarlı Mahmut tarafından yazılan Divan-ı Lügat-it Türk, Türkçenin ilk kapsamlı sözlüğü ve ansiklopedisidir. Türkçenin Arapçadan üstün olduğunu kanıtlamak amacıyla kaleme alınmıştır."
+  },
+  {
+    "id": "tolunog-kuruluş",
+    "civId": "tolunog",
+    "title": "Tolunoğulları'nın Kuruluşu",
+    "year": 868,
+    "type": "kuruluş",
+    "coordinates": [31, 30],
+    "description": "Abbasi halifesinin Mısır valisi Tolunoğlu Ahmet, Mısır'ı fiilen Abbasilerden bağımsız yönetmeye başlayarak Türk-İslam tarihinin ilk bağımsız devletlerinden birini kurdu."
+  },
+  {
+    "id": "tolunog-maristan",
+    "civId": "tolunog",
+    "title": "İlk Maristan'ın İnşası",
+    "year": 874,
+    "type": "kültür",
+    "coordinates": [31, 30],
+    "description": "Tolunoğlu Ahmet, Kahire'de 'Maristan' adı verilen ilk Türk-İslam hastanesini inşa ettirdi. Bu hastane herkese ücretsiz hizmet veriyordu."
+  },
+  {
+    "id": "ihsid-kuruluş",
+    "civId": "ihsidler",
+    "title": "İhşid Devleti'nin Kuruluşu",
+    "year": 935,
+    "type": "kuruluş",
+    "coordinates": [32, 30],
+    "description": "Abbasi halifesince Mısır valisi atanan Muhammed bin Toğaç, Tolunoğlularının ardından Mısır'da yeni bir Türk devleti kurdu."
+  },
+  {
+    "id": "ihsid-hicaz",
+    "civId": "ihsidler",
+    "title": "Hicaz'ın Fethine Alınması",
+    "year": 946,
+    "type": "siyasi",
+    "coordinates": [39, 21],
+    "description": "İhşidler Mekke ve Medine'yi içine alan Hicaz bölgesini kontrollerine alarak Hicaz'a sahip olan ilk Türk-İslam devleti unvanını kazandılar."
+  },
+  {
+    "id": "gazneli-sultan",
+    "civId": "gazneliler",
+    "title": "Gazneli Mahmut: İlk Türk Sultanı",
+    "year": 1000,
+    "type": "siyasi",
+    "coordinates": [68, 32],
+    "description": "Gazneli Mahmut, Abbasi halifesinden 'Sultan' unvanını alan ilk Türk hükümdarı oldu. Bu unvan sonraki tüm Türk devletleri için model oluşturdu."
+  },
+  {
+    "id": "gazneli-hindistan",
+    "civId": "gazneliler",
+    "title": "Hindistan Seferleri",
+    "year": 1017,
+    "type": "savaş",
+    "coordinates": [74, 30],
+    "description": "Gazneli Mahmut, Hindistan'a 17 sefer düzenledi. Bu seferler Türk-İslam kültürünü Hindistan'a taşırken Gazne sarayını büyük ganimetlerle zenginleştirdi."
+  },
+  {
+    "id": "gazneli-dandanakan",
+    "civId": "gazneliler",
+    "title": "Dandanakan Savaşı — Selçuklulara Yenilgi",
+    "year": 1040,
+    "type": "savaş",
+    "secondaryCivId": "buyuk-selcuklu",
+    "coordinates": [61, 38],
+    "description": "Horasan'da Selçuklularla karşılaşan Gazneli Mes'ud, Dandanakan'da ağır bir yenilgiye uğradı. Bu savaş Gaznelilerin çöküşünü, Selçukluların yükselişini sembolize eder."
+  },
+  {
+    "id": "selcuklu-nisabur",
+    "civId": "buyuk-selcuklu",
+    "title": "Nişabur'da Hutbe Okutulması",
+    "year": 1038,
+    "type": "kuruluş",
+    "coordinates": [58, 36],
+    "description": "Tuğrul Bey, 1038'de Nişabur'da kendi adına hutbe okutarak bağımsızlığını ilan etti. Resmi kuruluş ise 1040 Dandanakan Zaferi ile kabul edilir."
+  },
+  {
+    "id": "selcuklu-dandanakan",
+    "civId": "buyuk-selcuklu",
+    "title": "Dandanakan Zaferi",
+    "year": 1040,
+    "type": "savaş",
+    "secondaryCivId": "gazneliler",
+    "coordinates": [61, 38],
+    "description": "Tuğrul ve Çağrı Bey önderliğindeki Selçuklular, Gaznelileri Dandanakan'da büyük bir bozguna uğrattı. Bu zafer Büyük Selçuklu Devleti'nin resmi kuruluşu kabul edilir."
+  },
+  {
+    "id": "selcuklu-bagdat",
+    "civId": "buyuk-selcuklu",
+    "title": "Tuğrul Bey'in Bağdat'a Girişi",
+    "year": 1055,
+    "type": "siyasi",
+    "coordinates": [44, 33],
+    "description": "Tuğrul Bey Bağdat'a girerek Abbasi halifesini Büveyh baskısından kurtardı. Halife, Tuğrul Bey'e 'Doğu'nun ve Batı'nın Sultanı' unvanını vererek siyasi yetkilerini devretti."
+  },
+  {
+    "id": "selcuklu-pasinler",
+    "civId": "buyuk-selcuklu",
+    "title": "Pasinler Savaşı",
+    "year": 1048,
+    "type": "savaş",
+    "coordinates": [41, 40],
+    "description": "İlk Selçuklu-Bizans çatışması. Anadolu kapılarına dayanan Selçuklular, Bizans kuvvetlerini Pasinler'de (Erzurum) yenerek Anadolu'ya açılan yolu güvence altına aldı."
+  },
+  {
+    "id": "selcuklu-ani",
+    "civId": "buyuk-selcuklu",
+    "title": "Ani Kalesi'nin Fethi",
+    "year": 1064,
+    "type": "savaş",
+    "coordinates": [43, 41],
+    "description": "Alparslan, dönemin en güçlü kalelerinden Ani'yi fethetti. Bu başarı üzerine Abbasi Halifesi Alparslan'a 'Ebu'l Feth' (Fetihlerin Babası) lakabını verdi."
+  },
+  {
+    "id": "selcuklu-malazgirt",
+    "civId": "buyuk-selcuklu",
+    "title": "Malazgirt Savaşı",
+    "year": 1071,
+    "type": "savaş",
+    "coordinates": [42, 39],
+    "description": "Alparslan'ın Bizans İmparatoru Romen Diyojen'i esir aldığı büyük zafer. Bu savaş Anadolu'nun kapılarını Türklere açmış, Türklerin Anadolu'yu yurt edinmesini başlatmıştır."
+  },
+  {
+    "id": "anadolu-selcuklu-kuruluş",
+    "civId": "anadolu-selcuklu",
+    "title": "Anadolu Selçuklu Devleti'nin Kuruluşu",
+    "year": 1075,
+    "type": "kuruluş",
+    "coordinates": [34, 38],
+    "description": "Malazgirt Zaferi'nin ardından Türk boyları Anadolu'ya yayıldı. Kutalmışoğlu Süleyman Şah Anadolu Selçuklu Devleti'ni kurarak İznik'i başkent yaptı."
+  },
+  {
+    "id": "anadolu-miryokefalon",
+    "civId": "anadolu-selcuklu",
+    "title": "Miryokefalon Savaşı",
+    "year": 1176,
+    "type": "savaş",
+    "coordinates": [30, 38],
+    "description": "II. Kılıç Arslan komutasındaki Selçuklular, Bizans'ı Miryokefalon'da büyük bir bozguna uğrattı. Bu zaferle Anadolu kesin olarak Türk yurdu haline geldi."
+  },
+  {
+    "id": "eyyubi-kuruluş",
+    "civId": "eyyubiler",
+    "title": "Eyyubi Devleti'nin Kuruluşu",
+    "year": 1174,
+    "type": "kuruluş",
+    "coordinates": [31, 30],
+    "description": "Selahattin Eyyubi, Mısır'da Fâtımî Halifeliği'ne son vererek Eyyubi Devleti'ni kurdu ve Kahire'yi başkent ilan etti."
+  },
+  {
+    "id": "eyyubi-hittin",
+    "civId": "eyyubiler",
+    "title": "Hıttin Savaşı — Kudüs'ün Kurtuluşu",
+    "year": 1187,
+    "type": "savaş",
+    "coordinates": [35, 33],
+    "description": "Selahattin Eyyubi, Hıttin Savaşı'nda Haçlıları kesin yenilgiye uğratarak Kudüs Haçlı Krallığı'na son verdi ve Kudüs'ü Müslümanlara geri kazandırdı."
+  },
+  {
+    "id": "mogol-kuruluş",
+    "civId": "mogol-imparatorlugu",
+    "title": "Büyük Kurultay — Cengiz Han",
+    "year": 1206,
+    "type": "kuruluş",
+    "coordinates": [102, 47],
+    "description": "Timuçin, Moğol boylarını birleştirerek toplanan büyük kurultayda 'Cengiz Han' (Evrensel Hükümdar) unvanını aldı ve Moğol İmparatorluğu'nu resmen kurdu."
+  },
+  {
+    "id": "mogol-bagdat",
+    "civId": "mogol-imparatorlugu",
+    "title": "Bağdat'ın Yakılıp Yıkılması",
+    "year": 1258,
+    "type": "savaş",
+    "coordinates": [44, 33],
+    "description": "Cengiz Han'ın torunu Hülagu Han, Bağdat'ı kuşatarak yakıp yıktı. 500 yıllık Abbasi Halifeliği sona erdi. Büyük kütüphaneler tahrip edildi, bilim dünyası büyük bir kayıp yaşadı."
+  },
+  {
+    "id": "anadolu-kosedagi",
+    "civId": "anadolu-selcuklu",
+    "title": "Kösedağ Savaşı — İlhanlı Egemenliği",
+    "year": 1243,
+    "type": "savaş",
+    "secondaryCivId": "mogol-imparatorlugu",
+    "coordinates": [38, 40],
+    "description": "Anadolu Selçukluları, Babailer İsyanı'nın yarattığı zayıflık ortamında İlhanlı (Moğol) kuvvetlerine Kösedağ'da ağır yenilgi aldı. Bu yenilgiyle devlet İlhanlılara bağımlı hale geldi."
+  },
+  {
+    "id": "memluk-kuruluş",
+    "civId": "memlukler",
+    "title": "Memlük Devleti'nin Kuruluşu",
+    "year": 1250,
+    "type": "kuruluş",
+    "coordinates": [31, 30],
+    "description": "Eyyubi ordusundaki Türk kökenli gulam (köle asker) komutanlar, son Eyyubi sultanını devirerek Kahire'de Memlük Devleti'ni kurdular."
+  },
+  {
+    "id": "memluk-ayncalut",
+    "civId": "memlukler",
+    "title": "Ayn Calût Savaşı — Moğollar Durduruldu",
+    "year": 1260,
+    "type": "savaş",
+    "secondaryCivId": "mogol-imparatorlugu",
+    "coordinates": [35, 32],
+    "description": "Sultan Baybars komutasındaki Memlükler, Ayn Calût'ta Moğol ordusunu yenilgiye uğrattı. Bu, Moğolların İslam dünyasındaki ilk büyük yenilgisidir ve Mısır'ı Moğol istilasından kurtardı."
+  },
+  {
+    "id": "timur-kuruluş",
+    "civId": "timur-devleti",
+    "title": "Timur İmparatorluğu'nun Kuruluşu",
+    "year": 1370,
+    "type": "kuruluş",
+    "coordinates": [66, 40],
+    "description": "Timur (Aksak Timur), Semerkant'ı merkez alarak Çağatay Hanlığı'nın kalıntıları üzerinde kendi imparatorluğunu kurdu. Kısa sürede büyük bir güç haline geldi."
+  },
+  {
+    "id": "timur-ankara",
+    "civId": "timur-devleti",
+    "title": "Ankara Savaşı",
+    "year": 1402,
+    "type": "savaş",
+    "coordinates": [32, 40],
+    "description": "Timur, Ankara yakınlarında Osmanlı Sultanı Yıldırım Bayezid'i esir aldı. Bu yenilgi Osmanlı'yı geçici olarak dağıttı ve Fetret Devri'ni başlattı."
+  },
+  {
+    "id": "akkoyun-otlukbeli",
+    "civId": "akkoyunlular",
+    "title": "Otlukbeli Savaşı",
+    "year": 1473,
+    "type": "savaş",
+    "coordinates": [40, 40],
+    "description": "Akkoyunlu hükümdarı Uzun Hasan, Osmanlı Sultanı Fatih Sultan Mehmet ile Otlukbeli'nde karşılaştı. Osmanlı'nın top gücü karşısında ağır yenilgiye uğrayan Akkoyunlular zayıfladı."
+  },
+  {
+    "id": "safevi-kuruluş",
+    "civId": "safevi-devleti",
+    "title": "Safevi Devleti'nin Kuruluşu",
+    "year": 1501,
+    "type": "kuruluş",
+    "coordinates": [46, 38],
+    "description": "Şah İsmail, Tebriz'i başkent ilan ederek Safevi Devleti'ni kurdu ve Şii İslam'ı devletin resmi dini olarak benimsedi. Akkoyunlulara son vererek İran'a egemen oldu."
+  },
+  {
+    "id": "safevi-caldiran",
+    "civId": "safevi-devleti",
+    "title": "Çaldıran Savaşı",
+    "year": 1514,
+    "type": "savaş",
+    "coordinates": [44, 39],
+    "description": "Osmanlı Sultanı Yavuz Selim, Çaldıran'da Şah İsmail'i büyük yenilgiye uğrattı. Osmanlı topçusunun belirleyici rol oynadığı bu savaşta Tebriz kısa süreliğine Osmanlı'nın eline geçti."
+  },
+  {
+    "id": "memluk-ridaniye",
+    "civId": "memlukler",
+    "title": "Ridaniye Savaşı — Memlüklerin Sonu",
+    "year": 1517,
+    "type": "savaş",
+    "coordinates": [31, 30],
+    "description": "Yavuz Selim, Kahire yakınlarındaki Ridaniye'de Memlükleri kesin yenilgiye uğrattı. 267 yıllık Memlük Devleti sona erdi; Mısır, Suriye ve Hicaz Osmanlı topraklarına katıldı. Halifelik Osmanlılara geçti."
+  }
+]

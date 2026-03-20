@@ -11,6 +11,15 @@ export const PERIODS: Period[] = [
     description: "İskitlerden Oğuzlara İslamiyet öncesi Türk devletleri dönemi",
   },
   {
+    id: "ilk-turk-islam-devletleri",
+    slug: "ilk-turk-islam-devletleri",
+    name: "İlk Türk İslam Devletleri",
+    startYear: 840,
+    endYear: 1520,
+    color: "#7C3AED",
+    description: "Karahanlılardan Memlüklere ilk Türk-İslam devletleri dönemi",
+  },
+  {
     id: "buyuk-selcuklu",
     slug: "buyuk-selcuklu",
     name: "Büyük Selçuklu",

@@ -1,0 +1,100 @@
+[
+  {
+    "from": "tolunog",
+    "to": "ihsidler",
+    "type": "hakimiyet-geçişi",
+    "label": "Mısır'da Türk hakimiyeti devam etti",
+    "year": 905
+  },
+  {
+    "from": "gazneliler",
+    "to": "buyuk-selcuklu",
+    "type": "yıkılış",
+    "label": "Dandanakan'da Selçuklulara yenildi (1040)",
+    "year": 1040
+  },
+  {
+    "from": "karahanlilar",
+    "to": "buyuk-selcuklu",
+    "type": "bağlantı",
+    "label": "Selçuklular Karahanlı topraklarına hakim oldu",
+    "year": 1089
+  },
+  {
+    "from": "buyuk-selcuklu",
+    "to": "anadolu-selcuklu",
+    "type": "göç",
+    "label": "Malazgirt sonrası Anadolu'ya yayılma (1071)",
+    "year": 1071
+  },
+  {
+    "from": "saltuklular",
+    "to": "anadolu-selcuklu",
+    "type": "hakimiyet-geçişi",
+    "label": "Anadolu Selçuklu hakimiyetine katıldı",
+    "year": 1202
+  },
+  {
+    "from": "danismentliler",
+    "to": "anadolu-selcuklu",
+    "type": "hakimiyet-geçişi",
+    "label": "Anadolu Selçuklu hakimiyetine katıldı",
+    "year": 1178
+  },
+  {
+    "from": "eyyubiler",
+    "to": "memlukler",
+    "type": "yıkılış",
+    "label": "Gulam komutanlar Eyyubilere son verdi (1250)",
+    "year": 1250
+  },
+  {
+    "from": "mogol-imparatorlugu",
+    "to": "memlukler",
+    "type": "bağlantı",
+    "label": "Ayn Calût'ta Moğollar durduruldu (1260)",
+    "year": 1260
+  },
+  {
+    "from": "anadolu-selcuklu",
+    "to": "karakoyunlular",
+    "type": "bağlantı",
+    "label": "Selçuklu çöküşü sonrası Türkmen beylikleri yükseldi",
+    "year": 1308
+  },
+  {
+    "from": "karakoyunlular",
+    "to": "akkoyunlular",
+    "type": "yıkılış",
+    "label": "Akkoyunlular Karakoyunluları yıktı (1469)",
+    "year": 1469
+  },
+  {
+    "from": "akkoyunlular",
+    "to": "safevi-devleti",
+    "type": "yıkılış",
+    "label": "Şah İsmail Akkoyunluları ortadan kaldırdı (1501)",
+    "year": 1501
+  },
+  {
+    "from": "timur-devleti",
+    "to": "akkoyunlular",
+    "type": "bağlantı",
+    "label": "Timur sonrası Batı İran'da Akkoyunlular güçlendi",
+    "year": 1405
+  },
+  {
+    "from": "buyuk-selcuklu",
+    "to": "timur-devleti",
+    "type": "bağlantı",
+    "label": "Orta Asya–İran Türk-İslam siyasi mirası",
+    "year": 1157
+  },
+  {
+    "from": "memlukler",
+    "to": "safevi-devleti",
+    "type": "bağlantı",
+    "label": "Osmanlı-Memlük çöküşü, Safevi yükselişi",
+    "year": 1517
+  }
+]

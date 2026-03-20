@@ -1,0 +1,441 @@
+[
+  {
+    "id": "karahanlilar",
+    "name": "Karahanlılar",
+    "startYear": 840,
+    "endYear": 1212,
+    "color": "#7C3AED",
+    "centroid": [70, 41],
+    "mapFocus": { "center": [70, 41], "scale": 460 },
+    "territoryPolygon": [
+      [58, 36], [72, 34], [82, 38], [84, 44],
+      [78, 48], [66, 46], [56, 42], [54, 38], [58, 36]
+    ],
+    "ruler": "Bilge Kül Kadir Han",
+    "location": "Orta Asya (Maveraünnehir, Fergana, Kaşgar)",
+    "summary": "İlk Müslüman Türk devleti. Karluk, Yağma ve Çiğil boyları tarafından kurulmuş; Türk-İslam medeniyetinin temellerini atmıştır.",
+    "facts": [
+      "İlk Müslüman Türk devletidir — 960 yılında İslamiyeti resmi din olarak kabul ettiler",
+      "Devletin resmi dili Türkçe'dir",
+      "Gulam sistemini (köle askerler) ilk kez uygulamışlardır",
+      "Türk-İslam mimarisinin ve edebiyatının ilk örnekleri Karahanlılara aittir",
+      "Ribat adı verilen ilk kervansaraylar bu dönemde yapılmıştır",
+      "İlk medrese ve burslu öğrencilik bu dönemde görülmüştür",
+      "Kutadgu Bilig, Divan-ı Lügat-it Türk, Atabetül Hakayık ve Divan-ı Hikmet Karahanlılar döneminde yazılmıştır",
+      "Doğu Karahanlılara Karahıtaylar, Batı Karahanlılara Harzemşahlar son vermiştir"
+    ]
+  },
+  {
+    "id": "tolunog",
+    "name": "Tolunoğulları",
+    "startYear": 868,
+    "endYear": 905,
+    "color": "#F59E0B",
+    "centroid": [30, 27],
+    "mapFocus": { "center": [30, 27], "scale": 650 },
+    "territoryPolygon": [
+      [24, 22], [32, 22], [36, 26], [36, 32],
+      [30, 34], [26, 32], [24, 28], [24, 22]
+    ],
+    "ruler": "Tolunoğlu Ahmet",
+    "location": "Mısır, Suriye, Filistin",
+    "summary": "Abbasi halifelerinin Mısır valisi Tolunoğlu Ahmet tarafından kurulan ilk müstakil Türk-İslam devletlerinden biri. Mısır'da ilk Türk siyasi varlığını temsil eder.",
+    "facts": [
+      "Abbasilerin Mısır valisi Tolunoğlu Ahmet tarafından kurulmuştur",
+      "Tavaif-i Mülûk (küçük bağımsız devlet) özelliği taşır",
+      "Maristan adı verilen hastaneler inşa etmişlerdir",
+      "Mısır'ı Abbasi merkezinden fiilen bağımsız yönetmişlerdir",
+      "905 yılında Abbasi kuvvetleri tarafından yıkılmıştır"
+    ]
+  },
+  {
+    "id": "ihsidler",
+    "name": "İhşidler",
+    "startYear": 935,
+    "endYear": 969,
+    "color": "#D97706",
+    "centroid": [32, 28],
+    "mapFocus": { "center": [32, 28], "scale": 620 },
+    "territoryPolygon": [
+      [24, 20], [34, 20], [38, 24], [40, 30],
+      [36, 34], [30, 36], [26, 32], [24, 26], [24, 20]
+    ],
+    "ruler": "Muhammed bin Toğaç (İhşid)",
+    "location": "Mısır, Suriye, Hicaz",
+    "summary": "Abbasi halifesince Mısır'a vali olarak atanan Muhammed bin Toğaç tarafından kurulan Türk devleti. Hicaz'a sahip olan ilk Türk-İslam devleti olma özelliği taşır.",
+    "facts": [
+      "Abbasilerce Mısır'a vali olarak atanan Muhammed bin Toğaç tarafından kuruldu",
+      "Tavaif-i Mülûk devletidir",
+      "Hicaz'a (Mekke ve Medine) sahip olan ilk Türk-İslam devletidir",
+      "969 yılında Fatımiler tarafından yıkılmıştır"
+    ]
+  },
+  {
+    "id": "gazneliler",
+    "name": "Gazneliler",
+    "startYear": 963,
+    "endYear": 1187,
+    "color": "#059669",
+    "centroid": [65, 32],
+    "mapFocus": { "center": [65, 32], "scale": 460 },
+    "territoryPolygon": [
+      [52, 26], [70, 22], [78, 28], [76, 36],
+      [66, 40], [54, 38], [48, 32], [52, 26]
+    ],
+    "ruler": "Gazneli Mahmut",
+    "location": "Afganistan, İran'ın doğusu, Kuzey Hindistan",
+    "summary": "Alp Tigin tarafından Gazne şehrinde kurulan; Gazneli Mahmut döneminde Türk-İslam kültürünü Hindistan'a taşıyan büyük imparatorluk.",
+    "facts": [
+      "Alp Tigin tarafından Gazne'de kurulmuştur",
+      "Sultan unvanını kullanan ilk Türk hükümdarı Gazneli Mahmut'tur",
+      "Gazneli Mahmut Hindistan'a 17 sefer düzenleyerek Türk-İslam kültürünü yaymıştır",
+      "Biruni, dünyaca ünlü bilim insanı ve astronom, Gazneli sarayında yaşamıştır",
+      "Firdevsi, Şehname'yi Gazneli Mahmut'a sunmuştur",
+      "Nesa, Serahs ve 1040 Dandanakan Savaşı'nda Selçuklulara yenilerek yıkılış sürecine girmiştir"
+    ]
+  },
+  {
+    "id": "buyuk-selcuklu",
+    "name": "Büyük Selçuklu Devleti",
+    "startYear": 1040,
+    "endYear": 1157,
+    "color": "#DC2626",
+    "centroid": [54, 34],
+    "mapFocus": { "center": [54, 34], "scale": 380 },
+    "territoryPolygon": [
+      [36, 24], [60, 22], [72, 28], [72, 40],
+      [60, 46], [44, 44], [34, 36], [36, 24]
+    ],
+    "ruler": "Alparslan",
+    "location": "İran, Irak, Orta Doğu, Orta Asya",
+    "summary": "Oğuzların Kınık boyundan gelen Selçuklular tarafından kurulan büyük Türk-İslam imparatorluğu. Malazgirt Zaferi ile Anadolu'nun kapılarını Türklere açmıştır.",
+    "facts": [
+      "Oğuzların Kınık boyundandır",
+      "Kuruluş tarihi olarak 1040 Dandanakan Savaşı kabul edilir",
+      "Tuğrul Bey'e halife tarafından 'Doğu'nun ve Batı'nın Sultanı' unvanı verilmiştir",
+      "Tuğrul Bey, Halifeden siyasi yetkiyi de devralmıştır",
+      "Alparslan 1071 Malazgirt Savaşı ile Bizans'ı mağlup ederek Anadolu'yu Türklere açmıştır",
+      "Alparslan 1064'te Ani Kalesi'ni alınca halife tarafından 'Ebu'l Feth' lakabıyla ödüllendirilmiştir",
+      "Nişabur, Rey ve İsfehan sırasıyla başkentlik yapmıştır",
+      "1141 Katvan Savaşı'nda Karahıtaylara yenildi; Sultan Sencer'in 1157'de ölümüyle yıkıldı"
+    ]
+  },
+  {
+    "id": "saltuklular",
+    "name": "Saltuklular",
+    "startYear": 1072,
+    "endYear": 1202,
+    "color": "#EC4899",
+    "centroid": [41, 40],
+    "mapFocus": { "center": [41, 40], "scale": 850 },
+    "territoryPolygon": [
+      [38, 39], [46, 39], [46, 42], [40, 43],
+      [36, 41], [38, 39]
+    ],
+    "ruler": "Ebü'l-Kâsım Saltuk",
+    "location": "Erzurum ve çevresi",
+    "summary": "Anadolu'da kurulan ilk Türk beyliklerinden biri. Erzurum merkez olmak üzere kuzeydoğu Anadolu'da hüküm sürmüştür.",
+    "facts": [
+      "1072 yılında Malazgirt Zaferi'nin ardından kurulmuştur",
+      "Merkezi Erzurum'dur",
+      "Anadolu'da kurulan ilk Türk beyliklerinden biridir",
+      "1202 yılında Anadolu Selçuklularına katılmıştır"
+    ]
+  },
+  {
+    "id": "mengucekler",
+    "name": "Mengücekler",
+    "startYear": 1080,
+    "endYear": 1228,
+    "color": "#A855F7",
+    "centroid": [39, 40],
+    "mapFocus": { "center": [39, 40], "scale": 850 },
+    "territoryPolygon": [
+      [36, 38], [42, 38], [44, 41], [40, 42],
+      [34, 41], [36, 38]
+    ],
+    "ruler": "Mengücek Gazi",
+    "location": "Erzincan, Kemah, Divriği",
+    "summary": "Doğu Anadolu'da Erzincan, Kemah ve Divriği çevresinde hüküm süren Türk beyliği.",
+    "facts": [
+      "1080 yılında kurulmuştur",
+      "Erzincan, Kemah ve Divriği'de hüküm sürmüştür",
+      "1228 yılında Anadolu Selçuklularına katılmıştır",
+      "Divriği Ulu Camii ve Darüşşifası bu dönemde inşa edilmiştir"
+    ]
+  },
+  {
+    "id": "danismentliler",
+    "name": "Danışmentliler",
+    "startYear": 1080,
+    "endYear": 1178,
+    "color": "#14B8A6",
+    "centroid": [36, 40],
+    "mapFocus": { "center": [36, 40], "scale": 780 },
+    "territoryPolygon": [
+      [30, 38], [40, 38], [42, 41], [36, 43],
+      [28, 42], [30, 38]
+    ],
+    "ruler": "Danışment Gazi",
+    "location": "Tokat, Niksar, Amasya, Sivas, Kayseri",
+    "summary": "Kuzey-orta Anadolu'da geniş bir coğrafyada hüküm süren önemli Türk beyliği. Tokat, Niksar, Amasya, Sivas ve Kayseri'yi yönetmiştir.",
+    "facts": [
+      "1080 yılında Danışment Gazi tarafından kurulmuştur",
+      "Tokat, Niksar, Amasya, Sivas ve Kayseri'yi kapsamıştır",
+      "1178 yılında Anadolu Selçukluları tarafından ilhak edilmiştir",
+      "Bizans'a ve Haçlılara karşı başarılı savunma savaşları vermiştir"
+    ]
+  },
+  {
+    "id": "caka-beyligi",
+    "name": "Çaka Beyliği",
+    "startYear": 1081,
+    "endYear": 1093,
+    "color": "#06B6D4",
+    "centroid": [27, 38],
+    "mapFocus": { "center": [27, 38], "scale": 1050 },
+    "territoryPolygon": [
+      [25, 37], [30, 37], [30, 40], [26, 40],
+      [24, 38], [25, 37]
+    ],
+    "ruler": "Çaka Bey",
+    "location": "İzmir ve Ege kıyıları",
+    "summary": "İzmir merkezli kurulan ilk denizci Türk beyliği. Ege adalarına kadar uzanan deniz seferleri düzenlemiştir.",
+    "facts": [
+      "1081 yılında İzmir'de kurulmuştur",
+      "İlk denizci Türk beyliğidir",
+      "Ege adalarına seferler düzenlemiştir",
+      "1093 yılında Bizans ve Anadolu Selçuklularının baskısıyla ortadan kalkmıştır"
+    ]
+  },
+  {
+    "id": "artuklular",
+    "name": "Artuklular",
+    "startYear": 1102,
+    "endYear": 1409,
+    "color": "#F97316",
+    "centroid": [41, 37],
+    "mapFocus": { "center": [41, 37], "scale": 820 },
+    "territoryPolygon": [
+      [38, 36], [46, 36], [48, 39], [44, 40],
+      [36, 39], [38, 36]
+    ],
+    "ruler": "Artuk Bey",
+    "location": "Mardin, Diyarbakır, Harput, Hasankeyf",
+    "summary": "Güneydoğu Anadolu'da uzun süre hüküm süren Türk beyliği. Mardin, Diyarbakır ve Hasankeyf'te sanat ve mimari eserler bırakmıştır.",
+    "facts": [
+      "1102 yılında kurulmuştur",
+      "Mardin, Diyarbakır, Harput, Batman ve Hasankeyf'te hüküm sürmüştür",
+      "1409 yılına kadar varlığını sürdürmüştür — en uzun süre yaşayan Anadolu beyliğidir",
+      "Mimari eserleri ile tanınır; Mardin ve Hasankeyf önemli kültür merkezleri olmuştur"
+    ]
+  },
+  {
+    "id": "anadolu-selcuklu",
+    "name": "Anadolu Selçuklu Devleti",
+    "startYear": 1075,
+    "endYear": 1308,
+    "color": "#EF4444",
+    "centroid": [33, 38],
+    "mapFocus": { "center": [33, 38], "scale": 500 },
+    "territoryPolygon": [
+      [26, 36], [42, 36], [46, 40], [42, 44],
+      [34, 44], [26, 42], [22, 39], [26, 36]
+    ],
+    "ruler": "I. Alaeddin Keykubad",
+    "location": "Anadolu (Konya merkez)",
+    "summary": "Büyük Selçukluların devamı niteliğinde Anadolu'da kurulan Türk devleti. Malazgirt'ten sonra Anadolu'yu Türk yurdu haline getirmiştir.",
+    "facts": [
+      "I. Haçlı Seferi'nden sonra merkez Konya'ya taşınmıştır",
+      "1176 Miryokefalon Savaşı ile Anadolu kesin olarak Türk yurdu olmuştur",
+      "Anadolu'da ilk Türk beyliklerini hakimiyeti altına alarak siyasi birliği sağlayan ilk devlettir",
+      "Alanya, Antalya, Sinop ve Samsun gibi limanların alınmasıyla deniz ticareti geliştirilmiştir",
+      "1243 Kösedağ Savaşı'nda İlhanlılara yenilerek tâbi devlet haline gelmiştir",
+      "1308'de son Selçuklu sultanının ölümüyle yıkılmış, beylikler dönemi başlamıştır"
+    ]
+  },
+  {
+    "id": "eyyubiler",
+    "name": "Eyyubiler",
+    "startYear": 1174,
+    "endYear": 1250,
+    "color": "#0EA5E9",
+    "centroid": [36, 30],
+    "mapFocus": { "center": [36, 30], "scale": 500 },
+    "territoryPolygon": [
+      [24, 18], [40, 18], [46, 24], [46, 36],
+      [38, 38], [28, 36], [24, 28], [24, 18]
+    ],
+    "ruler": "Selahattin Eyyubi",
+    "location": "Mısır, Suriye, Irak, Hicaz, Yemen",
+    "summary": "Selahattin Eyyubi tarafından kurulan büyük Türk-İslam devleti. 1187 Hıttin Zaferi ile Haçlıları Kudüs'ten çıkarmıştır.",
+    "facts": [
+      "Selahattin Eyyubi tarafından Kahire'de kurulmuştur",
+      "1187 Hıttin Savaşı ile Kudüs Haçlı Krallığı'na son verilmiş, Kudüs Müslümanlara geri kazandırılmıştır",
+      "Mısır, Suriye, Irak, Hicaz ve Yemen'e hükmetmiştir",
+      "1250'de Memlük komutanlarının darbesiyle yıkılmıştır"
+    ]
+  },
+  {
+    "id": "mogol-imparatorlugu",
+    "name": "Moğol İmparatorluğu",
+    "startYear": 1196,
+    "endYear": 1227,
+    "color": "#6B7280",
+    "centroid": [96, 46],
+    "mapFocus": { "center": [96, 46], "scale": 360 },
+    "territoryPolygon": [
+      [56, 40], [84, 42], [96, 48], [106, 52],
+      [96, 56], [80, 54], [64, 50], [52, 44], [56, 40]
+    ],
+    "ruler": "Cengiz Han (Timuçin)",
+    "location": "Moğolistan, Orta Asya, Kuzey Çin",
+    "summary": "Timuçin (Cengiz Han) tarafından kurulan tarihin en büyük kara imparatorluklarından biri. Türk ve İslam dünyasını derinden etkileyen fetihleriyle tanınır.",
+    "facts": [
+      "Cengiz Han (Timuçin) tarafından 1206 Büyük Kurultay'da resmen kurulmuştur",
+      "Cengiz Han'ın ölümüyle (1227) imparatorluk parçalanmıştır",
+      "Parçalanma sonucunda Altın Orda, İlhanlı, Çağatay ve Kubilay devletleri kurulmuştur",
+      "1258'de torunu Hülagu Han Bağdat'ı yakıp yıkmış, Abbasi Halifeliği'ne son vermiştir",
+      "Türk ve İslam devletleri üzerindeki tahribatı büyük olmuştur"
+    ]
+  },
+  {
+    "id": "memlukler",
+    "name": "Memlükler (Kölemenler)",
+    "startYear": 1250,
+    "endYear": 1517,
+    "color": "#EA580C",
+    "centroid": [33, 27],
+    "mapFocus": { "center": [33, 27], "scale": 480 },
+    "territoryPolygon": [
+      [24, 18], [42, 18], [48, 26], [46, 38],
+      [36, 38], [28, 34], [24, 26], [24, 18]
+    ],
+    "ruler": "Baybars",
+    "location": "Mısır, Suriye, Hicaz",
+    "summary": "Eyyubilerin ardından Mısır'da kurulan Türk kökenli askeri köle (gulam) devleti. Moğolları durduran tek İslam devleti olma özelliği taşır.",
+    "facts": [
+      "Eyyubi ordusundaki Türk kökenli gulam (köle asker) komutanlar tarafından kurulmuştur",
+      "1258'de Abbasilere son veren Moğolları (İlhanlıları) 1260 Ayn Calût Savaşı'nda yenilgiye uğratmıştır",
+      "Moğolların İslam dünyasına ilerleyişini durduran tek devlettir",
+      "Abbasi Halifeliği'nin sembolik olarak devamını Kahire'de sürdürmüştür",
+      "1517 Ridaniye Savaşı'nda Osmanlı Sultanı Yavuz Selim'e yenilerek yıkılmıştır",
+      "Yıkılmasıyla birlikte halifelik Osmanlılara geçmiştir"
+    ]
+  },
+  {
+    "id": "karakoyunlular",
+    "name": "Karakoyunlular",
+    "startYear": 1365,
+    "endYear": 1469,
+    "color": "#1D4ED8",
+    "centroid": [48, 40],
+    "mapFocus": { "center": [48, 40], "scale": 560 },
+    "territoryPolygon": [
+      [38, 36], [54, 36], [60, 40], [56, 46],
+      [44, 46], [36, 42], [38, 36]
+    ],
+    "ruler": "Kara Yusuf",
+    "location": "Azerbaycan, Batı İran, Doğu Anadolu",
+    "summary": "Azerbaycan'ın Türkleşmesini sağlayan önemli Türkmen beyliği. Siyah koyun armasıyla tanınır.",
+    "facts": [
+      "1365 yılında Türkmen aşiretleri tarafından kurulmuştur",
+      "Azerbaycan'ın Türkleşmesini sağlamışlardır",
+      "Siyah koyun amblemiyle tanınırlar",
+      "1469 yılında Akkoyunlular tarafından yıkılmıştır"
+    ]
+  },
+  {
+    "id": "akkoyunlular",
+    "name": "Akkoyunlular",
+    "startYear": 1340,
+    "endYear": 1514,
+    "color": "#CA8A04",
+    "centroid": [47, 39],
+    "mapFocus": { "center": [47, 39], "scale": 520 },
+    "territoryPolygon": [
+      [36, 34], [58, 34], [62, 38], [56, 46],
+      [42, 46], [34, 42], [36, 34]
+    ],
+    "ruler": "Uzun Hasan",
+    "location": "Doğu Anadolu, Azerbaycan, Irak, İran",
+    "summary": "Kara Yülük Osman Bey tarafından kurulan Türkmen beyliği. Uzun Hasan döneminde bölgenin en güçlü devletlerinden biri haline gelmiştir.",
+    "facts": [
+      "Kara Yülük Osman Bey tarafından kurulmuştur",
+      "En önemli hükümdarları Uzun Hasan'dır",
+      "Kuran-ı Kerim'i Türkçeye çevirmişlerdir",
+      "Dede Korkut Hikayelerini yazıya geçirmişlerdir",
+      "1473 Otlukbeli Savaşı'nda Osmanlı Devleti'ne yenilerek zayıflamışlardır",
+      "1514'te Safeviler tarafından ortadan kaldırılmışlardır"
+    ]
+  },
+  {
+    "id": "timur-devleti",
+    "name": "Timur Devleti",
+    "startYear": 1370,
+    "endYear": 1507,
+    "color": "#8B5CF6",
+    "centroid": [62, 38],
+    "mapFocus": { "center": [62, 38], "scale": 400 },
+    "territoryPolygon": [
+      [46, 28], [76, 26], [84, 40], [78, 50],
+      [62, 50], [44, 44], [40, 34], [46, 28]
+    ],
+    "ruler": "Timur (Aksak Timur)",
+    "location": "Türkistan, İran, Irak, Anadolu",
+    "summary": "Timur (Aksak Timur/Tamerlane) tarafından Semerkant merkezli kurulan imparatorluk. 1402 Ankara Savaşı'nda Osmanlıları mağlup etmesiyle tarihe geçmiştir.",
+    "facts": [
+      "Timur (Aksak Timur) tarafından Semerkant'ta kurulmuştur",
+      "1402 Ankara Savaşı'nda Osmanlı Sultanı Yıldırım Bayezid'i esir almıştır",
+      "Bu zafer Osmanlı'yı geçici olarak dağıtmış, Fetret Devri'ni başlatmıştır",
+      "Semerkant, Timur döneminde büyük bir kültür ve bilim merkezi haline gelmiştir",
+      "Timur'un ölümünden sonra devlet Timurlular olarak varlığını sürdürmüştür"
+    ]
+  },
+  {
+    "id": "safevi-devleti",
+    "name": "Safevi Devleti",
+    "startYear": 1501,
+    "endYear": 1736,
+    "color": "#10B981",
+    "centroid": [53, 32],
+    "mapFocus": { "center": [53, 32], "scale": 440 },
+    "territoryPolygon": [
+      [44, 24], [64, 24], [70, 30], [68, 42],
+      [58, 46], [44, 44], [38, 34], [44, 24]
+    ],
+    "ruler": "Şah İsmail",
+    "location": "İran, Azerbaycan, Irak",
+    "summary": "Şah İsmail tarafından İran'da kurulan ve Osmanlı ile sürekli rekabet halinde olan Türk kökenli Şii devleti.",
+    "facts": [
+      "Şah İsmail tarafından Tebriz'de kurulmuştur",
+      "İran'da Şii İslam'ı resmi devlet dini olarak ilan etmiştir",
+      "1514 Çaldıran Savaşı'nda Osmanlı Devleti'ne mağlup olmuşlardır",
+      "Osmanlı-Safevi rekabeti Orta Doğu'nun siyasi haritasını şekillendirmiştir",
+      "1736 yılına kadar İran'ı yönetmişlerdir"
+    ]
+  },
+  {
+    "id": "babur-imparatorlugu",
+    "name": "Babür İmparatorluğu",
+    "startYear": 1526,
+    "endYear": 1858,
+    "color": "#6366F1",
+    "centroid": [76, 28],
+    "mapFocus": { "center": [76, 28], "scale": 430 },
+    "territoryPolygon": [
+      [62, 20], [86, 20], [88, 28], [82, 36],
+      [68, 38], [60, 30], [62, 20]
+    ],
+    "ruler": "Babür Şah",
+    "location": "Hindistan (Delhi, Agra merkez)",
+    "summary": "Timur'un soyundan gelen Babür Şah tarafından Hindistan'da kurulan büyük Türk-Müslüman imparatorluğu. Tac Mahal bu dönemin simgesidir.",
+    "facts": [
+      "Babür Şah tarafından 1526 Panipat Savaşı'nın ardından kurulmuştur",
+      "Timur'un soyundan gelmektedir",
+      "Şah Cihan, eşi Mümtaz Mahal için Tac Mahal'i yaptırmıştır",
+      "Hindistan'ın en büyük Türk-Müslüman imparatorluğudur",
+      "1858'de İngilizler tarafından son verilmiştir"
+    ]
+  }
+]

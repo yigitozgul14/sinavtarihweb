@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 const DEDICATED_ROUTES: Record<string, string> = {
   "islamiyet-oncesi-turk-tarihi": "/egitim/islamiyet-oncesi-turk-tarihi",
+  "ilk-turk-islam-devletleri": "/egitim/ilk-turk-islam-devletleri",
 };
 
 interface PeriodFilterProps {
