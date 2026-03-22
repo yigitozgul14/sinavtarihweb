@@ -79,6 +79,7 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
 
   const [bundle, setBundle] = useState<PeriodDataBundle | null>(null);
   const [selectedEntityId, setSelectedEntityId] = useState<string | null>(null);
+  const [hoveredEntityId, setHoveredEntityId] = useState<string | null>(null);
 
   const { appPhase, goToCulture, goToQuiz, goToTimeline } = usePeriodPhase();
 
@@ -184,7 +185,9 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
               visibleEntities={visibleEntities}
               currentYear={currentYear}
               selectedEntityId={selectedEntityId}
+              hoveredEntityId={hoveredEntityId}
               onEntitySelect={handleEntitySelect}
+              onEntityHover={setHoveredEntityId}
               mapCenter={config.mapCenter}
               mapScale={config.mapScale}
             />
@@ -193,6 +196,7 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
               visibleEntities={visibleEntities}
               selectedEntityId={selectedEntityId}
               onSelect={setSelectedEntityId}
+              onHover={setHoveredEntityId}
             />
 
             <EventHighlightToast event={highlightedEvent} entities={bundle.entities} />

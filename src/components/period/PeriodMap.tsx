@@ -47,7 +47,9 @@ interface PeriodMapProps {
   visibleEntities: PeriodEntity[];
   currentYear: number;
   selectedEntityId: string | null;
+  hoveredEntityId: string | null;
   onEntitySelect: (id: string | null) => void;
+  onEntityHover: (id: string | null) => void;
   mapCenter?: [number, number];
   mapScale?: number;
 }
@@ -59,7 +61,9 @@ export default function PeriodMap({
   visibleEntities,
   currentYear,
   selectedEntityId,
+  hoveredEntityId,
   onEntitySelect,
+  onEntityHover,
   mapCenter = [65, 48],
   mapScale = 420,
 }: PeriodMapProps) {
@@ -139,10 +143,14 @@ export default function PeriodMap({
                   points={entity.territoryPolygon}
                   color={entity.color}
                   isSelected={entity.id === selectedEntityId}
+                  isHovered={entity.id === hoveredEntityId}
                   isAnySelected={selectedEntityId !== null}
+                  isAnyHovered={hoveredEntityId !== null}
                   currentZoom={zoom}
                   phaseOpacity={getPhaseOpacity(entity, currentYear, fadeIn, fadeOut)}
                   onClick={() => onEntitySelect(entity.id === selectedEntityId ? null : entity.id)}
+                  onMouseEnter={() => onEntityHover(entity.id)}
+                  onMouseLeave={() => onEntityHover(null)}
                 />
               );
             })}

@@ -282,8 +282,8 @@
     "startYear": 1196,
     "endYear": 1227,
     "color": "#6B7280",
-    "centroid": [96, 46],
-    "mapFocus": { "center": [96, 46], "scale": 360 },
+    "centroid": [79, 48],
+    "mapFocus": { "center": [79, 48], "scale": 360 },
     "territoryPolygon": [
       [56, 40], [84, 42], [96, 48], [106, 52],
       [96, 56], [80, 54], [64, 50], [52, 44], [56, 40]

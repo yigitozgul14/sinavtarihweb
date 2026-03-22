@@ -8,12 +8,14 @@ interface ActiveEntitiesPanelProps {
   visibleEntities: PeriodEntity[];
   selectedEntityId: string | null;
   onSelect: (id: string | null) => void;
+  onHover: (id: string | null) => void;
 }
 
 export default function ActiveEntitiesPanel({
   visibleEntities,
   selectedEntityId,
   onSelect,
+  onHover,
 }: ActiveEntitiesPanelProps) {
   if (visibleEntities.length === 0) return null;
 
@@ -41,6 +43,8 @@ export default function ActiveEntitiesPanel({
               >
                 <button
                   onClick={() => onSelect(isSelected ? null : entity.id)}
+                  onMouseEnter={() => onHover(entity.id)}
+                  onMouseLeave={() => onHover(null)}
                   className={`w-full flex items-center gap-2 text-left rounded-lg px-2 py-1 transition-colors ${
                     isSelected ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"
                   }`}

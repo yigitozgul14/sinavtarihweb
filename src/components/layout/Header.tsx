@@ -8,16 +8,20 @@ import { PERIODS } from "@/constants/periods";
 
 const DEDICATED_ROUTES: Record<string, string> = {
   "islamiyet-oncesi-turk-tarihi": "/egitim/islamiyet-oncesi-turk-tarihi",
+  "ilk-turk-islam-devletleri": "/egitim/ilk-turk-islam-devletleri",
 };
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
 
-  const pageTitle =
-    pathname === "/egitim/islamiyet-oncesi-turk-tarihi"
-      ? "İslamiyet Öncesi Türk Tarihi"
-      : "KPSS Tarih Haritası";
+  const activePeriodSlug = pathname.startsWith("/egitim/")
+    ? pathname.replace("/egitim/", "")
+    : null;
+  const activePeriod = activePeriodSlug
+    ? PERIODS.find((p) => p.slug === activePeriodSlug)
+    : null;
+  const pageTitle = activePeriod ? activePeriod.name : "KPSS Tarih Haritası";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10">
