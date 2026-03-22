@@ -100,6 +100,7 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
     speed,
     highlightedEvent,
     togglePlay,
+    pausePlayback,
     handleYearChange,
     handleSpeedChange,
   } = usePeriodPlayback({
@@ -116,7 +117,8 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
 
   const handleEntitySelect = useCallback((id: string | null) => {
     setSelectedEntityId(id);
-  }, []);
+    if (id !== null) pausePlayback();
+  }, [pausePlayback]);
 
   const selectedEntity = bundle?.entities.find((e) => e.id === selectedEntityId) ?? null;
 

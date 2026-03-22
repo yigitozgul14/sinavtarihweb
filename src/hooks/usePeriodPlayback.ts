@@ -153,6 +153,15 @@ export function usePeriodPlayback({
     setSpeed(s);
   }, []);
 
+  const pausePlayback = useCallback(() => {
+    if (autoResumeTimeoutRef.current) {
+      clearTimeout(autoResumeTimeoutRef.current);
+      autoResumeTimeoutRef.current = null;
+      setHighlightedEvent(null);
+    }
+    setIsPlaying(false);
+  }, []);
+
   return {
     currentYear,
     setCurrentYear,
@@ -160,6 +169,7 @@ export function usePeriodPlayback({
     speed,
     highlightedEvent,
     togglePlay,
+    pausePlayback,
     handleYearChange,
     handleSpeedChange,
   };

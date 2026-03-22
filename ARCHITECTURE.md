@@ -241,7 +241,7 @@ const { appPhase, goToTimeline, goToCulture, goToQuiz } = usePeriodPhase();
 ```typescript
 const {
   currentYear, isPlaying, speed, highlightedEvent,
-  togglePlay, handleYearChange, handleSpeedChange,
+  togglePlay, pausePlayback, handleYearChange, handleSpeedChange,
 } = usePeriodPlayback({ events, entities, config });
 ```
 
@@ -249,7 +249,8 @@ const {
 - `requestAnimationFrame` tabanlı smooth playback
 - Adaptive increment: en kısa ömürlü aktif entity'ye göre hız ayarı
 - Slow zone: kuruluş/yıkılış yılı ±15 yıl içinde otomatik yavaşlama (5x)
-- Auto-pause: harici olay türlerinde 2.5s durdur, sonra devam et
+- Auto-pause on event: harici olay türlerinde 2.5s durdur, sonra devam et (`autoPauseEventTypes`)
+- **Auto-pause on entity click**: Haritada veya panel'de bir entity'ye tıklandığında `pausePlayback()` çağrılır, oynatma otomatik durur — aktif auto-resume timeout da temizlenir
 - Spacebar toggle
 
 ### `usePeriodEntities` — Entity Filtresi
@@ -486,7 +487,8 @@ Aşağıdaki temizlik işlemleri ileride yapılacak — mevcut uygulama etkilenm
 - **60fps smooth playback**: `requestAnimationFrame` tabanlı, `setInterval` kullanılmıyor
 - **Adaptive speed**: Aktif entity'nin ömrüne göre increment otomatik ayarlanır
 - **Slow zone sistemi**: Kuruluş/yıkılış yakınında otomatik 5x yavaşlama
-- **Auto-pause + toast**: Harici olaylarda 2.5s durdur, bilgi göster, devam et
+- **Auto-pause on event + toast**: Harici olaylarda 2.5s durdur, bilgi göster, devam et
+- **Auto-pause on entity click**: Entity seçildiğinde `pausePlayback()` çağrılır; tüm dönemlerde geçerlidir
 - **Zero-config yeni dönem**: Registry'ye bir satır eklemek yeterli
 - **3 katman lazy loading**: Route split + veri lazy + faz-gated mount
 - **Strict TypeScript**: Adapter pattern, generic tip sistemi
