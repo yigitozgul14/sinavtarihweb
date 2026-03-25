@@ -39,4 +39,5 @@ export interface Civilization {
   location: string;
   summary: string;
   facts: string[];
+  hideFromMap?: boolean;
 }

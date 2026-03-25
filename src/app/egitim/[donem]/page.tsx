@@ -193,7 +193,7 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
             />
 
             <ActiveEntitiesPanel
-              visibleEntities={visibleEntities}
+              visibleEntities={visibleEntities.filter((e) => !e.hideFromMap)}
               selectedEntityId={selectedEntityId}
               onSelect={setSelectedEntityId}
               onHover={setHoveredEntityId}

@@ -1,0 +1,100 @@
+[
+  {
+    "from": "osmanli-beylik",
+    "to": "osmanli-devlet",
+    "type": "genişleme",
+    "label": "Edirne alınarak Balkanlar'a yayılma",
+    "year": 1362
+  },
+  {
+    "from": "osmanli-devlet",
+    "to": "osmanli-imparatorluk-1",
+    "type": "genişleme",
+    "label": "İstanbul'un fethiyle imparatorluk statüsü",
+    "year": 1453
+  },
+  {
+    "from": "osmanli-imparatorluk-1",
+    "to": "osmanli-imparatorluk-2",
+    "type": "genişleme",
+    "label": "Yavuz ile Mısır ve Şam fethiyle zirveye",
+    "year": 1512
+  },
+  {
+    "from": "karesioğullari",
+    "to": "osmanli-beylik",
+    "type": "yıkılış",
+    "label": "Karesioğulları Orhan Bey tarafından alındı",
+    "year": 1345
+  },
+  {
+    "from": "bizans",
+    "to": "osmanli-imparatorluk-1",
+    "type": "yıkılış",
+    "label": "Fatih Sultan Mehmed İstanbul'u fethetti",
+    "year": 1453
+  },
+  {
+    "from": "bulgar-kralligi",
+    "to": "osmanli-devlet",
+    "type": "yıkılış",
+    "label": "Bulgar Krallığı Osmanlı'ya geçti",
+    "year": 1396
+  },
+  {
+    "from": "sirp-devleti",
+    "to": "osmanli-imparatorluk-1",
+    "type": "yıkılış",
+    "label": "Sırbistan Osmanlı himayesine girdi",
+    "year": 1459
+  },
+  {
+    "from": "macaristan",
+    "to": "osmanli-imparatorluk-2",
+    "type": "yıkılış",
+    "label": "Mohaç Savaşı ile Macaristan çöktü",
+    "year": 1526
+  },
+  {
+    "from": "karamanogullari",
+    "to": "osmanli-imparatorluk-1",
+    "type": "yıkılış",
+    "label": "Karamanoğulları kesin olarak ortadan kalktı",
+    "year": 1487
+  },
+  {
+    "from": "dulkadiroglullari",
+    "to": "osmanli-imparatorluk-2",
+    "type": "yıkılış",
+    "label": "Turnadağ Savaşı ile alındı",
+    "year": 1515
+  },
+  {
+    "from": "akkoyunlular",
+    "to": "osmanli-imparatorluk-1",
+    "type": "yıkılış",
+    "label": "Otlukbeli'nde Doğu Anadolu Osmanlı'ya geçti",
+    "year": 1473
+  },
+  {
+    "from": "memlukler",
+    "to": "osmanli-imparatorluk-2",
+    "type": "yıkılış",
+    "label": "Ridaniye ile Mısır ve halifelik Osmanlı'ya geçti",
+    "year": 1517
+  },
+  {
+    "from": "timur-devleti",
+    "to": "osmanli-devlet",
+    "type": "bağlantı",
+    "label": "Ankara Savaşı — Osmanlı Fetret Devri'ne girdi",
+    "year": 1402
+  },
+  {
+    "from": "safeviler",
+    "to": "osmanli-imparatorluk-2",
+    "type": "bağlantı",
+    "label": "Amasya Antlaşması ile sınır çizildi",
+    "year": 1555
+  }
+]

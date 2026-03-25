@@ -13,6 +13,7 @@ export interface PeriodEntity {
   centroid: [number, number];
   mapFocus: { center: [number, number]; scale: number };
   territoryPolygon: [number, number][];
+  hideFromMap?: boolean;
   /** Dönem-özel alanlar (ruler, summary, facts, location vb.) */
   meta: Record<string, unknown>;
 }

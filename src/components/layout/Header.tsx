@@ -9,6 +9,7 @@ import { PERIODS } from "@/constants/periods";
 const DEDICATED_ROUTES: Record<string, string> = {
   "islamiyet-oncesi-turk-tarihi": "/egitim/islamiyet-oncesi-turk-tarihi",
   "ilk-turk-islam-devletleri": "/egitim/ilk-turk-islam-devletleri",
+  "osmanli-kurulus-yukselme": "/egitim/osmanli-kurulus-yukselme",
 };
 
 export default function Header() {

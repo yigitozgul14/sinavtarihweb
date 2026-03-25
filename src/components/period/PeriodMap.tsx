@@ -92,7 +92,7 @@ export default function PeriodMap({
 
   const zScale = Math.max(0.45, 1 / Math.sqrt(zoom));
   const activeEntities = visibleEntities.filter(
-    (e) => currentYear >= e.startYear && currentYear <= e.endYear
+    (e) => !e.hideFromMap && currentYear >= e.startYear && currentYear <= e.endYear
   );
 
   return (
@@ -135,7 +135,7 @@ export default function PeriodMap({
 
           {/* Territory polygons */}
           <AnimatePresence>
-            {visibleEntities.map((entity) => {
+            {visibleEntities.filter((e) => !e.hideFromMap).map((entity) => {
               const { fadeIn, fadeOut } = getEntityFadeWindow(entity, entities, transitions);
               return (
                 <TerritoryPolygon
@@ -190,7 +190,7 @@ export default function PeriodMap({
           </AnimatePresence>
 
           {/* Entity centroid dots + labels */}
-          {visibleEntities.map((entity) => {
+          {visibleEntities.filter((e) => !e.hideFromMap).map((entity) => {
             const isSelected = entity.id === selectedEntityId;
             if (selectedEntityId && !isSelected) return null;
 
@@ -441,6 +441,7 @@ export default function PeriodMap({
             { type: "yıkılış",          color: "#D63A3A", label: "Yıkılış" },
             { type: "restorasyon",      color: "#5090F0", label: "Restorasyon" },
             { type: "hakimiyet-geçişi", color: "#C8A030", label: "Hâkimiyet Geçişi" },
+            { type: "genişleme",        color: "#16A34A", label: "Genişleme" },
             { type: "bağlantı",         color: "#888",    label: "Bağlantı" },
           ]
             .filter((item) => relevantTransitions.some((t) => t.type === item.type))

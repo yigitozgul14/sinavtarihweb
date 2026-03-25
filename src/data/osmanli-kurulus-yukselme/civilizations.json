@@ -1,0 +1,344 @@
+[
+  {
+    "id": "osmanli-beylik",
+    "name": "Osmanlı Beyliği",
+    "startYear": 1299,
+    "endYear": 1362,
+    "color": "#C8102E",
+    "centroid": [30, 40],
+    "mapFocus": { "center": [30, 40], "scale": 650 },
+    "territoryPolygon": [
+      [26, 38], [33, 38], [34, 40], [31, 43], [26, 43], [24, 41], [26, 38]
+    ],
+    "ruler": "Osman Bey (1299–1324) · Orhan Bey (1324–1362)",
+    "location": "Kuzeybatı Anadolu, Erken Trakya",
+    "summary": "Osman Bey tarafından kurulan beylik, Orhan Bey döneminde devlet yapısına kavuştu. Bursa ve İznik fethedildi; Çimpe Kalesi ile Rumeli'ye ilk adım atıldı.",
+    "facts": [
+      "1299'da Osman Bey bağımsızlığını ilan ederek beyliği kurdu",
+      "1302 Koyunhisar Savaşı ile Bizans ile ilk büyük mücadele yaşandı",
+      "1326'da Bursa fethedilerek ilk başkent yapıldı",
+      "1345'te Karesioğulları alınarak Osmanlı denizciliği başladı",
+      "1353'te Çimpe Kalesi ile Rumeli'ye kapı açıldı"
+    ]
+  },
+  {
+    "id": "osmanli-devlet",
+    "name": "Osmanlı Devleti",
+    "startYear": 1362,
+    "endYear": 1453,
+    "color": "#C8102E",
+    "centroid": [28, 41],
+    "mapFocus": { "center": [26, 41], "scale": 480 },
+    "territoryPolygon": [
+      [18, 36], [42, 36], [42, 44], [30, 48], [18, 44], [16, 42], [18, 36]
+    ],
+    "ruler": "I. Murad · Yıldırım Bayezid · I. Mehmed · II. Murad",
+    "location": "Balkanlar, Anadolu, Trakya",
+    "summary": "I. Murad ile Balkanlar'a yayılan Osmanlı, 1389 I. Kosova ve 1396 Niğbolu zaferlerini kazandı. 1402 Ankara Savaşı'ndan sonra Fetret Devri yaşandı; I. Mehmed birliği yeniden kurdu.",
+    "facts": [
+      "1363 Sazlıdere Savaşı ile Edirne alındı ve başkent yapıldı",
+      "I. Murad, sultan unvanını kullanan ilk Osmanlı hükümdarıdır",
+      "1389 I. Kosova ile Balkan hakimiyeti pekişti; I. Murad savaşta şehit düştü",
+      "1396 Niğbolu'da büyük Haçlı ordusu yenilgiye uğratıldı",
+      "1402 Ankara Savaşı'nda Timur'a yenilerek Fetret Devri başladı",
+      "I. Mehmed Osmanlı'nın ikinci kurucusu sayılır"
+    ]
+  },
+  {
+    "id": "osmanli-imparatorluk-1",
+    "name": "Osmanlı İmparatorluğu",
+    "startYear": 1453,
+    "endYear": 1512,
+    "color": "#C8102E",
+    "centroid": [28, 40],
+    "mapFocus": { "center": [26, 40], "scale": 420 },
+    "territoryPolygon": [
+      [14, 34], [44, 32], [46, 44], [34, 50], [18, 50], [12, 44], [14, 34]
+    ],
+    "ruler": "Fatih Sultan Mehmed (1451–1481) · II. Bayezid (1481–1512)",
+    "location": "Balkanlar, Anadolu, Karadeniz, Ege",
+    "summary": "Fatih Sultan Mehmed 1453'te İstanbul'u fethederek Osmanlı'yı imparatorluğa dönüştürdü. Akkoyunluları yenerek Doğu Anadolu'yu aldı; Kırım fethiyle Karadeniz Türk gölü oldu.",
+    "facts": [
+      "1453 İstanbul fethiyle Bizans sona erdi; Ortaçağ kapandı",
+      "İstanbul başkent yapılarak büyük bir kozmopolit şehre dönüştürüldü",
+      "1473 Otlukbeli'nde Akkoyunlular yenilerek Doğu Anadolu alındı",
+      "1475'te Kırım fethedildi; Karadeniz Türk gölü haline geldi",
+      "II. Bayezid dönemi Cem Sultan meselesiyle dış politikada sönük geçti"
+    ]
+  },
+  {
+    "id": "osmanli-imparatorluk-2",
+    "name": "Osmanlı İmparatorluğu (Yükselme)",
+    "startYear": 1512,
+    "endYear": 1579,
+    "color": "#C8102E",
+    "centroid": [35, 38],
+    "mapFocus": { "center": [32, 37], "scale": 380 },
+    "territoryPolygon": [
+      [14, 36], [58, 22], [58, 44], [44, 52], [28, 52], [14, 46], [14, 36]
+    ],
+    "ruler": "Yavuz Sultan Selim · Kanuni Sultan Süleyman · II. Selim · III. Murad",
+    "location": "Üç Kıta: Avrupa, Asya, Afrika",
+    "summary": "Yavuz Sultan Selim doğuda Çaldıran, güneyde Ridaniye seferleriyle Mısır'ı alarak halifeliği devraldı. Kanuni 13 seferle imparatorluğu zirveye taşıdı; Preveze ile Akdeniz'e hakim oldu.",
+    "facts": [
+      "1514 Çaldıran Savaşı ile Safevi tehlikesi durduruldu",
+      "1517 Ridaniye ile Mısır alındı; halifelik Osmanlı'ya geçti",
+      "1526 Mohaç ile Macaristan fiilen Osmanlı topraklarına katıldı",
+      "1538 Preveze Zaferi ile Akdeniz Türk gölü haline geldi",
+      "Kanuni, 13 seferle Osmanlı padişahları arasında rekortmendir",
+      "Sokullu Mehmet Paşa döneminde Don-Volga ve Süveyş Kanalı projeleri gündeme geldi"
+    ]
+  },
+  {
+    "id": "bizans",
+    "name": "Bizans İmparatorluğu",
+    "startYear": 1299,
+    "endYear": 1453,
+    "color": "#9333EA",
+    "centroid": [29, 40],
+    "mapFocus": { "center": [29, 40], "scale": 700 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [26, 38], [32, 38], [32, 42], [28, 42], [24, 40], [26, 38]
+    ],
+    "ruler": "Palaiologos Hanedanı",
+    "location": "Konstantinopolis ve çevresi, bazı Ege adaları",
+    "summary": "1261'de Latin İmparatorluğu'ndan kurtarılan Bizans, yüzyıllar içinde küçülerek kendi sınırlarına çekildi. 1453'te Fatih Sultan Mehmed tarafından fethedilerek 1000 yıllık tarih son buldu.",
+    "facts": [
+      "Doğu Roma'nın devamı olan Bizans 395'ten 1453'e kadar yaşadı",
+      "1394-1402 arası İstanbul ilk kez Osmanlı kuşatması altına girdi",
+      "Bizans'ın düşmesiyle Rönesans başladı ve Ortaçağ kapandı",
+      "Son imparator XI. Konstantinos savaşarak öldü"
+    ]
+  },
+  {
+    "id": "bulgar-kralligi",
+    "name": "Bulgar Krallığı",
+    "startYear": 1299,
+    "endYear": 1396,
+    "color": "#F59E0B",
+    "centroid": [25, 43],
+    "mapFocus": { "center": [25, 43], "scale": 700 },
+    "territoryPolygon": [
+      [22, 42], [28, 42], [28, 44], [24, 44], [22, 43], [22, 42]
+    ],
+    "ruler": "Bulgar Çarları",
+    "location": "Bulgaristan, Trakya",
+    "summary": "Osmanlı'nın Balkanlara yayılmasıyla baskı altına giren Bulgar Krallığı, 1363 Sazlıdere'nin ardından Osmanlı hakimiyetine girdi.",
+    "facts": [
+      "1363 Sazlıdere Savaşı ile Osmanlı Trakya'ya yerleşti",
+      "Başkent Tırnova 1393'te alındı",
+      "1396 Niğbolu Savaşı'nın ardından tamamen Osmanlı kontrolüne geçti"
+    ]
+  },
+  {
+    "id": "sirp-devleti",
+    "name": "Sırbistan",
+    "startYear": 1299,
+    "endYear": 1459,
+    "color": "#3B82F6",
+    "centroid": [21, 44],
+    "mapFocus": { "center": [21, 44], "scale": 700 },
+    "territoryPolygon": [
+      [19, 43], [23, 43], [23, 46], [20, 46], [18, 44], [19, 43]
+    ],
+    "ruler": "Sırp Despotları",
+    "location": "Balkanlar, Sırbistan",
+    "summary": "Balkan devletlerinin Osmanlı karşısındaki en önemli direniş güçlerinden biri olan Sırbistan, I. ve II. Kosova Savaşları'nın ardından Osmanlı himayesine girdi.",
+    "facts": [
+      "1389 I. Kosova Savaşı Osmanlı-Sırp dengesini değiştirdi",
+      "I. Murad bu savaşta bir Sırp tarafından şehit edildi",
+      "1448 II. Kosova ile Osmanlı hakimiyeti pekişti",
+      "1459'da tamamen Osmanlı topraklarına katıldı"
+    ]
+  },
+  {
+    "id": "macaristan",
+    "name": "Macaristan",
+    "startYear": 1299,
+    "endYear": 1526,
+    "color": "#F97316",
+    "centroid": [18, 47],
+    "mapFocus": { "center": [18, 47], "scale": 600 },
+    "territoryPolygon": [
+      [16, 46], [22, 46], [22, 50], [18, 50], [14, 48], [16, 46]
+    ],
+    "ruler": "Macar Krallığı (Hunyadi, Corvinus, Jagiellon)",
+    "location": "Orta Avrupa, Tuna Havzası",
+    "summary": "Haçlı seferlerinin örgütleyicisi olarak defalarca Osmanlı ile savaşan Macaristan, 1526 Mohaç Savaşı'nda büyük bir yenilgiye uğrayarak fiilen sona erdi.",
+    "facts": [
+      "1396 Niğbolu'da Haçlı ordusunu yönetti",
+      "1444 Varna ve 1448 II. Kosova'da yenildi",
+      "Hunyadi Janos Osmanlı'ya karşı uzun süre direnç gösterdi",
+      "1521'de Belgrad Osmanlı'ya geçti",
+      "1526 Mohaç Savaşı'nda Macar ordusu imha edildi; kral savaşta öldü"
+    ]
+  },
+  {
+    "id": "karamanogullari",
+    "name": "Karamanoğulları",
+    "startYear": 1256,
+    "endYear": 1487,
+    "color": "#84CC16",
+    "centroid": [34, 37],
+    "mapFocus": { "center": [34, 37], "scale": 700 },
+    "territoryPolygon": [
+      [32, 36], [38, 36], [38, 40], [34, 40], [32, 38], [32, 36]
+    ],
+    "ruler": "Karamanoğulları Beyleri",
+    "location": "Orta Anadolu, Konya ve çevresi",
+    "summary": "Kendilerini Selçuklu mirasçısı sayan Karamanoğulları, Osmanlı'nın en önemli Anadolu rakiplerindendi. Defalarca topraklarını geri aldılar; II. Bayezid döneminde 1487'de kesin olarak ortadan kalktılar.",
+    "facts": [
+      "Selçuklu mirasını sahiplenerek Anadolu'nun en güçlü beyliğiydi",
+      "Defalarca Osmanlı ile savaşıp topraklarını geri aldılar",
+      "Fatih döneminde büyük ölçüde toprak kaybetti",
+      "II. Bayezid döneminde 1487'de kesin olarak ortadan kalktı"
+    ]
+  },
+  {
+    "id": "dulkadiroglullari",
+    "name": "Dulkadiroğulları",
+    "startYear": 1348,
+    "endYear": 1515,
+    "color": "#14B8A6",
+    "centroid": [38, 37],
+    "mapFocus": { "center": [38, 37], "scale": 800 },
+    "territoryPolygon": [
+      [36, 36], [40, 36], [40, 38], [37, 38], [36, 37], [36, 36]
+    ],
+    "ruler": "Dulkadiroğulları Beyleri",
+    "location": "Güneydoğu Anadolu, Maraş çevresi",
+    "summary": "Osmanlı ile Memlük arasında tampon bölge olarak varlığını sürdüren Dulkadiroğulları, 1515 Turnadağ Savaşı'nda Yavuz Sultan Selim tarafından ortadan kaldırıldı.",
+    "facts": [
+      "Osmanlı-Memlük tampon bölgesi olarak önemli rol oynadı",
+      "Mısır seferi öncesi 1515'te Yavuz tarafından alındı",
+      "Alınmasıyla Anadolu Türk birliği kesin olarak sağlandı"
+    ]
+  },
+  {
+    "id": "akkoyunlular",
+    "name": "Akkoyunlular",
+    "startYear": 1340,
+    "endYear": 1514,
+    "color": "#FBBF24",
+    "centroid": [46, 39],
+    "mapFocus": { "center": [46, 39], "scale": 500 },
+    "territoryPolygon": [
+      [40, 36], [52, 34], [54, 40], [46, 44], [38, 42], [38, 38], [40, 36]
+    ],
+    "ruler": "Uzun Hasan",
+    "location": "Doğu Anadolu, Azerbaycan, Batı İran",
+    "summary": "Karakoyunluları yıkan Akkoyunlular, Batı ile ittifak kurarak Osmanlı'ya karşı durmaya çalıştı. 1473 Otlukbeli Savaşı'nda Fatih'e yenildi; ardından Safeviler tarafından yıkıldı.",
+    "facts": [
+      "Uzun Hasan Venedik ile Osmanlı'ya karşı ittifak kurdu",
+      "1473 Otlukbeli Savaşı'nda Fatih Sultan Mehmed'e yenildi",
+      "Doğu Anadolu'nun kontrolünü Osmanlı'ya bıraktı",
+      "1514'te Safevi Devleti tarafından tamamen yıkıldı"
+    ]
+  },
+  {
+    "id": "safeviler",
+    "name": "Safevi Devleti",
+    "startYear": 1501,
+    "endYear": 1579,
+    "color": "#10B981",
+    "centroid": [52, 35],
+    "mapFocus": { "center": [52, 35], "scale": 400 },
+    "territoryPolygon": [
+      [44, 26], [60, 24], [62, 38], [54, 44], [44, 42], [44, 26]
+    ],
+    "ruler": "Şah İsmail · Şah Tahmasp",
+    "location": "İran, Azerbaycan, Irak",
+    "summary": "Şii İslam'ı devlet dini yapan Safevi Devleti, Anadolu'da Osmanlı'ya karşı Şii propagandası yürüttü. 1514 Çaldıran yenilgisi sınırları belirledi; 1555 Amasya Antlaşması ile ilk kalıcı sınır çizildi.",
+    "facts": [
+      "Anadolu'da Şiilik propagandası Şah Kulu gibi isyanlara yol açtı",
+      "1514 Çaldıran Savaşı'nda Yavuz Sultan Selim'e yenildi",
+      "1555 Amasya Antlaşması ile Osmanlı-İran sınırı ilk kez belirlendi",
+      "Osmanlı-Safevi rekabeti birkaç yüzyıl boyunca sürdü"
+    ]
+  },
+  {
+    "id": "memlukler",
+    "name": "Memlükler",
+    "startYear": 1250,
+    "endYear": 1517,
+    "color": "#EA580C",
+    "centroid": [33, 28],
+    "mapFocus": { "center": [33, 28], "scale": 500 },
+    "territoryPolygon": [
+      [30, 20], [42, 30], [40, 38], [34, 38], [28, 34], [26, 26], [30, 20]
+    ],
+    "ruler": "Memlük Sultanları",
+    "location": "Mısır, Suriye, Filistin, Hicaz",
+    "summary": "1250'den 1517'ye kadar Mısır ve Suriye'yi yöneten Memlükler, 1260 Ayn Calût'ta Moğolları durdurdu. 1517'de Yavuz Sultan Selim'e yenilerek sona erdi; halifelik Osmanlı'ya geçti.",
+    "facts": [
+      "1260 Ayn Calût'ta Moğolların Batı'ya ilerleyişini durdurdu",
+      "Abbasi halifelerini Kahire'de korudu",
+      "1516 Mercidabık ve 1517 Ridaniye yenilgileriyle son buldu",
+      "Yenilginin ardından halifelik Osmanlı'ya geçti"
+    ]
+  },
+  {
+    "id": "venedik",
+    "name": "Venedik Cumhuriyeti",
+    "startYear": 1299,
+    "endYear": 1579,
+    "color": "#0EA5E9",
+    "centroid": [18, 40],
+    "mapFocus": { "center": [18, 40], "scale": 600 },
+    "territoryPolygon": [
+      [13, 44], [18, 44], [22, 38], [20, 36], [14, 42], [13, 44]
+    ],
+    "ruler": "Venedik Doç'ları",
+    "location": "Adriyatik kıyısı, Dalmaçya, Ege adaları",
+    "summary": "Doğu Akdeniz ticaretinin hakimi olan Venedik, Osmanlı'nın deniz gücü karşısında geriledi. 1479'da ticarî imtiyazlar karşılığında Osmanlı'ya yıllık vergi ödemeyi kabul etti.",
+    "facts": [
+      "1416'da Osmanlı donanmasını Gelibolu'da yendi (ilk Osmanlı deniz yenilgisi)",
+      "1479 İstanbul Antlaşması ile ticari imtiyazlar aldı",
+      "1538 Preveze'de Osmanlı donanmasına yenildi",
+      "1571 İnebahtı'da ise Haçlı donanması Osmanlı'yı mağlup etti"
+    ]
+  },
+  {
+    "id": "karesioğullari",
+    "name": "Karesioğulları",
+    "startYear": 1300,
+    "endYear": 1345,
+    "color": "#A78BFA",
+    "centroid": [28, 39],
+    "mapFocus": { "center": [28, 39], "scale": 800 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [26, 38], [30, 38], [30, 40], [27, 40], [26, 39], [26, 38]
+    ],
+    "ruler": "Karesioğulları Beyleri",
+    "location": "Kuzeybatı Anadolu, Balıkesir ve çevresi",
+    "summary": "Osmanlı'nın ilk Türk deniz gücü tabanını oluşturan Karesioğulları, 1345'te Orhan Bey tarafından alındı. Bu alımla Osmanlı denizciliği ve Rumeli'ye geçiş süreci hız kazandı.",
+    "facts": [
+      "Alınmasıyla Osmanlı'nın denizcilik faaliyetleri başladı",
+      "1345'te Orhan Bey tarafından Osmanlı'ya katıldı",
+      "Karesili denizciler Osmanlı donanmasının çekirdeğini oluşturdu"
+    ]
+  },
+  {
+    "id": "timur-devleti",
+    "name": "Timur Devleti",
+    "startYear": 1370,
+    "endYear": 1405,
+    "color": "#6B7280",
+    "centroid": [60, 40],
+    "mapFocus": { "center": [60, 40], "scale": 350 },
+    "territoryPolygon": [
+      [52, 32], [70, 36], [72, 44], [60, 48], [50, 44], [46, 38], [52, 32]
+    ],
+    "ruler": "Timur (Aksak Timur)",
+    "location": "Orta Asya, İran, Anadolu",
+    "summary": "Timur, 1402 Ankara Savaşı'nda Yıldırım Bayezid'i esir alarak Osmanlı'yı Fetret Devri'ne soktu. Timur'un 1405'te ölmesinin ardından Osmanlı toparlanmaya başladı.",
+    "facts": [
+      "1402 Ankara Savaşı'nda Yıldırım Bayezid'i esir aldı",
+      "Anadolu beyliklerini yeniden kurarak Osmanlı'yı zayıflattı",
+      "Timur 1405'te öldü; devlet hızla dağıldı",
+      "Osmanlı'nın yenilgisi 1402-1413 Fetret Devri'ni başlattı"
+    ]
+  }
+]

@@ -1,0 +1,298 @@
+[
+  {
+    "id": "osmanli-kuruluş",
+    "civId": "osmanli-beylik",
+    "title": "Osmanlı Beyliği'nin Kuruluşu",
+    "year": 1299,
+    "type": "kuruluş",
+    "coordinates": [30, 40],
+    "description": "Osman Bey, Söğüt ve Domaniç çevresinde küçük bir beylik olarak bağımsızlığını ilan etti. Osmanlı Devleti'nin resmi kuruluşu kabul edilir."
+  },
+  {
+    "id": "koyunhisar",
+    "civId": "osmanli-beylik",
+    "secondaryCivId": "bizans",
+    "title": "Koyunhisar (Bafeon) Savaşı",
+    "year": 1302,
+    "type": "savaş",
+    "coordinates": [29.4, 40.8],
+    "description": "Osmanlı kuvvetleri ile Bizans ordusu arasındaki bu savaşta Osman Bey galip geldi. Bizans'ın Bursa önlerindeki savunması çöktü."
+  },
+  {
+    "id": "bursa-fethi",
+    "civId": "osmanli-beylik",
+    "secondaryCivId": "bizans",
+    "title": "Bursa'nın Fethi",
+    "year": 1326,
+    "type": "savaş",
+    "coordinates": [29.1, 40.2],
+    "description": "Orhan Bey döneminde Bursa fethedildi ve Osmanlı'nın ilk başkenti oldu. Bu fetih, beyliğin güçlü bir devlete dönüşümünün simgesidir."
+  },
+  {
+    "id": "pelekanon",
+    "civId": "osmanli-beylik",
+    "secondaryCivId": "bizans",
+    "title": "Pelekanon Savaşı — İznik Alındı",
+    "year": 1329,
+    "type": "savaş",
+    "coordinates": [29.5, 40.9],
+    "description": "Bizans İmparatoru III. Andronikos ile Orhan Bey karşı karşıya geldi. Osmanlılar savaşı kazandı; arkasından İznik ve İzmit de fethedildi."
+  },
+  {
+    "id": "karesi-alinmasi",
+    "civId": "osmanli-beylik",
+    "secondaryCivId": "karesioğullari",
+    "title": "Karesioğullarının Alınması",
+    "year": 1345,
+    "type": "siyasi",
+    "coordinates": [27.8, 39.4],
+    "description": "Orhan Bey, iç karışıklıklar yaşayan Karesioğullarını topraklarına kattı. Bu sayede Ege kıyılarına ulaşıldı ve denizcilik konusunda deneyimli kuvvetler Osmanlı'ya geçti."
+  },
+  {
+    "id": "cimpe-kalesi",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "bizans",
+    "title": "Çimpe Kalesi — Rumeli'ye İlk Adım",
+    "year": 1353,
+    "type": "siyasi",
+    "coordinates": [26.7, 40.6],
+    "description": "Orhan Bey'in oğlu Süleyman Paşa, Bizans iç savaşında Kantakuzenos'a yardım karşılığında Çimpe Kalesi'ni aldı. Bu, Osmanlıların Avrupa'ya geçişinin başlangıcıdır."
+  },
+  {
+    "id": "sazlidere",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "bulgar-kralligi",
+    "title": "Sazlıdere Savaşı — Edirne Alındı",
+    "year": 1363,
+    "type": "savaş",
+    "coordinates": [26.5, 41.7],
+    "description": "Murat I döneminde Osmanlılar Trakya'ya ilerledi; Sazlıdere'de Bulgar ve Bizans kuvvetleri yenildi. Edirne fethedilerek ikinci başkent yapıldı."
+  },
+  {
+    "id": "sirpsindiği",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "sirp-devleti",
+    "title": "Sırpsındığı Savaşı (I. Haçlı)",
+    "year": 1364,
+    "type": "savaş",
+    "coordinates": [26.2, 41.6],
+    "description": "Papa Urban V'in örgütlediği Haçlı kuvvetleri Meriç Nehri kıyısında Osmanlılara ağır bir yenilgi tattı. Batı'nın ilk büyük Osmanlı karşıtı girişimi sonuçsuz kaldı."
+  },
+  {
+    "id": "kosova-1",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "sirp-devleti",
+    "title": "I. Kosova Savaşı",
+    "year": 1389,
+    "type": "savaş",
+    "coordinates": [21.0, 42.7],
+    "description": "Osmanlılar, Sırp-Bosna-Arnavut koalisyonunu Kosova Ovası'nda kesin bir yenilgiye uğrattı. Sultan I. Murat savaş sırasında şehit düştü; yerine I. Beyazıt geçti."
+  },
+  {
+    "id": "istanbul-kusatma-1",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "bizans",
+    "title": "İstanbul'un İlk Kuşatması",
+    "year": 1394,
+    "type": "savaş",
+    "coordinates": [28.9, 41.0],
+    "description": "I. Beyazıt, İstanbul'u yaklaşık sekiz yıl boyunca kuşatma altında tuttu. Timur'un batıya ilerlemesi nedeniyle kuşatma kaldırılmak zorunda kalındı."
+  },
+  {
+    "id": "nigbolu",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "macaristan",
+    "title": "Niğbolu Savaşı — Haçlılar Yenildi",
+    "year": 1396,
+    "type": "savaş",
+    "coordinates": [24.9, 43.7],
+    "description": "Macaristan öncülüğündeki büyük Haçlı ordusu Niğbolu'da Yıldırım Beyazıt tarafından bozguna uğratıldı. Osmanlı'nın Balkan hakimiyeti pekişti."
+  },
+  {
+    "id": "ankara-savasi",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "timur-devleti",
+    "title": "Ankara Savaşı — Fetret Devri",
+    "year": 1402,
+    "type": "savaş",
+    "coordinates": [32.9, 39.9],
+    "description": "Timur, Ankara Savaşı'nda Yıldırım Beyazıt'ı esir aldı. Osmanlı on yıldan fazla süren Fetret Devri'ne girdi; kardeşler arasında taht mücadelesi yaşandı."
+  },
+  {
+    "id": "seyh-bedrettin",
+    "civId": "osmanli-devlet",
+    "title": "Şeyh Bedrettin İsyanı",
+    "year": 1418,
+    "type": "din",
+    "coordinates": [26.0, 41.5],
+    "description": "Fetret Devri'nin izlerini taşıyan bu isyan, sosyal ve dini karışıklıkların yansımasıydı. Şeyh Bedrettin yakalanarak idam edildi; Osmanlı merkezi otoritesi güçlendi."
+  },
+  {
+    "id": "varna-savasi",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "macaristan",
+    "title": "Varna Savaşı",
+    "year": 1444,
+    "type": "savaş",
+    "coordinates": [28.0, 43.2],
+    "description": "II. Murat, Macar-Polonya öncülüğündeki Haçlı ordusunu Varna'da kesin bir yenilgiye uğrattı. Macar Kralı Vladislav I. savaşta hayatını kaybetti."
+  },
+  {
+    "id": "kosova-2",
+    "civId": "osmanli-devlet",
+    "secondaryCivId": "macaristan",
+    "title": "II. Kosova Savaşı",
+    "year": 1448,
+    "type": "savaş",
+    "coordinates": [21.0, 42.7],
+    "description": "II. Murat, Macar komutanı Hunyadi Janos önderliğindeki Hristiyan kuvvetlerini II. Kosova'da yenilgiye uğrattı. Balkanlar'daki Osmanlı üstünlüğü kesinleşti."
+  },
+  {
+    "id": "istanbul-fethi",
+    "civId": "osmanli-imparatorluk-1",
+    "secondaryCivId": "bizans",
+    "title": "İstanbul'un Fethi",
+    "year": 1453,
+    "type": "kuruluş",
+    "coordinates": [28.9, 41.0],
+    "description": "Fatih Sultan Mehmed, 53 günlük kuşatmanın ardından 29 Mayıs 1453'te İstanbul'u fethetti. Bin yıllık Bizans İmparatorluğu son buldu; Osmanlı artık bir dünya imparatorluğuydu."
+  },
+  {
+    "id": "otlukbeli",
+    "civId": "osmanli-imparatorluk-1",
+    "secondaryCivId": "akkoyunlular",
+    "title": "Otlukbeli Savaşı",
+    "year": 1473,
+    "type": "savaş",
+    "coordinates": [40.5, 39.5],
+    "description": "Fatih Sultan Mehmed, Uzun Hasan önderliğindeki Akkoyunlu ordusunu Otlukbeli'nde bozguna uğrattı. Doğu Anadolu'da Osmanlı hakimiyeti sağlandı."
+  },
+  {
+    "id": "kirim-fethi",
+    "civId": "osmanli-imparatorluk-1",
+    "title": "Kırım'ın Fethi",
+    "year": 1475,
+    "type": "siyasi",
+    "coordinates": [34.0, 45.0],
+    "description": "Gedik Ahmet Paşa komutasındaki Osmanlı donanması Kırım'ı fethederek Kırım Hanlığı'nı Osmanlı himayesine aldı. Karadeniz tam bir Osmanlı gölü haline gelmeye başladı."
+  },
+  {
+    "id": "istanbul-ant-1479",
+    "civId": "osmanli-imparatorluk-1",
+    "secondaryCivId": "venedik",
+    "title": "İstanbul Antlaşması (Venedik)",
+    "year": 1479,
+    "type": "antlaşma",
+    "coordinates": [28.9, 41.0],
+    "description": "Uzun Osmanlı-Venedik savaşını bitiren bu antlaşmayla Venedik, Ege'deki pek çok adayı ve Arnavutluk'taki topraklarını Osmanlı'ya bıraktı."
+  },
+  {
+    "id": "sah-kulu-isyani",
+    "civId": "osmanli-imparatorluk-1",
+    "secondaryCivId": "safeviler",
+    "title": "Şah Kulu İsyanı",
+    "year": 1511,
+    "type": "din",
+    "coordinates": [30.0, 38.0],
+    "description": "Safevi propagandasının etkisiyle Anadolu'da Kızılbaş isyanı patlak verdi. II. Beyazıt'ın tahtını sarsarken Yavuz Sultan Selim'in iktidarının önünü açtı."
+  },
+  {
+    "id": "caldiran",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "safeviler",
+    "title": "Çaldıran Savaşı",
+    "year": 1514,
+    "type": "savaş",
+    "coordinates": [44.0, 38.9],
+    "description": "Yavuz Sultan Selim, Şah İsmail'i Çaldıran'da kesin bir yenilgiye uğrattı. Doğu Anadolu ve Güneydoğu Anadolu Osmanlı'ya katıldı; Safevi tehdidi geçici olarak durduruldu."
+  },
+  {
+    "id": "turnadagi",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "dulkadiroglullari",
+    "title": "Turnadağ Savaşı",
+    "year": 1515,
+    "type": "savaş",
+    "coordinates": [37.0, 37.5],
+    "description": "Yavuz Sultan Selim, Dulkadiroğlu Alauddevle'yi Turnadağ'da mağlup etti. Dulkadiroğulları beyliği Osmanlı topraklarına katıldı."
+  },
+  {
+    "id": "mercidabik",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "memlukler",
+    "title": "Mercidabık Savaşı",
+    "year": 1516,
+    "type": "savaş",
+    "coordinates": [36.9, 36.7],
+    "description": "Yavuz Sultan Selim, Memlük Sultanı Kansu Gavri'yi Suriye'de ağır bir yenilgiye uğrattı. Suriye ve Filistin Osmanlı'ya geçti; Memlük saltanatı sona erdi."
+  },
+  {
+    "id": "ridaniye",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "memlukler",
+    "title": "Ridaniye Savaşı — Mısır Fethedildi",
+    "year": 1517,
+    "type": "savaş",
+    "coordinates": [31.2, 30.1],
+    "description": "Yavuz Sultan Selim, Kahire yakınlarındaki Ridaniye'de Memlük ordusunu kesin olarak yendi. Mısır fethedildi; halifelik unvanı ile Hicaz ve kutsal topraklar Osmanlı'ya geçti."
+  },
+  {
+    "id": "belgrat-fethi",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "macaristan",
+    "title": "Belgrad'ın Alınması",
+    "year": 1521,
+    "type": "savaş",
+    "coordinates": [20.5, 44.8],
+    "description": "Kanuni Sultan Süleyman, Fatih'in almayı başaramadığı Belgrad'ı fethetti. Macaristan'ın kapıları Osmanlılara açıldı."
+  },
+  {
+    "id": "mohac",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "macaristan",
+    "title": "Mohaç Savaşı",
+    "year": 1526,
+    "type": "savaş",
+    "coordinates": [18.7, 45.9],
+    "description": "Kanuni Sultan Süleyman, Macar ordusunu Mohaç Ovası'nda kısa sürede imha etti. Macaristan Krallığı fiilen son buldu; Orta Avrupa Osmanlı nüfuzuna girdi."
+  },
+  {
+    "id": "viyana-kusatma",
+    "civId": "osmanli-imparatorluk-2",
+    "title": "I. Viyana Kuşatması",
+    "year": 1529,
+    "type": "savaş",
+    "coordinates": [16.4, 48.2],
+    "description": "Kanuni Sultan Süleyman Viyana'yı kuşattı ancak lojistik güçlükler ve erken gelen kış nedeniyle geri çekildi. Osmanlı'nın Batı'daki en uç noktası olarak tarihe geçti."
+  },
+  {
+    "id": "preveze",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "venedik",
+    "title": "Preveze Zaferi — Akdeniz Türk Gölü",
+    "year": 1538,
+    "type": "savaş",
+    "coordinates": [20.7, 38.9],
+    "description": "Barbaros Hayreddin Paşa komutasındaki Osmanlı donanması, Papa öncülüğündeki Haçlı donanmasını Preveze'de büyük bir yenilgiye uğrattı. Akdeniz'de Osmanlı deniz hakimiyeti kuruldu."
+  },
+  {
+    "id": "amasya-ant",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "safeviler",
+    "title": "Amasya Antlaşması",
+    "year": 1555,
+    "type": "antlaşma",
+    "coordinates": [35.8, 40.7],
+    "description": "Osmanlı ile Safevi Devleti arasında imzalanan bu antlaşma, iki güç arasındaki ilk resmi barış anlaşmasıdır. Irak ve Azerbaycan'ın bir bölümü Osmanlı'ya kaldı."
+  },
+  {
+    "id": "inebahti",
+    "civId": "osmanli-imparatorluk-2",
+    "secondaryCivId": "venedik",
+    "title": "İnebahtı Yenilgisi",
+    "year": 1571,
+    "type": "savaş",
+    "coordinates": [21.5, 38.4],
+    "description": "İspanya-Venedik-Papa koalisyonu İnebahtı'da Osmanlı donanmasını yendi. Uzun dönemde Osmanlı donanmasını yeniden kurdu; Akdeniz hakimiyeti korundu."
+  }
+]

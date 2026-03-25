@@ -14,6 +14,7 @@ const TYPE_COLOR: Record<string, string> = {
   "yıkılış":          "#D63A3A",
   "restorasyon":      "#5090F0",
   "hakimiyet-geçişi": "#C8A030",
+  "genişleme":        "#16A34A",
   "bağlantı":         "#888",
 };
 
