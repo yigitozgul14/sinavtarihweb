@@ -4,6 +4,9 @@ import type { QuizQuestion } from "@/data/islamiyet-oncesi/quizQuestions";
 export type { CulturePageData, ContentItem };
 export type { QuizQuestion };
 
+import type { CityData } from "./civilization";
+export type { CityData };
+
 export interface PeriodEntity {
   id: string;
   name: string;
@@ -11,8 +14,9 @@ export interface PeriodEntity {
   endYear: number;
   color: string;
   centroid: [number, number];
-  mapFocus: { center: [number, number]; scale: number };
+  mapFocus: { center: [number, number]; scale: number; zoom?: number };
   territoryPolygon: [number, number][];
+  cities?: CityData[];
   hideFromMap?: boolean;
   /** Dönem-özel alanlar (ruler, summary, facts, location vb.) */
   meta: Record<string, unknown>;

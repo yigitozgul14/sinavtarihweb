@@ -21,9 +21,17 @@ export interface CivTransition {
   year?: number;
 }
 
+export interface CityData {
+  id: string;
+  name: string;
+  coordinates: [number, number]; // [longitude, latitude]
+  type: "capital" | "city" | "port" | "fortress" | "sacred";
+}
+
 export interface MapFocus {
   center: [number, number];
   scale: number;
+  zoom?: number; // MapLibre zoom level (optional — used by MapLibre-based paths)
 }
 
 export interface Civilization {
@@ -39,5 +47,6 @@ export interface Civilization {
   location: string;
   summary: string;
   facts: string[];
+  cities?: CityData[];
   hideFromMap?: boolean;
 }

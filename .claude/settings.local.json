@@ -5,7 +5,11 @@
       "Bash(npx tsc:*)",
       "Bash(npm install:*)",
       "Bash(grep -E '\\\\.\\(tsx?|json\\)$')",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(ls:*)",
+      "Bash(node -e \"require\\(''''maplibre-gl''''\\); console.log\\(''''ok''''\\)\")",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/maplibre-gl/package.json''\\); console.log\\(''maplibre-gl:'', pkg.version\\)\")",
+      "Bash(node -e \"const pkg = require\\(''./node_modules/react-map-gl/package.json''\\); console.log\\(''react-map-gl:'', pkg.version\\)\")"
     ]
   }
 }

@@ -16,6 +16,7 @@ function civToEntity(civ: Civilization): PeriodEntity {
     centroid: civ.centroid,
     mapFocus: civ.mapFocus,
     territoryPolygon: civ.territoryPolygon,
+    cities: civ.cities,
     meta: {
       ruler: civ.ruler,
       location: civ.location,

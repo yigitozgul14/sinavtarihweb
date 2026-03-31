@@ -6,10 +6,15 @@
     "endYear": -200,
     "color": "#E8A045",
     "centroid": [34, 47],
-    "mapFocus": { "center": [34, 47], "scale": 450 },
+    "mapFocus": { "center": [34, 47], "scale": 450, "zoom": 4.5 },
     "territoryPolygon": [
       [28, 52], [35, 53], [44, 51], [50, 48],
       [48, 44], [40, 43], [34, 43], [29, 45], [28, 52]
+    ],
+    "cities": [
+      { "id": "neapolis-skythike", "name": "Neapolis", "coordinates": [33.95, 44.92], "type": "capital" },
+      { "id": "pantikapaion", "name": "Pantikapaion", "coordinates": [36.42, 45.35], "type": "city" },
+      { "id": "olbia", "name": "Olbia", "coordinates": [31.9, 46.97], "type": "port" }
     ],
     "ruler": "Alper Tunga",
     "location": "Kırım, Karadeniz'in Kuzeyi (Pont Bozkırı)",
@@ -29,11 +34,15 @@
     "endYear": 216,
     "color": "#E05A2B",
     "centroid": [103, 47],
-    "mapFocus": { "center": [103, 47], "scale": 370 },
+    "mapFocus": { "center": [103, 47], "scale": 370, "zoom": 3.5 },
     "territoryPolygon": [
-      [84, 54], [96, 56], [110, 54], [118, 48],
-      [116, 42], [108, 40], [92, 42], [82, 46],
+      [84, 54], [96, 56], [110, 54], [120, 48],
+      [122, 40], [108, 38], [92, 40], [82, 46],
       [82, 50], [84, 54]
+    ],
+    "cities": [
+      { "id": "longcheng", "name": "Longcheng", "coordinates": [116.5, 42.7], "type": "capital" },
+      { "id": "otuken", "name": "Ötüken", "coordinates": [102.0, 47.0], "type": "sacred" }
     ],
     "ruler": "Mete Han (Tan-hu)",
     "location": "Orta Asya, Moğolistan (Merkez: Ötüken)",
@@ -55,10 +64,16 @@
     "endYear": 469,
     "color": "#D63A3A",
     "centroid": [20, 47],
-    "mapFocus": { "center": [20, 47], "scale": 420 },
+    "mapFocus": { "center": [20, 47], "scale": 420, "zoom": 4.0 },
     "territoryPolygon": [
       [14, 50], [22, 52], [32, 50], [36, 47],
       [30, 44], [22, 43], [16, 45], [14, 48], [14, 50]
+    ],
+    "cities": [
+      { "id": "attila-sarayi", "name": "Attila Sarayı", "coordinates": [20.5, 47.5], "type": "capital" },
+      { "id": "aquincum", "name": "Aquincum", "coordinates": [19.1, 47.5], "type": "city" },
+      { "id": "sirmium", "name": "Sirmium", "coordinates": [19.6, 45.0], "type": "city" },
+      { "id": "margus", "name": "Margus", "coordinates": [21.8, 44.6], "type": "city" }
     ],
     "ruler": "Atilla",
     "location": "Orta Avrupa — Panonya Ovası (bugünkü Macaristan)",
@@ -79,10 +94,14 @@
     "endYear": 823,
     "color": "#9B5EC0",
     "centroid": [19, 46],
-    "mapFocus": { "center": [19, 46], "scale": 420 },
+    "mapFocus": { "center": [19, 46], "scale": 420, "zoom": 4.5 },
     "territoryPolygon": [
       [14, 48], [20, 50], [26, 48], [28, 46],
       [24, 43], [18, 42], [14, 44], [13, 46], [14, 48]
+    ],
+    "cities": [
+      { "id": "sirmium-avar", "name": "Sirmium", "coordinates": [19.6, 45.0], "type": "capital" },
+      { "id": "avar-ringi", "name": "Avar Ringi", "coordinates": [17.5, 46.8], "type": "fortress" }
     ],
     "ruler": "Bayan Han",
     "location": "Orta Avrupa — Panonya ve Balkanlar",
@@ -100,10 +119,14 @@
     "endYear": 1050,
     "color": "#6B9E2E",
     "centroid": [53, 46],
-    "mapFocus": { "center": [53, 46], "scale": 430 },
+    "mapFocus": { "center": [53, 46], "scale": 430, "zoom": 4.5 },
     "territoryPolygon": [
       [44, 50], [54, 52], [62, 50], [62, 45],
       [54, 43], [44, 44], [42, 47], [44, 50]
+    ],
+    "cities": [
+      { "id": "yangikent-uz", "name": "Yangıkent", "coordinates": [62.0, 45.0], "type": "capital" },
+      { "id": "cend-uz", "name": "Cend", "coordinates": [60.7, 44.3], "type": "city" }
     ],
     "ruler": "-",
     "location": "Hazar Denizi ve Aral Gölü arası — Doğu Avrupa bozkırı",
@@ -119,10 +142,13 @@
     "endYear": 1091,
     "color": "#4A7FBF",
     "centroid": [34, 48],
-    "mapFocus": { "center": [34, 48], "scale": 430 },
+    "mapFocus": { "center": [34, 48], "scale": 430, "zoom": 4.0 },
     "territoryPolygon": [
       [28, 52], [38, 54], [46, 52], [46, 46],
       [38, 44], [30, 45], [26, 48], [28, 52]
+    ],
+    "cities": [
+      { "id": "sarkel-pec", "name": "Sarkel", "coordinates": [40.8, 47.9], "type": "fortress" }
     ],
     "ruler": "-",
     "location": "Karadeniz'in Kuzeyi — Ukrayna, Moldova, Romanya",
@@ -140,10 +166,15 @@
     "endYear": 2026,
     "color": "#2E9E2E",
     "centroid": [19, 47],
-    "mapFocus": { "center": [19, 47], "scale": 520 },
+    "mapFocus": { "center": [19, 47], "scale": 520, "zoom": 5.5 },
     "territoryPolygon": [
       [16, 48], [20, 49], [23, 48], [22, 46],
       [18, 45], [16, 46], [16, 48]
+    ],
+    "cities": [
+      { "id": "esztergom", "name": "Esztergom", "coordinates": [18.74, 47.79], "type": "capital" },
+      { "id": "fehervar", "name": "Fehérvár", "coordinates": [18.41, 47.19], "type": "city" },
+      { "id": "buda", "name": "Óbuda", "coordinates": [19.05, 47.55], "type": "city" }
     ],
     "ruler": "Arpad",
     "location": "Panonya Ovası — Bugünkü Macaristan",
@@ -161,10 +192,16 @@
     "endYear": 864,
     "color": "#A07830",
     "centroid": [25, 44],
-    "mapFocus": { "center": [25, 44], "scale": 510 },
+    "mapFocus": { "center": [25, 44], "scale": 510, "zoom": 5.5 },
     "territoryPolygon": [
       [22, 48], [28, 48], [30, 46], [28, 42],
       [22, 42], [20, 44], [22, 48]
+    ],
+    "cities": [
+      { "id": "pliska", "name": "Pliska", "coordinates": [27.13, 43.38], "type": "capital" },
+      { "id": "preslav", "name": "Preslav", "coordinates": [26.83, 43.17], "type": "city" },
+      { "id": "madara", "name": "Madara", "coordinates": [27.11, 43.27], "type": "sacred" },
+      { "id": "silistra", "name": "Silistra", "coordinates": [27.27, 44.12], "type": "fortress" }
     ],
     "ruler": "Asparuh / Boris Han",
     "location": "Balkanlar — Bugünkü Bulgaristan ve Güney Romanya",
@@ -183,10 +220,15 @@
     "endYear": 1236,
     "color": "#C8A030",
     "centroid": [50, 55],
-    "mapFocus": { "center": [50, 55], "scale": 490 },
+    "mapFocus": { "center": [50, 55], "scale": 490, "zoom": 5.0 },
     "territoryPolygon": [
       [46, 58], [52, 58], [56, 56], [54, 52],
       [48, 52], [44, 55], [44, 57], [46, 58]
+    ],
+    "cities": [
+      { "id": "bulgar-sehri", "name": "Bulgar", "coordinates": [49.04, 54.97], "type": "capital" },
+      { "id": "suvar", "name": "Suvar", "coordinates": [48.22, 54.29], "type": "city" },
+      { "id": "bilyar", "name": "Bilyar", "coordinates": [50.5, 54.6], "type": "city" }
     ],
     "ruler": "Almış Han",
     "location": "İdil/Volga Nehri çevresi — Kazan bölgesi (Tataristan)",
@@ -203,10 +245,15 @@
     "endYear": 965,
     "color": "#20A89A",
     "centroid": [46, 46],
-    "mapFocus": { "center": [46, 46], "scale": 440 },
+    "mapFocus": { "center": [46, 46], "scale": 440, "zoom": 4.5 },
     "territoryPolygon": [
       [38, 50], [46, 52], [54, 50], [54, 44],
       [48, 42], [42, 42], [36, 44], [36, 48], [38, 50]
+    ],
+    "cities": [
+      { "id": "itil-atil", "name": "İtil / Atil", "coordinates": [48.5, 46.2], "type": "capital" },
+      { "id": "sarkel", "name": "Sarkel", "coordinates": [40.8, 47.9], "type": "fortress" },
+      { "id": "semender", "name": "Semender", "coordinates": [44.6, 43.5], "type": "city" }
     ],
     "ruler": "-",
     "location": "Kafkaslar, Hazar Denizi ve Don Nehri arası",
@@ -226,10 +273,15 @@
     "endYear": 1241,
     "color": "#BF6030",
     "centroid": [48, 49],
-    "mapFocus": { "center": [48, 49], "scale": 340 },
+    "mapFocus": { "center": [48, 49], "scale": 340, "zoom": 3.5 },
     "territoryPolygon": [
       [30, 54], [46, 56], [64, 54], [70, 50],
       [64, 44], [50, 44], [36, 46], [28, 50], [30, 54]
+    ],
+    "cities": [
+      { "id": "saksin", "name": "Saksin", "coordinates": [48.5, 47.3], "type": "city" },
+      { "id": "sarukan", "name": "Şarukan", "coordinates": [36.5, 50.0], "type": "city" },
+      { "id": "sugrov", "name": "Sugrov", "coordinates": [36.0, 49.5], "type": "city" }
     ],
     "ruler": "-",
     "location": "Deşt-i Kıpçak — Ukrayna'dan Kazakistan'a uzanan büyük bozkır",
@@ -248,10 +300,15 @@
     "endYear": 630,
     "color": "#3A6FE0",
     "centroid": [92, 48],
-    "mapFocus": { "center": [92, 48], "scale": 340 },
+    "mapFocus": { "center": [92, 48], "scale": 340, "zoom": 3.5 },
     "territoryPolygon": [
-      [68, 52], [86, 56], [108, 54], [116, 48],
-      [110, 42], [88, 40], [70, 42], [64, 48], [68, 52]
+      [64, 52], [86, 56], [108, 54], [116, 48],
+      [110, 42], [88, 40], [70, 42], [62, 46], [64, 52]
+    ],
+    "cities": [
+      { "id": "otuken-goktürk", "name": "Ötüken", "coordinates": [102.0, 47.0], "type": "sacred" },
+      { "id": "suyab", "name": "Suyab", "coordinates": [75.2, 42.8], "type": "capital" },
+      { "id": "khocho", "name": "Khocho", "coordinates": [89.2, 42.9], "type": "city" }
     ],
     "ruler": "Bumin Kağan / Mukan Kağan",
     "location": "Orta Asya — Moğolistan'dan Hazar'a (Merkez: Ötüken)",
@@ -272,10 +329,14 @@
     "endYear": 744,
     "color": "#5090F0",
     "centroid": [94, 48],
-    "mapFocus": { "center": [94, 48], "scale": 360 },
+    "mapFocus": { "center": [94, 48], "scale": 360, "zoom": 3.5 },
     "territoryPolygon": [
       [74, 52], [90, 55], [106, 52], [112, 46],
       [106, 42], [88, 42], [74, 46], [72, 50], [74, 52]
+    ],
+    "cities": [
+      { "id": "otuken-kutluk", "name": "Ötüken", "coordinates": [102.0, 47.0], "type": "capital" },
+      { "id": "orhon-vadisi", "name": "Orhon Vadisi", "coordinates": [102.7, 47.3], "type": "sacred" }
     ],
     "ruler": "Kutluk Kağan / Bilge Kağan",
     "location": "Orta Asya — Moğolistan ve Orta Kazakistan (Merkez: Ötüken)",
@@ -295,10 +356,15 @@
     "endYear": 840,
     "color": "#C850A0",
     "centroid": [96, 46],
-    "mapFocus": { "center": [96, 46], "scale": 370 },
+    "mapFocus": { "center": [96, 46], "scale": 370, "zoom": 4.0 },
     "territoryPolygon": [
       [78, 52], [94, 56], [108, 52], [112, 45],
       [106, 38], [90, 38], [78, 42], [76, 48], [78, 52]
+    ],
+    "cities": [
+      { "id": "karabalgasun", "name": "Karabalgasun", "coordinates": [103.3, 47.4], "type": "capital" },
+      { "id": "bisbalik", "name": "Bişbalık", "coordinates": [87.4, 44.0], "type": "city" },
+      { "id": "turfan", "name": "Turfan", "coordinates": [89.2, 42.9], "type": "city" }
     ],
     "ruler": "Kutluk Bilge Kül Kağan / Bögü Kağan",
     "location": "Moğolistan ve Doğu Türkistan — Tarım Havzası",
@@ -320,10 +386,13 @@
     "endYear": 1212,
     "color": "#30A850",
     "centroid": [88, 56],
-    "mapFocus": { "center": [88, 56], "scale": 400 },
+    "mapFocus": { "center": [88, 56], "scale": 400, "zoom": 4.5 },
     "territoryPolygon": [
       [72, 62], [84, 64], [96, 62], [98, 56],
       [92, 52], [80, 50], [72, 54], [70, 58], [72, 62]
+    ],
+    "cities": [
+      { "id": "minusinsk", "name": "Minusinsk", "coordinates": [91.7, 53.7], "type": "capital" }
     ],
     "ruler": "-",
     "location": "Yenisey Irmağı çevresi — Güney Sibirya",
@@ -341,10 +410,15 @@
     "endYear": 1212,
     "color": "#E08020",
     "centroid": [76, 45],
-    "mapFocus": { "center": [76, 45], "scale": 430 },
+    "mapFocus": { "center": [76, 45], "scale": 430, "zoom": 5.0 },
     "territoryPolygon": [
       [68, 50], [78, 52], [84, 50], [84, 44],
       [76, 40], [68, 40], [64, 44], [66, 48], [68, 50]
+    ],
+    "cities": [
+      { "id": "suyab-karluk", "name": "Suyab", "coordinates": [75.2, 42.8], "type": "capital" },
+      { "id": "talas", "name": "Talas", "coordinates": [72.2, 42.5], "type": "city" },
+      { "id": "balasagun", "name": "Balasagun", "coordinates": [75.3, 42.7], "type": "city" }
     ],
     "ruler": "-",
     "location": "Tanrı Dağları ve Yedisu — Orta Kazakistan ve Kırgızistan",
@@ -363,10 +437,15 @@
     "endYear": 1300,
     "color": "#C83040",
     "centroid": [58, 40],
-    "mapFocus": { "center": [58, 40], "scale": 400 },
+    "mapFocus": { "center": [58, 40], "scale": 400, "zoom": 4.0 },
     "territoryPolygon": [
       [52, 48], [64, 50], [72, 46], [72, 38],
       [60, 32], [50, 34], [46, 38], [48, 44], [52, 48]
+    ],
+    "cities": [
+      { "id": "yangikent-oguz", "name": "Yangıkent", "coordinates": [62.0, 45.0], "type": "capital" },
+      { "id": "cend-oguz", "name": "Cend", "coordinates": [60.7, 44.3], "type": "city" },
+      { "id": "sabran", "name": "Sabran", "coordinates": [68.0, 41.0], "type": "city" }
     ],
     "ruler": "-",
     "location": "Maveraünnehir, Horasan — Özbekistan, Türkmenistan, Kuzey İran",

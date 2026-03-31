@@ -1,21 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import {
-  ComposableMap,
-  Geographies,
-  Geography,
+import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import Map, {
+  Source,
+  Layer,
   Marker,
-  ZoomableGroup,
-} from "react-simple-maps";
+  type MapRef,
+} from "react-map-gl/maplibre";
 import { motion, AnimatePresence } from "framer-motion";
+import type { FeatureCollection } from "geojson";
 import type { Civilization, CivEvent, CivTransition } from "@/types";
-import TransitionArrow from "./TransitionArrow";
-import TerritoryPolygon from "./TerritoryPolygon";
-import TravelingArrow from "./TravelingArrow";
+import "maplibre-gl/dist/maplibre-gl.css";
 
-const GEO_URL =
-  "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+/* ─── Types ──────────────────────────────────────────────────── */
+
+interface IslamiyetOncesiMapProps {
+  civilizations: Civilization[];
+  events: CivEvent[];
+  transitions: CivTransition[];
+  visibleCivs: Civilization[];
+  currentYear: number;
+  selectedCivId: string | null;
+  onCivSelect: (id: string | null) => void;
+}
+
+/* ─── Constants ───────────────────────────────────────────────── */
+
+const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const EVENT_TYPE_ICON: Record<string, string> = {
   savaş: "⚔",
@@ -28,50 +39,473 @@ const EVENT_TYPE_ICON: Record<string, string> = {
   siyasi: "⚑",
 };
 
+const TRANSITION_COLOR: Record<string, string> = {
+  "göç": "#E8A045",
+  "yıkılış": "#D63A3A",
+  "restorasyon": "#5090F0",
+  "hakimiyet-geçişi": "#C8A030",
+  "bağlantı": "#888",
+};
+
+const CITY_TYPE_SIZE: Record<string, number> = {
+  capital: 6,
+  city: 4,
+  port: 4,
+  fortress: 4,
+  sacred: 5,
+};
+
+// Minimal MapLibre style — ocean background, land rendered via GeoJSON
+const MAP_STYLE = {
+  version: 8 as const,
+  sources: {},
+  layers: [
+    {
+      id: "background",
+      type: "background" as const,
+      paint: { "background-color": "#A8C5DA" },
+    },
+  ],
+};
+
+const MAX_BUFFER = 50;
+
+/* ─── Utilities ───────────────────────────────────────────────── */
+
 function formatYear(year: number): string {
   return year < 0 ? `MÖ ${Math.abs(year)}` : `MS ${year}`;
 }
-
-const MAX_BUFFER = 50;
 
 function getCivFadeWindow(
   civ: { id: string; startYear: number; endYear: number },
   allCivs: { id: string; startYear: number; endYear: number }[],
   allTransitions: CivTransition[]
 ): { fadeIn: number; fadeOut: number } {
-  const successorIds   = allTransitions.filter((t) => t.from === civ.id).map((t) => t.to);
-  const predecessorIds = allTransitions.filter((t) => t.to   === civ.id).map((t) => t.from);
-  const successors   = allCivs.filter((c) => successorIds.includes(c.id));
+  const successorIds = allTransitions.filter((t) => t.from === civ.id).map((t) => t.to);
+  const predecessorIds = allTransitions.filter((t) => t.to === civ.id).map((t) => t.from);
+  const successors = allCivs.filter((c) => successorIds.includes(c.id));
   const predecessors = allCivs.filter((c) => predecessorIds.includes(c.id));
-  const gapAfter  = successors.length   > 0 ? Math.min(...successors.map((s)   => Math.max(0, s.startYear - civ.endYear)))   : Infinity;
-  const gapBefore = predecessors.length > 0 ? Math.min(...predecessors.map((p) => Math.max(0, civ.startYear - p.endYear))) : Infinity;
+  const gapAfter = successors.length > 0
+    ? Math.min(...successors.map((s) => Math.max(0, s.startYear - civ.endYear)))
+    : Infinity;
+  const gapBefore = predecessors.length > 0
+    ? Math.min(...predecessors.map((p) => Math.max(0, civ.startYear - p.endYear)))
+    : Infinity;
   return {
-    fadeIn:  Math.min(MAX_BUFFER, Math.floor(gapBefore / 2)),
-    fadeOut: Math.min(MAX_BUFFER, Math.floor(gapAfter  / 2)),
+    fadeIn: Math.min(MAX_BUFFER, Math.floor(gapBefore / 2)),
+    fadeOut: Math.min(MAX_BUFFER, Math.floor(gapAfter / 2)),
   };
 }
 
-// 0→1 fading in, 1 active, 1→0 fading out — uses asymmetric fade windows
 function getPhaseOpacity(
   civ: { startYear: number; endYear: number },
   currentYear: number,
   fadeIn: number,
   fadeOut: number
 ): number {
-  if (currentYear < civ.startYear) return fadeIn  === 0 ? 1 : (currentYear - (civ.startYear - fadeIn))  / fadeIn;
-  if (currentYear > civ.endYear)   return fadeOut === 0 ? 1 : 1 - (currentYear - civ.endYear) / fadeOut;
+  if (currentYear < civ.startYear)
+    return fadeIn === 0 ? 1 : (currentYear - (civ.startYear - fadeIn)) / fadeIn;
+  if (currentYear > civ.endYear)
+    return fadeOut === 0 ? 1 : 1 - (currentYear - civ.endYear) / fadeOut;
   return 1;
 }
 
-interface IslamiyetOncesiMapProps {
-  civilizations: Civilization[];
-  events: CivEvent[];
-  transitions: CivTransition[];
-  visibleCivs: Civilization[];
-  currentYear: number;
-  selectedCivId: string | null;
-  onCivSelect: (id: string | null) => void;
+function closedRing(coords: [number, number][]): [number, number][] {
+  if (coords.length < 2) return coords;
+  const first = coords[0];
+  const last = coords[coords.length - 1];
+  if (first[0] === last[0] && first[1] === last[1]) return coords;
+  return [...coords, first];
 }
+
+// Quadratic bezier curve points in geographic space
+function geoBezierPoints(
+  from: [number, number],
+  to: [number, number],
+  n = 32
+): [number, number][] {
+  const cpLon = (from[0] + to[0]) / 2;
+  const cpLat = (from[1] + to[1]) / 2 + Math.abs(to[0] - from[0]) * 0.15;
+  const pts: [number, number][] = [];
+  for (let i = 0; i <= n; i++) {
+    const t = i / n;
+    const mt = 1 - t;
+    pts.push([
+      mt * mt * from[0] + 2 * mt * t * cpLon + t * t * to[0],
+      mt * mt * from[1] + 2 * mt * t * cpLat + t * t * to[1],
+    ]);
+  }
+  return pts;
+}
+
+// Partial bezier (de Casteljau) — 0→progress
+function geoBezierPartialPoints(
+  from: [number, number],
+  to: [number, number],
+  progress: number,
+  n = 32
+): [number, number][] {
+  if (progress <= 0) return [from];
+  const cpLon = (from[0] + to[0]) / 2;
+  const cpLat = (from[1] + to[1]) / 2 - Math.abs(to[0] - from[0]) * 0.15;
+  const p = Math.min(1, progress);
+  const subCp: [number, number] = [
+    from[0] + (cpLon - from[0]) * p,
+    from[1] + (cpLat - from[1]) * p,
+  ];
+  const mt = 1 - p;
+  const subEnd: [number, number] = [
+    mt * mt * from[0] + 2 * mt * p * cpLon + p * p * to[0],
+    mt * mt * from[1] + 2 * mt * p * cpLat + p * p * to[1],
+  ];
+  const pts: [number, number][] = [];
+  for (let i = 0; i <= n; i++) {
+    const t = i / n;
+    const mt2 = 1 - t;
+    pts.push([
+      mt2 * mt2 * from[0] + 2 * mt2 * t * subCp[0] + t * t * subEnd[0],
+      mt2 * mt2 * from[1] + 2 * mt2 * t * subCp[1] + t * t * subEnd[1],
+    ]);
+  }
+  return pts;
+}
+
+/* ─── GeoJSON builders ─────────────────────────────────────────── */
+
+function buildTerritoriesGeoJson(
+  visibleCivs: Civilization[],
+  civilizations: Civilization[],
+  transitions: CivTransition[],
+  currentYear: number,
+  selectedCivId: string | null
+): FeatureCollection {
+  const isAnySelected = selectedCivId !== null;
+  return {
+    type: "FeatureCollection",
+    features: visibleCivs.map((civ) => {
+      const { fadeIn, fadeOut } = getCivFadeWindow(civ, civilizations, transitions);
+      const phase = Math.max(0, Math.min(1, getPhaseOpacity(civ, currentYear, fadeIn, fadeOut)));
+      const isSel = civ.id === selectedCivId;
+      const baseFill = isSel ? 0.55 : isAnySelected ? 0.1 : 0.25;
+      const baseStroke = isSel ? 1.0 : isAnySelected ? 0.2 : 0.6;
+      return {
+        type: "Feature",
+        properties: {
+          id: civ.id,
+          color: civ.color,
+          fillOpacity: phase * baseFill,
+          strokeOpacity: phase * baseStroke,
+          strokeWidth: isSel ? 2 : 1,
+        },
+        geometry: {
+          type: "Polygon",
+          coordinates: [closedRing(civ.territoryPolygon)],
+        },
+      };
+    }),
+  };
+}
+
+function buildCitiesGeoJson(
+  activeCivs: Civilization[],
+  currentYear: number,
+  civilizations: Civilization[],
+  transitions: CivTransition[]
+): FeatureCollection {
+  const features = activeCivs.flatMap((civ) => {
+    const { fadeIn, fadeOut } = getCivFadeWindow(civ, civilizations, transitions);
+    const phase = Math.max(0, Math.min(1, getPhaseOpacity(civ, currentYear, fadeIn, fadeOut)));
+    return (civ.cities ?? []).map((city) => ({
+      type: "Feature" as const,
+      properties: {
+        id: city.id,
+        name: city.name,
+        type: city.type,
+        color: civ.color,
+        phase,
+        radius: CITY_TYPE_SIZE[city.type] ?? 4,
+      },
+      geometry: {
+        type: "Point" as const,
+        coordinates: city.coordinates,
+      },
+    }));
+  });
+  return { type: "FeatureCollection", features };
+}
+
+function buildTransitionLinesGeoJson(
+  relevantTransitions: CivTransition[],
+  civilizations: Civilization[]
+): FeatureCollection {
+  const features = relevantTransitions.flatMap((t) => {
+    const fromCiv = civilizations.find((c) => c.id === t.from);
+    const toCiv = civilizations.find((c) => c.id === t.to);
+    if (!fromCiv || !toCiv) return [];
+    const color = TRANSITION_COLOR[t.type] ?? "#888";
+    return [{
+      type: "Feature" as const,
+      properties: { color, type: t.type },
+      geometry: {
+        type: "LineString" as const,
+        coordinates: geoBezierPoints(fromCiv.centroid, toCiv.centroid),
+      },
+    }];
+  });
+  return { type: "FeatureCollection", features };
+}
+
+function buildTravelArrowsGeoJson(
+  activeCivs: Civilization[],
+  events: CivEvent[],
+  currentYear: number
+): FeatureCollection {
+  const features = activeCivs.flatMap((civ) => {
+    const civEvents = events.filter((e) => e.civId === civ.id).sort((a, b) => a.year - b.year);
+    const nextEvent = civEvents.find((e) => e.year > currentYear);
+    if (!nextEvent) return [];
+    const prevEvent = civEvents.filter((e) => e.year <= currentYear).at(-1);
+    const fromYear = prevEvent?.year ?? civ.startYear;
+    const progress = Math.min(1, Math.max(0, (currentYear - fromYear) / (nextEvent.year - fromYear)));
+    if (progress <= 0) return [];
+    return [{
+      type: "Feature" as const,
+      properties: { color: civ.color },
+      geometry: {
+        type: "LineString" as const,
+        coordinates: geoBezierPartialPoints(civ.centroid, nextEvent.coordinates, progress),
+      },
+    }];
+  });
+  return { type: "FeatureCollection", features };
+}
+
+/* ─── Sub-components ───────────────────────────────────────────── */
+
+function PulseRing({ color }: { color: string }) {
+  return (
+    <motion.div
+      className="absolute rounded-full pointer-events-none"
+      style={{
+        border: `2px solid ${color}`,
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+      }}
+      animate={{
+        width: ["14px", "52px"],
+        height: ["14px", "52px"],
+        marginLeft: ["-7px", "-26px"],
+        marginTop: ["-7px", "-26px"],
+        opacity: [0.8, 0],
+      }}
+      transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
+    />
+  );
+}
+
+function CentroidDot({
+  civ,
+  isSelected,
+  phase,
+  onSelect,
+}: {
+  civ: Civilization;
+  isSelected: boolean;
+  phase: number;
+  onSelect: () => void;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.7 }}
+      animate={{ opacity: phase, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      transition={{ duration: 0.35 }}
+      className="relative flex flex-col items-center cursor-pointer"
+      style={{ pointerEvents: "all" }}
+      onClick={(e) => {
+        e.stopPropagation();
+        onSelect();
+      }}
+    >
+      {isSelected && (
+        <>
+          <PulseRing color={civ.color} />
+          <div
+            className="absolute text-center font-bold uppercase tracking-widest pointer-events-none select-none whitespace-nowrap"
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "13px",
+              color: "#ffffff",
+              WebkitTextStroke: `2px ${civ.color}`,
+              bottom: "calc(100% + 12px)",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
+            {civ.name.toUpperCase()}
+          </div>
+        </>
+      )}
+
+      {/* Dot */}
+      <div
+        className="rounded-full border-2 border-white shadow-md flex-shrink-0"
+        style={{
+          width: isSelected ? 14 : 10,
+          height: isSelected ? 14 : 10,
+          background: civ.color,
+          boxShadow: isSelected ? `0 0 8px ${civ.color}88` : undefined,
+        }}
+      />
+
+      {!isSelected && (
+        <div className="flex flex-col items-center pointer-events-none select-none mt-0.5">
+          <span
+            className="font-bold whitespace-nowrap"
+            style={{
+              fontFamily: "var(--font-cinzel)",
+              fontSize: "9px",
+              color: civ.color,
+              textShadow:
+                "0 0 3px rgba(250,246,240,0.95), 0 0 3px rgba(250,246,240,0.95), 0 0 3px rgba(250,246,240,0.95)",
+            }}
+          >
+            {civ.name}
+          </span>
+          <span
+            className="whitespace-nowrap"
+            style={{
+              fontFamily: "var(--font-source-sans, sans-serif)",
+              fontSize: "7px",
+              color: "#2A1F12",
+              opacity: 0.75,
+              textShadow: "0 0 2px rgba(250,246,240,0.9)",
+            }}
+          >
+            {formatYear(civ.startYear)}–{formatYear(civ.endYear)}
+          </span>
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
+function EventMarkerDot({
+  ev,
+  civilizations,
+  onMouseEnter,
+  onMouseLeave,
+}: {
+  ev: CivEvent;
+  civilizations: Civilization[];
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}) {
+  const ownerCiv = civilizations.find((c) => c.id === ev.civId);
+  const color1 = ownerCiv?.color ?? "#2A1F12";
+  const secondaryCiv = ev.secondaryCivId ? civilizations.find((c) => c.id === ev.secondaryCivId) : null;
+  const color2 = secondaryCiv?.color ?? null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0 }}
+      transition={{ duration: 0.35, type: "spring", stiffness: 220 }}
+      className="relative flex items-center justify-center cursor-pointer"
+      style={{ width: 28, height: 28, pointerEvents: "all" }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      {/* Burst ring */}
+      <motion.div
+        className="absolute rounded-full pointer-events-none"
+        style={{ border: `1px solid ${color1}`, top: 0, left: 0, right: 0, bottom: 0 }}
+        initial={{ scale: 0.4, opacity: 0.9 }}
+        animate={{ scale: 2.2, opacity: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      />
+
+      {/* Background circle */}
+      <div
+        className="absolute rounded-full"
+        style={{
+          inset: 2,
+          background: "rgba(250,246,240,0.88)",
+        }}
+      />
+
+      {/* Colored border — split if two civs */}
+      {color2 ? (
+        <svg
+          className="absolute inset-0 pointer-events-none"
+          viewBox="0 0 28 28"
+          style={{ width: 28, height: 28 }}
+        >
+          <path
+            d="M 14 2 A 12 12 0 0 0 14 26"
+            fill="none"
+            stroke={color1}
+            strokeWidth={2}
+          />
+          <path
+            d="M 14 2 A 12 12 0 0 1 14 26"
+            fill="none"
+            stroke={color2}
+            strokeWidth={2}
+          />
+        </svg>
+      ) : (
+        <div
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            inset: 1.5,
+            border: `2px solid ${color1}`,
+            borderRadius: "50%",
+            opacity: 0.9,
+          }}
+        />
+      )}
+
+      {/* Icon */}
+      <span className="relative z-10 select-none" style={{ fontSize: 12, lineHeight: 1 }}>
+        {EVENT_TYPE_ICON[ev.type] ?? "●"}
+      </span>
+    </motion.div>
+  );
+}
+
+function CityLabel({
+  name,
+  type,
+  color,
+}: {
+  name: string;
+  type: string;
+  color: string;
+}) {
+  const isCapital = type === "capital" || type === "sacred";
+  return (
+    <div
+      className="pointer-events-none select-none whitespace-nowrap"
+      style={{
+        fontFamily: "var(--font-cinzel)",
+        fontSize: isCapital ? "8px" : "7px",
+        fontWeight: isCapital ? "600" : "400",
+        color: isCapital ? color : "#2A1F12",
+        textShadow:
+          "0 0 3px rgba(222,208,160,0.98), 0 0 3px rgba(222,208,160,0.98), 0 0 3px rgba(222,208,160,0.98)",
+        marginTop: "3px",
+      }}
+    >
+      {isCapital ? "★ " : ""}
+      {name}
+    </div>
+  );
+}
+
+/* ─── Main Component ───────────────────────────────────────────── */
 
 export default function IslamiyetOncesiMap({
   civilizations,
@@ -82,378 +516,288 @@ export default function IslamiyetOncesiMap({
   selectedCivId,
   onCivSelect,
 }: IslamiyetOncesiMapProps) {
+  const mapRef = useRef<MapRef>(null);
   const [hoveredEvent, setHoveredEvent] = useState<CivEvent | null>(null);
-  const [zoom, setZoom] = useState(1);
-  const [center, setCenter] = useState<[number, number]>([65, 48]);
-  // Track previous selectedCivId to detect prop changes during render (derived-state pattern)
-  const [prevSelectedCivId, setPrevSelectedCivId] = useState<string | null>(null);
+  const [mapZoom, setMapZoom] = useState(3);
+  // Track previous selectedCivId to fly on change
+  const prevSelectedRef = useRef<string | null>(null);
+
+  // Fetch world-atlas countries (TopoJSON → GeoJSON)
+  const [worldGeoJson, setWorldGeoJson] = useState<FeatureCollection | null>(null);
+  useEffect(() => {
+    fetch(GEO_URL)
+      .then((r) => r.json())
+      .then(async (topo) => {
+        const { feature } = await import("topojson-client");
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        setWorldGeoJson(feature(topo as any, (topo as any).objects.countries) as unknown as FeatureCollection);
+      })
+      .catch(() => null);
+  }, []);
+
+  // Fly when selection changes
+  useEffect(() => {
+    if (!mapRef.current) return;
+    if (selectedCivId === prevSelectedRef.current) return;
+    prevSelectedRef.current = selectedCivId;
+    const civ = civilizations.find((c) => c.id === selectedCivId);
+    mapRef.current.flyTo({
+      center: civ ? (civ.mapFocus.center as [number, number]) : [65, 48],
+      zoom: civ ? (civ.mapFocus.zoom ?? 4.5) : 3,
+      duration: 800,
+    });
+  }, [selectedCivId, civilizations]);
 
   const selectedCiv = civilizations.find((c) => c.id === selectedCivId) ?? null;
 
   const relevantTransitions = selectedCivId
-    ? transitions.filter(
-        (t) => t.from === selectedCivId || t.to === selectedCivId
-      )
+    ? transitions.filter((t) => t.from === selectedCivId || t.to === selectedCivId)
     : [];
 
   const visibleCivIds = new Set(visibleCivs.map((c) => c.id));
-  // Hide all events and arrows when a civ is selected — focus mode shows only that civ
   const visibleEvents = selectedCivId
     ? []
     : events.filter((e) => visibleCivIds.has(e.civId) && e.year <= currentYear);
 
-  // Derived-state pattern (react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes):
-  // detect selectedCivId prop change during render and update zoom synchronously.
-  // React restarts the render with the new state — no effect, no cascade.
-  if (selectedCivId !== prevSelectedCivId) {
-    setPrevSelectedCivId(selectedCivId);
-    setZoom(selectedCiv ? selectedCiv.mapFocus.scale / 280 : 1);
-    setCenter(selectedCiv ? selectedCiv.mapFocus.center : [65, 48]);
-  }
-
-  // Zoom-aware scale factor — sqrt for gentler reduction, min 0.45
-  const zScale = Math.max(0.45, 1 / Math.sqrt(zoom));
-
-  // Officially active civs (within their real startYear–endYear) — used for arrows/events
   const activeCivs = visibleCivs.filter(
     (c) => currentYear >= c.startYear && currentYear <= c.endYear
   );
 
+  // GeoJSON sources (memoized)
+  const territoriesGeoJson = useMemo(
+    () => buildTerritoriesGeoJson(visibleCivs, civilizations, transitions, currentYear, selectedCivId),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [visibleCivs, currentYear, selectedCivId]
+  );
+
+  const citiesGeoJson = useMemo(
+    () => buildCitiesGeoJson(activeCivs, currentYear, civilizations, transitions),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [activeCivs, currentYear]
+  );
+
+  const transitionLinesGeoJson = useMemo(
+    () => buildTransitionLinesGeoJson(relevantTransitions, civilizations),
+    [relevantTransitions, civilizations]
+  );
+
+  const travelArrowsGeoJson = useMemo(
+    () => buildTravelArrowsGeoJson(activeCivs, events, currentYear),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [activeCivs, currentYear]
+  );
+
+  const handleZoomIn = useCallback(() => {
+    mapRef.current?.zoomIn({ duration: 300 });
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    mapRef.current?.zoomOut({ duration: 300 });
+  }, []);
+
+  const handleMapClick = useCallback(() => {
+    if (selectedCivId) onCivSelect(null);
+  }, [selectedCivId, onCivSelect]);
+
+  // City labels shown only when zoomed in enough
+  const showCityLabels = mapZoom >= 4.5;
+  // City dots via MapLibre layer always shown when civ is active; labels via Marker at higher zoom
+
   return (
-    <div className="relative w-full h-full" style={{ background: "#FAF6F0" }}>
-      <ComposableMap
-        projectionConfig={{ center: [65, 48], scale: 420 }}
-        width={1200}
-        height={500}
-        style={{ width: "100%", height: "100%", background: "transparent" }}
+    <div className="relative w-full h-full" style={{ background: "#A8C5DA" }}>
+      <Map
+        ref={mapRef}
+        mapStyle={MAP_STYLE}
+        initialViewState={{ longitude: 65, latitude: 48, zoom: 3 }}
+        style={{ width: "100%", height: "100%" }}
+        onClick={handleMapClick}
+        onZoomEnd={(e) => setMapZoom(e.viewState.zoom)}
+        minZoom={1.5}
+        maxZoom={10}
       >
-        <ZoomableGroup
-          center={center}
-          zoom={zoom}
-          maxZoom={8}
-          minZoom={1}
-          onMoveEnd={({ coordinates, zoom: z }: { coordinates: [number, number]; zoom: number }) => {
-            setCenter(coordinates);
-            setZoom(z);
-          }}
-        >
-          {/* ── Base world map (light cream) ── */}
-          <Geographies geography={GEO_URL}>
-            {({ geographies }) =>
-              geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill="#E8E0D6"
-                  stroke="#C8C0B4"
-                  strokeWidth={0.5}
-                  style={{
-                    default: { outline: "none" },
-                    hover: { outline: "none", fill: "#DDD5C8" },
-                    pressed: { outline: "none" },
-                  }}
-                />
-              ))
-            }
-          </Geographies>
+        {/* ── World land background ── */}
+        {worldGeoJson && (
+          <Source id="world" type="geojson" data={worldGeoJson}>
+            <Layer
+              id="world-fill"
+              type="fill"
+              paint={{ "fill-color": "#DED0A0", "fill-opacity": 1 }}
+            />
+            <Layer
+              id="world-line"
+              type="line"
+              paint={{
+                "line-color": "#8B6914",
+                "line-width": 0.4,
+                "line-opacity": 0.5,
+              }}
+            />
+          </Source>
+        )}
 
-          {/* ── Territory polygons — zoom-based opacity ── */}
-          <AnimatePresence>
-            {visibleCivs.map((civ) => {
-              const { fadeIn, fadeOut } = getCivFadeWindow(civ, civilizations, transitions);
-              return (
-                <TerritoryPolygon
-                  key={`territory-${civ.id}`}
-                  points={civ.territoryPolygon}
-                  color={civ.color}
-                  isSelected={civ.id === selectedCivId}
-                  isAnySelected={selectedCivId !== null}
-                  currentZoom={zoom}
-                  phaseOpacity={getPhaseOpacity(civ, currentYear, fadeIn, fadeOut)}
-                  onClick={() =>
-                    onCivSelect(civ.id === selectedCivId ? null : civ.id)
-                  }
-                />
-              );
-            })}
-          </AnimatePresence>
+        {/* ── Territory polygons ── */}
+        <Source id="territories" type="geojson" data={territoriesGeoJson}>
+          <Layer
+            id="territories-fill"
+            type="fill"
+            paint={{
+              "fill-color": ["get", "color"] as unknown as string,
+              "fill-opacity": ["get", "fillOpacity"] as unknown as number,
+            }}
+          />
+          <Layer
+            id="territories-line"
+            type="line"
+            paint={{
+              "line-color": ["get", "color"] as unknown as string,
+              "line-width": ["get", "strokeWidth"] as unknown as number,
+              "line-opacity": ["get", "strokeOpacity"] as unknown as number,
+            }}
+          />
+        </Source>
 
-          {/* ── Transition arrows (selected civ only) ── */}
-          {relevantTransitions.map((t, i) => (
-            <TransitionArrow key={i} transition={t} civilizations={civilizations} />
-          ))}
+        {/* ── City dots (MapLibre circle layer) ── */}
+        <Source id="cities" type="geojson" data={citiesGeoJson}>
+          {/* Capital / sacred */}
+          <Layer
+            id="cities-capital"
+            type="circle"
+            filter={["in", "type", "capital", "sacred"] as unknown as boolean}
+            paint={{
+              "circle-color": ["get", "color"] as unknown as string,
+              "circle-radius": 5,
+              "circle-stroke-color": "#2A1F12",
+              "circle-stroke-width": 1.5,
+              "circle-opacity": ["get", "phase"] as unknown as number,
+              "circle-stroke-opacity": ["get", "phase"] as unknown as number,
+            }}
+          />
+          {/* Other city types */}
+          <Layer
+            id="cities-other"
+            type="circle"
+            filter={["!in", "type", "capital", "sacred"] as unknown as boolean}
+            paint={{
+              "circle-color": "#3D2B1F",
+              "circle-radius": 3,
+              "circle-stroke-color": ["get", "color"] as unknown as string,
+              "circle-stroke-width": 1,
+              "circle-opacity": ["get", "phase"] as unknown as number,
+              "circle-stroke-opacity": ["get", "phase"] as unknown as number,
+            }}
+          />
+        </Source>
 
-          {/* ── Traveling arrows — only for officially active civs, hidden when a civ is selected ── */}
-          <AnimatePresence>
-            {!selectedCivId && activeCivs.flatMap((civ) => {
-              const civEvents = events
-                .filter((e) => e.civId === civ.id)
-                .sort((a, b) => a.year - b.year);
+        {/* ── Transition arrows ── */}
+        <Source id="transitions" type="geojson" data={transitionLinesGeoJson}>
+          <Layer
+            id="transitions-line"
+            type="line"
+            paint={{
+              "line-color": ["get", "color"] as unknown as string,
+              "line-width": 1.5,
+              "line-opacity": 0.75,
+              "line-dasharray": [4, 3],
+            }}
+          />
+        </Source>
 
-              const nextEvent = civEvents.find((e) => e.year > currentYear);
-              if (!nextEvent) return [];
+        {/* ── Traveling arrows ── */}
+        <Source id="travel" type="geojson" data={travelArrowsGeoJson}>
+          <Layer
+            id="travel-line"
+            type="line"
+            paint={{
+              "line-color": ["get", "color"] as unknown as string,
+              "line-width": 1.5,
+              "line-opacity": 0.8,
+            }}
+          />
+        </Source>
 
-              const prevEvent = civEvents.filter((e) => e.year <= currentYear).at(-1);
-              const fromYear = prevEvent?.year ?? civ.startYear;
-              const progress = Math.min(
-                1,
-                Math.max(0, (currentYear - fromYear) / (nextEvent.year - fromYear))
-              );
+        {/* ── City labels (HTML Markers — shown at zoom ≥ 4.5) ── */}
+        {showCityLabels &&
+          activeCivs.flatMap((civ) =>
+            (civ.cities ?? []).map((city) => (
+              <Marker
+                key={`city-label-${city.id}`}
+                longitude={city.coordinates[0]}
+                latitude={city.coordinates[1]}
+                anchor="top"
+              >
+                <CityLabel name={city.name} type={city.type} color={civ.color} />
+              </Marker>
+            ))
+          )}
 
-              return [
-                <TravelingArrow
-                  key={`travel-${civ.id}-${nextEvent.id}`}
-                  from={civ.centroid}
-                  to={nextEvent.coordinates}
-                  progress={progress}
-                  color={civ.color}
-                  zoomScale={zScale}
-                  civId={civ.id}
-                />,
-              ];
-            })}
-          </AnimatePresence>
-
-          {/* ── Civilization centroid dots + labels ── */}
+        {/* ── Centroid dots + labels ── */}
+        <AnimatePresence>
           {visibleCivs.map((civ) => {
             const isSelected = civ.id === selectedCivId;
             if (selectedCivId && !isSelected) return null;
-
-            const dotR = (isSelected ? 7 : 5) * zScale;
-            const sw = (isSelected ? 2 : 1.5) * zScale;
-            const nameSize = 9 * zScale;
-            const yearSize = 6 * zScale;
-            const nameY = -11 * zScale;
-            const yearY = -3 * zScale;
-            const { fadeIn: fi, fadeOut: fo } = getCivFadeWindow(civ, civilizations, transitions);
-            const phase = getPhaseOpacity(civ, currentYear, fi, fo);
-
+            const { fadeIn, fadeOut } = getCivFadeWindow(civ, civilizations, transitions);
+            const phase = Math.max(0, Math.min(1, getPhaseOpacity(civ, currentYear, fadeIn, fadeOut)));
             return (
               <Marker
-                key={civ.id}
-                coordinates={civ.centroid}
-                onClick={() => onCivSelect(isSelected ? null : civ.id)}
+                key={`centroid-${civ.id}`}
+                longitude={civ.centroid[0]}
+                latitude={civ.centroid[1]}
+                anchor="center"
               >
-              <g opacity={phase}>
-                {/* Pulse ring + EU4-style territory name on selected */}
-                {isSelected && (
-                  <>
-                    <motion.circle
-                      fill="none"
-                      stroke={civ.color}
-                      strokeWidth={1.5 * zScale}
-                      strokeOpacity={0.4}
-                      initial={{ r: 8 * zScale, opacity: 0.8 }}
-                      animate={{ r: 22 * zScale, opacity: 0 }}
-                      transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
-                    />
-                    {/* Large territory name — EU4 style */}
-                    <motion.text
-                      textAnchor="middle"
-                      y={-26 * zScale}
-                      fontSize={20 * zScale}
-                      fill="#FFFFFF"
-                      stroke={civ.color}
-                      strokeWidth={20 * zScale * 0.55}
-                      paintOrder="stroke"
-                      letterSpacing={2.5 * zScale}
-                      fontFamily="'Source Sans 3', sans-serif"
-                      fontWeight="900"
-                      style={{ pointerEvents: "none", userSelect: "none" }}
-                      initial={{ opacity: 0, scale: 0.85 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4, delay: 0.1 }}
-                    >
-                      {civ.name.toUpperCase()}
-                    </motion.text>
-                  </>
-                )}
-
-                {/* Main dot — white border */}
-                <motion.circle
-                  r={dotR}
-                  fill={civ.color}
-                  stroke="#ffffff"
-                  strokeWidth={sw}
-                  style={{ cursor: "pointer" }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.35 }}
+                <CentroidDot
+                  civ={civ}
+                  isSelected={isSelected}
+                  phase={phase}
+                  onSelect={() => onCivSelect(isSelected ? null : civ.id)}
                 />
-
-                {/* Civ name — colored, bold, white outline via paintOrder */}
-                {!isSelected && (
-                  <>
-                    <motion.text
-                      textAnchor="middle"
-                      y={nameY}
-                      fontSize={nameSize}
-                      fill={civ.color}
-                      stroke="rgba(250,246,240,0.9)"
-                      strokeWidth={nameSize * 0.45}
-                      paintOrder="stroke"
-                      fontFamily="'Source Sans 3', sans-serif"
-                      fontWeight="800"
-                      style={{ pointerEvents: "none", userSelect: "none" }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4, delay: 0.15 }}
-                    >
-                      {civ.name}
-                    </motion.text>
-                    {/* Year range — dark primary, same outline trick */}
-                    <motion.text
-                      textAnchor="middle"
-                      y={yearY}
-                      fontSize={yearSize}
-                      fill="#2A1F12"
-                      stroke="rgba(250,246,240,0.9)"
-                      strokeWidth={yearSize * 0.5}
-                      paintOrder="stroke"
-                      fontFamily="'Source Sans 3', sans-serif"
-                      fontWeight="400"
-                      style={{ pointerEvents: "none", userSelect: "none" }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 0.75 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4, delay: 0.25 }}
-                    >
-                      {formatYear(civ.startYear)}–{formatYear(civ.endYear)}
-                    </motion.text>
-                  </>
-                )}
-              </g>
               </Marker>
             );
           })}
+        </AnimatePresence>
 
-          {/* ── Event markers — appear when currentYear crosses ev.year ── */}
-          <AnimatePresence>
-            {visibleEvents.map((ev) => {
-              const iconSize = 16 * zScale;
-              const borderR = iconSize * 0.85;
-              const borderW = 1.2 * zScale;
-
-              const ownerCiv = civilizations.find((c) => c.id === ev.civId);
-              const color1 = ownerCiv?.color ?? "#2A1F12";
-              const secondaryCiv = ev.secondaryCivId
-                ? civilizations.find((c) => c.id === ev.secondaryCivId)
-                : null;
-              const color2 = secondaryCiv?.color ?? null;
-
-              return (
-                <Marker
-                  key={ev.id}
-                  coordinates={ev.coordinates}
-                  onMouseEnter={() => setHoveredEvent(ev)}
-                  onMouseLeave={() => setHoveredEvent(null)}
-                >
-                  {/* Background circle for icon */}
-                  <motion.circle
-                    r={borderR}
-                    fill="rgba(250,246,240,0.85)"
-                    stroke="none"
-                    initial={{ r: 0, opacity: 0 }}
-                    animate={{ r: borderR, opacity: 1 }}
-                    exit={{ r: 0, opacity: 0 }}
-                    transition={{ duration: 0.35, type: "tween", ease: "easeOut" }}
-                  />
-
-                  {/* Colored border — single civ or split two-civ */}
-                  {color2 ? (
-                    <motion.g
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 0.9 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4, type: "spring", stiffness: 200 }}
-                    >
-                      <path
-                        d={`M 0,${-borderR} A ${borderR},${borderR} 0 0,0 0,${borderR}`}
-                        fill="none"
-                        stroke={color1}
-                        strokeWidth={borderW}
-                      />
-                      <path
-                        d={`M 0,${-borderR} A ${borderR},${borderR} 0 0,1 0,${borderR}`}
-                        fill="none"
-                        stroke={color2}
-                        strokeWidth={borderW}
-                      />
-                    </motion.g>
-                  ) : (
-                    <motion.circle
-                      r={borderR}
-                      fill="none"
-                      stroke={color1}
-                      strokeWidth={borderW}
-                      initial={{ opacity: 0, r: 0 }}
-                      animate={{ opacity: 0.9, r: borderR }}
-                      exit={{ opacity: 0, r: 0 }}
-                      transition={{ duration: 0.35, type: "tween", ease: "easeOut" }}
-                    />
-                  )}
-
-                  {/* Entry burst ring */}
-                  <motion.circle
-                    fill="none"
-                    stroke={color1}
-                    strokeWidth={0.7 * zScale}
-                    strokeOpacity={0.4}
-                    initial={{ r: iconSize * 0.5, opacity: 0.9 }}
-                    animate={{ r: iconSize * 2, opacity: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                  />
-                  <motion.text
-                    textAnchor="middle"
-                    dominantBaseline="central"
-                    fontSize={iconSize}
-                    style={{ cursor: "pointer", userSelect: "none", pointerEvents: "all" }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.4, type: "spring", stiffness: 220, delay: 0.1 }}
-                  >
-                    {EVENT_TYPE_ICON[ev.type] ?? "●"}
-                  </motion.text>
-                </Marker>
-              );
-            })}
-          </AnimatePresence>
-        </ZoomableGroup>
-      </ComposableMap>
+        {/* ── Event markers ── */}
+        <AnimatePresence>
+          {visibleEvents.map((ev) => (
+            <Marker
+              key={`event-${ev.id}`}
+              longitude={ev.coordinates[0]}
+              latitude={ev.coordinates[1]}
+              anchor="center"
+            >
+              <EventMarkerDot
+                ev={ev}
+                civilizations={civilizations}
+                onMouseEnter={() => setHoveredEvent(ev)}
+                onMouseLeave={() => setHoveredEvent(null)}
+              />
+            </Marker>
+          ))}
+        </AnimatePresence>
+      </Map>
 
       {/* ── Zoom controls ── */}
       <div className="absolute top-4 right-4 z-10 flex flex-col gap-1">
-        <button
-          onClick={() => setZoom((z) => Math.min(8, z * 1.5))}
-          className="w-8 h-8 rounded-lg flex items-center justify-center font-sans text-base font-medium transition-colors shadow-sm"
-          style={{
-            background: "rgba(250,246,240,0.95)",
-            border: "1px solid rgba(0,0,0,0.12)",
-            color: "#2A1F12",
-          }}
-          title="Yakınlaştır"
-        >
-          +
-        </button>
-        <button
-          onClick={() => setZoom((z) => Math.max(1, z / 1.5))}
-          className="w-8 h-8 rounded-lg flex items-center justify-center font-sans text-base font-medium transition-colors shadow-sm"
-          style={{
-            background: "rgba(250,246,240,0.95)",
-            border: "1px solid rgba(0,0,0,0.12)",
-            color: "#2A1F12",
-          }}
-          title="Uzaklaştır"
-        >
-          −
-        </button>
+        {[
+          { label: "+", handler: handleZoomIn, title: "Yakınlaştır" },
+          { label: "−", handler: handleZoomOut, title: "Uzaklaştır" },
+        ].map(({ label, handler, title }) => (
+          <button
+            key={label}
+            onClick={handler}
+            title={title}
+            className="w-8 h-8 rounded-lg flex items-center justify-center font-sans text-base font-medium transition-colors shadow-sm"
+            style={{
+              background: "rgba(250,246,240,0.95)",
+              border: "1px solid rgba(0,0,0,0.12)",
+              color: "#2A1F12",
+            }}
+          >
+            {label}
+          </button>
+        ))}
       </div>
 
-      {/* ── Event tooltip — only when no civ selected ── */}
+      {/* ── Event tooltip ── */}
       <AnimatePresence>
         {hoveredEvent && !selectedCivId && (
           <motion.div
@@ -463,7 +807,10 @@ export default function IslamiyetOncesiMap({
             className="absolute bottom-5 left-1/2 -translate-x-1/2 backdrop-blur border rounded-xl px-4 py-3 max-w-sm pointer-events-none z-20 shadow-xl"
             style={{ background: "rgba(250,246,240,0.97)", borderColor: "rgba(0,0,0,0.10)" }}
           >
-            <p className="font-display text-base font-medium leading-snug" style={{ color: "#2A1F12" }}>
+            <p
+              className="text-base font-medium leading-snug"
+              style={{ fontFamily: "var(--font-im-fell)", color: "#2A1F12" }}
+            >
               {hoveredEvent.title}
             </p>
             <p className="font-sans text-xs text-ochre mt-0.5 mb-1">
@@ -477,31 +824,61 @@ export default function IslamiyetOncesiMap({
       </AnimatePresence>
 
       {/* ── Transition legend ── */}
-      {relevantTransitions.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, x: -10 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="absolute bottom-4 left-4 backdrop-blur border rounded-xl p-3 text-xs font-sans z-10 shadow-md"
-          style={{ background: "rgba(250,246,240,0.9)", borderColor: "rgba(0,0,0,0.10)" }}
+      <AnimatePresence>
+        {relevantTransitions.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -10 }}
+            className="absolute bottom-4 left-4 backdrop-blur border rounded-xl p-3 text-xs font-sans z-10 shadow-md"
+            style={{ background: "rgba(250,246,240,0.9)", borderColor: "rgba(0,0,0,0.10)" }}
+          >
+            <p
+              className="mb-2 uppercase tracking-wider text-[9px]"
+              style={{ color: "rgba(122,106,88,0.7)" }}
+            >
+              Geçiş Türleri
+            </p>
+            {[
+              { type: "göç", color: "#E8A045", label: "Göç" },
+              { type: "yıkılış", color: "#D63A3A", label: "Yıkılış" },
+              { type: "restorasyon", color: "#5090F0", label: "Restorasyon" },
+              { type: "hakimiyet-geçişi", color: "#C8A030", label: "Hâkimiyet Geçişi" },
+              { type: "bağlantı", color: "#888", label: "Bağlantı" },
+            ]
+              .filter((item) => relevantTransitions.some((t) => t.type === item.type))
+              .map((item) => (
+                <div key={item.type} className="flex items-center gap-2 mb-1 last:mb-0">
+                  <span
+                    className="w-5 border-t-2 border-dashed flex-shrink-0"
+                    style={{ borderColor: item.color }}
+                  />
+                  <span style={{ color: item.color }}>{item.label}</span>
+                </div>
+              ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Selected civ info badge ── */}
+      {selectedCiv && (
+        <div
+          className="absolute top-4 left-4 z-10 rounded-xl px-3 py-2 shadow-lg border text-xs"
+          style={{
+            background: "rgba(250,246,240,0.95)",
+            borderColor: selectedCiv.color + "55",
+          }}
         >
-          <p className="mb-2 uppercase tracking-wider text-[9px]" style={{ color: "rgba(122,106,88,0.7)" }}>
-            Geçiş Türleri
+          <p
+            className="font-semibold"
+            style={{ fontFamily: "var(--font-cinzel)", color: selectedCiv.color, fontSize: "10px" }}
+          >
+            {selectedCiv.name}
           </p>
-          {[
-            { type: "göç", color: "#E8A045", label: "Göç" },
-            { type: "yıkılış", color: "#D63A3A", label: "Yıkılış" },
-            { type: "restorasyon", color: "#5090F0", label: "Restorasyon" },
-            { type: "hakimiyet-geçişi", color: "#C8A030", label: "Hâkimiyet Geçişi" },
-            { type: "bağlantı", color: "#888", label: "Bağlantı" },
-          ]
-            .filter((item) => relevantTransitions.some((t) => t.type === item.type))
-            .map((item) => (
-              <div key={item.type} className="flex items-center gap-2 mb-1 last:mb-0">
-                <span className="w-5 border-t-2 border-dashed flex-shrink-0" style={{ borderColor: item.color }} />
-                <span style={{ color: item.color }}>{item.label}</span>
-              </div>
-            ))}
-        </motion.div>
+          <p className="font-sans opacity-60 mt-0.5" style={{ color: "#2A1F12", fontSize: "8px" }}>
+            {formatYear(selectedCiv.startYear)} – {formatYear(selectedCiv.endYear)}
+          </p>
+        </div>
       )}
     </div>
   );
