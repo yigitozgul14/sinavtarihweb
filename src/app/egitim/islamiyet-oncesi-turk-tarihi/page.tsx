@@ -295,7 +295,7 @@ export default function IslamiyetOncesiTurkTarihiPage() {
             <ActiveCulturesPanel
               visibleCivs={visibleCivs}
               selectedCivId={selectedCivId}
-              onSelect={setSelectedCivId}
+              onSelect={handleCivSelect}
             />
 
             <EventHighlightToast event={highlightedEvent} civilizations={civilizations} />

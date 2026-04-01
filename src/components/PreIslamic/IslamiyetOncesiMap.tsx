@@ -29,14 +29,14 @@ interface IslamiyetOncesiMapProps {
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const EVENT_TYPE_ICON: Record<string, string> = {
-  savaş: "⚔",
+  savaş: "⚔️",
   antlaşma: "📜",
-  din: "☽",
-  kuruluş: "◆",
-  yıkılış: "✕",
-  göç: "→",
+  din: "🌙",
+  kuruluş: "🔶",
+  yıkılış: "💥",
+  göç: "🏹",
   kültür: "✦",
-  siyasi: "⚑",
+  siyasi: "👑",
 };
 
 const TRANSITION_COLOR: Record<string, string> = {
@@ -63,7 +63,7 @@ const MAP_STYLE = {
     {
       id: "background",
       type: "background" as const,
-      paint: { "background-color": "#A8C5DA" },
+      paint: { "background-color": "#B8CDD8" },
     },
   ],
 };
@@ -336,8 +336,8 @@ function CentroidDot({
             style={{
               fontFamily: "var(--font-cinzel)",
               fontSize: "13px",
-              color: "#ffffff",
-              WebkitTextStroke: `2px ${civ.color}`,
+              color: "#2A1F12",
+              textShadow: "0 0 4px rgba(250,246,240,1), 0 0 4px rgba(250,246,240,1), 0 0 8px rgba(250,246,240,0.8)",
               bottom: "calc(100% + 12px)",
               left: "50%",
               transform: "translateX(-50%)",
@@ -604,7 +604,7 @@ export default function IslamiyetOncesiMap({
   // City dots via MapLibre layer always shown when civ is active; labels via Marker at higher zoom
 
   return (
-    <div className="relative w-full h-full" style={{ background: "#A8C5DA" }}>
+    <div className="relative w-full h-full" style={{ background: "#B8CDD8" }}>
       <Map
         ref={mapRef}
         mapStyle={MAP_STYLE}
@@ -612,8 +612,10 @@ export default function IslamiyetOncesiMap({
         style={{ width: "100%", height: "100%" }}
         onClick={handleMapClick}
         onZoomEnd={(e) => setMapZoom(e.viewState.zoom)}
-        minZoom={1.5}
+        minZoom={2.5}
         maxZoom={10}
+        maxPitch={0}
+        renderWorldCopies={false}
       >
         {/* ── World land background ── */}
         {worldGeoJson && (
@@ -621,15 +623,15 @@ export default function IslamiyetOncesiMap({
             <Layer
               id="world-fill"
               type="fill"
-              paint={{ "fill-color": "#DED0A0", "fill-opacity": 1 }}
+              paint={{ "fill-color": "#E8E0D6", "fill-opacity": 1 }}
             />
             <Layer
               id="world-line"
               type="line"
               paint={{
-                "line-color": "#8B6914",
-                "line-width": 0.4,
-                "line-opacity": 0.5,
+                "line-color": "#B0A090",
+                "line-width": 0.5,
+                "line-opacity": 0.6,
               }}
             />
           </Source>
@@ -656,18 +658,19 @@ export default function IslamiyetOncesiMap({
           />
         </Source>
 
-        {/* ── City dots (MapLibre circle layer) ── */}
+        {/* ── City dots (MapLibre circle layer — visible at zoom ≥ 4) ── */}
         <Source id="cities" type="geojson" data={citiesGeoJson}>
           {/* Capital / sacred */}
           <Layer
             id="cities-capital"
             type="circle"
+            minzoom={4}
             filter={["in", "type", "capital", "sacred"] as unknown as boolean}
             paint={{
               "circle-color": ["get", "color"] as unknown as string,
-              "circle-radius": 5,
-              "circle-stroke-color": "#2A1F12",
-              "circle-stroke-width": 1.5,
+              "circle-radius": 6,
+              "circle-stroke-color": "#FAF6F0",
+              "circle-stroke-width": 2,
               "circle-opacity": ["get", "phase"] as unknown as number,
               "circle-stroke-opacity": ["get", "phase"] as unknown as number,
             }}
@@ -676,12 +679,13 @@ export default function IslamiyetOncesiMap({
           <Layer
             id="cities-other"
             type="circle"
+            minzoom={4}
             filter={["!in", "type", "capital", "sacred"] as unknown as boolean}
             paint={{
-              "circle-color": "#3D2B1F",
-              "circle-radius": 3,
+              "circle-color": "#FAF6F0",
+              "circle-radius": 4,
               "circle-stroke-color": ["get", "color"] as unknown as string,
-              "circle-stroke-width": 1,
+              "circle-stroke-width": 1.5,
               "circle-opacity": ["get", "phase"] as unknown as number,
               "circle-stroke-opacity": ["get", "phase"] as unknown as number,
             }}
