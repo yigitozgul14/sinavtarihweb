@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useMapContext } from "react-simple-maps";
+import { chaikinSmooth } from "@/lib/chaikin";
 
 interface TerritoryPolygonProps {
   points: [number, number][];
@@ -24,7 +25,7 @@ export default function TerritoryPolygon({
 }: TerritoryPolygonProps) {
   const { projection } = useMapContext();
 
-  const projected = points.map((p) => projection(p));
+  const projected = chaikinSmooth(points).map((p) => projection(p));
   if (projected.some((p) => p === null)) return null;
 
   const d =

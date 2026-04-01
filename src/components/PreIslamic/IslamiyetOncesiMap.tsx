@@ -10,6 +10,7 @@ import Map, {
 import { motion, AnimatePresence } from "framer-motion";
 import type { FeatureCollection } from "geojson";
 import type { Civilization, CivEvent, CivTransition } from "@/types";
+import { chaikinSmooth } from "@/lib/chaikin";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 /* ─── Types ──────────────────────────────────────────────────── */
@@ -26,7 +27,51 @@ interface IslamiyetOncesiMapProps {
 
 /* ─── Constants ───────────────────────────────────────────────── */
 
-const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+const MAP_BASE_STYLE_URL = "https://tiles.openfreemap.org/styles/positron";
+
+const LAND_COLOR = "#E8E0D6";
+const WATER_COLOR = "#A8C5DA";
+
+// Layer id patterns that identify country / state level labels to hide
+const COUNTRY_LABEL_PATTERNS = ["country", "state", "region", "province", "territory"];
+
+function isCountryOrStateLabel(layer: Record<string, unknown>): boolean {
+  if (layer.type !== "symbol") return false;
+  const id = (layer.id as string).toLowerCase();
+  return COUNTRY_LABEL_PATTERNS.some((p) => id.includes(p));
+}
+
+// English name expression — falls back to native name if no English available
+const EN_NAME_EXPR = ["coalesce", ["get", "name:en"], ["get", "name_en"], ["get", "name"]];
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function customizeBaseStyle(style: Record<string, any>): Record<string, any> {
+  return {
+    ...style,
+    layers: style.layers
+      // Remove country / state level labels only; keep city/town/village labels
+      .filter((l: Record<string, unknown>) => !isCountryOrStateLabel(l))
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .map((l: Record<string, any>) => {
+        // Recolor background → parchment
+        if (l.id === "background") {
+          return { ...l, paint: { ...(l.paint ?? {}), "background-color": LAND_COLOR } };
+        }
+        // Recolor water layers → blue
+        if (typeof l.id === "string" && l.id.startsWith("water")) {
+          if (l.type === "fill")
+            return { ...l, paint: { ...(l.paint ?? {}), "fill-color": WATER_COLOR, "fill-outline-color": WATER_COLOR } };
+          if (l.type === "line")
+            return { ...l, paint: { ...(l.paint ?? {}), "line-color": WATER_COLOR } };
+        }
+        // Force English names on all remaining symbol layers
+        if (l.type === "symbol" && l.layout?.["text-field"]) {
+          return { ...l, layout: { ...l.layout, "text-field": EN_NAME_EXPR } };
+        }
+        return l;
+      }),
+  };
+}
 
 const EVENT_TYPE_ICON: Record<string, string> = {
   savaş: "⚔️",
@@ -55,18 +100,6 @@ const CITY_TYPE_SIZE: Record<string, number> = {
   sacred: 5,
 };
 
-// Minimal MapLibre style — ocean background, land rendered via GeoJSON
-const MAP_STYLE = {
-  version: 8 as const,
-  sources: {},
-  layers: [
-    {
-      id: "background",
-      type: "background" as const,
-      paint: { "background-color": "#B8CDD8" },
-    },
-  ],
-};
 
 const MAX_BUFFER = 50;
 
@@ -199,7 +232,7 @@ function buildTerritoriesGeoJson(
         },
         geometry: {
           type: "Polygon",
-          coordinates: [closedRing(civ.territoryPolygon)],
+          coordinates: [closedRing(chaikinSmooth(civ.territoryPolygon))],
         },
       };
     }),
@@ -519,20 +552,16 @@ export default function IslamiyetOncesiMap({
   const mapRef = useRef<MapRef>(null);
   const [hoveredEvent, setHoveredEvent] = useState<CivEvent | null>(null);
   const [mapZoom, setMapZoom] = useState(3);
-  // Track previous selectedCivId to fly on change
   const prevSelectedRef = useRef<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [mapStyle, setMapStyle] = useState<string | Record<string, any>>(MAP_BASE_STYLE_URL);
 
-  // Fetch world-atlas countries (TopoJSON → GeoJSON)
-  const [worldGeoJson, setWorldGeoJson] = useState<FeatureCollection | null>(null);
+  // Fetch base style, strip labels, recolor water/land
   useEffect(() => {
-    fetch(GEO_URL)
+    fetch(MAP_BASE_STYLE_URL)
       .then((r) => r.json())
-      .then(async (topo) => {
-        const { feature } = await import("topojson-client");
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        setWorldGeoJson(feature(topo as any, (topo as any).objects.countries) as unknown as FeatureCollection);
-      })
-      .catch(() => null);
+      .then((style) => setMapStyle(customizeBaseStyle(style)))
+      .catch(() => {}); // keep URL fallback on error
   }, []);
 
   // Fly when selection changes
@@ -604,10 +633,11 @@ export default function IslamiyetOncesiMap({
   // City dots via MapLibre layer always shown when civ is active; labels via Marker at higher zoom
 
   return (
-    <div className="relative w-full h-full" style={{ background: "#B8CDD8" }}>
+    <div className="relative w-full h-full" style={{ background: "#e8e0d6" }}>
       <Map
         ref={mapRef}
-        mapStyle={MAP_STYLE}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        mapStyle={mapStyle as any}
         initialViewState={{ longitude: 65, latitude: 48, zoom: 3 }}
         style={{ width: "100%", height: "100%" }}
         onClick={handleMapClick}
@@ -617,26 +647,6 @@ export default function IslamiyetOncesiMap({
         maxPitch={0}
         renderWorldCopies={false}
       >
-        {/* ── World land background ── */}
-        {worldGeoJson && (
-          <Source id="world" type="geojson" data={worldGeoJson}>
-            <Layer
-              id="world-fill"
-              type="fill"
-              paint={{ "fill-color": "#E8E0D6", "fill-opacity": 1 }}
-            />
-            <Layer
-              id="world-line"
-              type="line"
-              paint={{
-                "line-color": "#B0A090",
-                "line-width": 0.5,
-                "line-opacity": 0.6,
-              }}
-            />
-          </Source>
-        )}
-
         {/* ── Territory polygons ── */}
         <Source id="territories" type="geojson" data={territoriesGeoJson}>
           <Layer
@@ -650,6 +660,7 @@ export default function IslamiyetOncesiMap({
           <Layer
             id="territories-line"
             type="line"
+            layout={{ "line-join": "round", "line-cap": "round" }}
             paint={{
               "line-color": ["get", "color"] as unknown as string,
               "line-width": ["get", "strokeWidth"] as unknown as number,
