@@ -32,25 +32,14 @@ const MAP_BASE_STYLE_URL = "https://tiles.openfreemap.org/styles/positron";
 const LAND_COLOR = "#E8E0D6";
 const WATER_COLOR = "#A8C5DA";
 
-// Layer id patterns that identify country / state level labels to hide
-const COUNTRY_LABEL_PATTERNS = ["country", "state", "region", "province", "territory"];
-
-function isCountryOrStateLabel(layer: Record<string, unknown>): boolean {
-  if (layer.type !== "symbol") return false;
-  const id = (layer.id as string).toLowerCase();
-  return COUNTRY_LABEL_PATTERNS.some((p) => id.includes(p));
-}
-
-// English name expression — falls back to native name if no English available
-const EN_NAME_EXPR = ["coalesce", ["get", "name:en"], ["get", "name_en"], ["get", "name"]];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function customizeBaseStyle(style: Record<string, any>): Record<string, any> {
   return {
     ...style,
     layers: style.layers
-      // Remove country / state level labels only; keep city/town/village labels
-      .filter((l: Record<string, unknown>) => !isCountryOrStateLabel(l))
+      // Remove all text / icon labels
+      .filter((l: Record<string, unknown>) => l.type !== "symbol")
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .map((l: Record<string, any>) => {
         // Recolor background → parchment
@@ -63,10 +52,6 @@ function customizeBaseStyle(style: Record<string, any>): Record<string, any> {
             return { ...l, paint: { ...(l.paint ?? {}), "fill-color": WATER_COLOR, "fill-outline-color": WATER_COLOR } };
           if (l.type === "line")
             return { ...l, paint: { ...(l.paint ?? {}), "line-color": WATER_COLOR } };
-        }
-        // Force English names on all remaining symbol layers
-        if (l.type === "symbol" && l.layout?.["text-field"]) {
-          return { ...l, layout: { ...l.layout, "text-field": EN_NAME_EXPR } };
         }
         return l;
       }),
