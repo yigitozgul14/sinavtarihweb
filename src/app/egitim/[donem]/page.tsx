@@ -13,8 +13,8 @@ import { usePeriodEntities } from "@/hooks/usePeriodEntities";
 import type { PeriodDataBundle, PeriodConfig } from "@/types/period-data";
 
 // Dynamic imports — each loads only when the relevant phase is active
-const PeriodMap = dynamic(
-  () => import("@/components/period/PeriodMap"),
+const PeriodMapLibre = dynamic(
+  () => import("@/components/period/PeriodMapLibre"),
   {
     ssr: false,
     loading: () => (
@@ -178,7 +178,7 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
       {appPhase === "timeline" && (
         <>
           <div className="relative flex-1 min-h-0">
-            <PeriodMap
+            <PeriodMapLibre
               entities={bundle.entities}
               events={bundle.events}
               transitions={bundle.transitions}
@@ -189,7 +189,6 @@ export default function PeriodPage({ params }: { params: Promise<{ donem: string
               onEntitySelect={handleEntitySelect}
               onEntityHover={setHoveredEntityId}
               mapCenter={config.mapCenter}
-              mapScale={config.mapScale}
             />
 
             <ActiveEntitiesPanel
