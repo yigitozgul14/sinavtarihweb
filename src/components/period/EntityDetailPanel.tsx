@@ -56,10 +56,10 @@ export default function EntityDetailPanel({
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 24 }}
       transition={{ type: "spring", stiffness: 300, damping: 28 }}
-      className="w-full max-w-sm bg-[#151c28]/95 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
+      className="w-full max-w-sm bg-[#151c28]/95 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh]"
     >
       {/* Header */}
-      <div className="px-5 pt-5 pb-4" style={{ borderBottom: `1px solid ${entity.color}22` }}>
+      <div className="px-5 pt-5 pb-4 flex-shrink-0" style={{ borderBottom: `1px solid ${entity.color}22` }}>
         <div className="flex items-start justify-between gap-2">
           <div>
             <p className="font-sans text-xs uppercase tracking-[0.2em] mb-1" style={{ color: entity.color }}>
@@ -93,7 +93,7 @@ export default function EntityDetailPanel({
       </div>
 
       {/* Scrollable content */}
-      <div className="overflow-y-auto custom-scrollbar max-h-[55vh] p-5 space-y-5">
+      <div className="overflow-y-auto custom-scrollbar flex-1 min-h-0 p-5 space-y-5">
         {/* Facts */}
         {facts && facts.length > 0 && (
           <div>
