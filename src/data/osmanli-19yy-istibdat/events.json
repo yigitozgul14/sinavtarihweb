@@ -1,0 +1,255 @@
+[
+  {
+    "id": "sened-i-ittifak-1808",
+    "civId": "osmanli-ii-mahmut",
+    "title": "Sened-i İttifak — Padişah Yetkisi Kâğıda Döküldü",
+    "year": 1808,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "II. Mahmut ile ayanlar arasında imzalanan Sened-i İttifak, Osmanlı tarihinde padişahın yetkilerinin ilk kez resmi bir belgeyle sınırlandırıldığı belgedir. Ayanlar padişaha itaat etmeyi taahhüt ederken padişah da ağır vergi koymamayı ve adil davranmayı kabul etti. Herhangi bir dış baskı olmaksızın iç dinamiklerle ortaya çıkması bakımından özgün bir anayasal belge niteliği taşır."
+  },
+  {
+    "id": "vakay-hayriye-1826",
+    "civId": "osmanli-ii-mahmut",
+    "title": "Vakay-ı Hayriye — Yeniçeri Ocağı Kaldırıldı",
+    "year": 1826,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "II. Mahmut, 1826'da Eşkinci Ocağı'na yönelik yeniçeri isyanını fırsat bilerek Yeniçeri Ocağı'nı tamamen kaldırdı. Bu tarihi olaya 'hayırlı olay' anlamına gelen Vakay-ı Hayriye adı verildi. Ardından Asâkir-i Mansure-i Muhammediye adıyla modern bir ordu kuruldu; Bektaşi tarikatı kapatıldı ve modernleşmenin önündeki en büyük engel ortadan kalktı."
+  },
+  {
+    "id": "navarin-1827",
+    "civId": "osmanli-ii-mahmut",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Navarin Olayı — Osmanlı Donanması Yakıldı",
+    "year": 1827,
+    "type": "savaş",
+    "coordinates": [22, 37],
+    "description": "Yunan bağımsızlık hareketini destekleyen İngiltere, Fransa ve Rusya'dan oluşan müttefik donanma, Navarin limanında Osmanlı-Mısır donanmasını yaktı. Bu ağır yenilgi 1827-1829 Osmanlı-Rus Savaşı'nı tetikledi ve Yunan bağımsızlığının önünü açtı. Rusya bu müdahaleyle Yunanistan'ın hamisi konumuna yerleşti."
+  },
+  {
+    "id": "edirne-ant-1829",
+    "civId": "osmanli-ii-mahmut",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Edirne Antlaşması — Yunanistan Bağımsız",
+    "year": 1829,
+    "type": "antlaşma",
+    "coordinates": [26, 41],
+    "description": "1827-29 Osmanlı-Rus Savaşı'nı sona erdiren Edirne Antlaşması ile Yunanistan bağımsızlığını kazandı. Osmanlı'dan bağımsızlığını kazanan ilk azınlık olan Yunanlılar, Fransız İhtilali'nin milliyetçilik fikirlerinden ve Filiki Eterya cemiyetinin örgütlenmesinden güç almıştı. Rusya'nın Tuna kıyısındaki üstünlüğü de bu antlaşmayla pekişti."
+  },
+  {
+    "id": "cezayir-1830",
+    "civId": "osmanli-ii-mahmut",
+    "title": "Fransa Cezayir'i İşgal Etti",
+    "year": 1830,
+    "type": "siyasi",
+    "coordinates": [3, 36],
+    "description": "Fransa 1830'da Kuzey Afrika'daki Osmanlı toprağı Cezayir'i işgal etti. Bu gelişme Batılı güçlerin Osmanlı topraklarını fiilen parçalamaya başladığının somut bir göstergesidir. Aynı yıl Kavalalı Mehmet Ali Paşa da Mısır'da Osmanlı'ya karşı isyan bayrağını açtı; Osmanlı eş zamanlı iç ve dış krizlerle boğuşur hale geldi."
+  },
+  {
+    "id": "misir-sorunu-1832",
+    "civId": "kavalali-misir",
+    "secondaryCivId": "osmanli-ii-mahmut",
+    "title": "Mısır Sorunu — İbrahim Paşa Konya'ya İlerledi",
+    "year": 1832,
+    "type": "savaş",
+    "coordinates": [32, 38],
+    "description": "Kavalalı Mehmet Ali Paşa'nın oğlu İbrahim Paşa, 1832'de Suriye'ye girdi ve Konya'ya kadar ilerledi. Osmanlı bu iç isyanı tek başına bastıramadı; Rusya'dan destek istemek zorunda kaldı. Kütahya Antlaşması (1833) ile geçici bir barış sağlandı; Suriye ve Adana Mısır yönetimine bırakıldı."
+  },
+  {
+    "id": "hunkar-iskelesi-1833",
+    "civId": "osmanli-ii-mahmut",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Hünkar İskelesi Antlaşması — Boğazlar Sorunu Doğdu",
+    "year": 1833,
+    "type": "antlaşma",
+    "coordinates": [29, 41],
+    "description": "Mısır Sorunu sırasında Rusya'nın askeri yardımı karşılığında imzalanan Hünkar İskelesi Antlaşması ile Osmanlı, savaş durumunda Boğazları Rusya'nın istediği gibi kapatmayı taahhüt etti. Bu antlaşma 'Boğazlar Sorunu'nu uluslararası bir meseleye dönüştürdü ve İngiltere ile Fransa'yı Rusya'nın artan nüfuzundan rahatsız etti."
+  },
+  {
+    "id": "nizip-1839",
+    "civId": "kavalali-misir",
+    "secondaryCivId": "osmanli-ii-mahmut",
+    "title": "Nizip Muharebesi — Osmanlı Ordusu İmha Edildi",
+    "year": 1839,
+    "type": "savaş",
+    "coordinates": [38, 37],
+    "description": "24 Haziran 1839'da Nizip'te İbrahim Paşa komutasındaki Mısır ordusu, Hafız Osman Paşa komutasındaki Osmanlı ordusunu tamamen imha etti. II. Mahmut bu haberi duymadan hayatını kaybetti. Aynı günlerde Osmanlı donanma komutanı donanmayı Mısır'a teslim etti; Osmanlı hem kara hem deniz gücünü yitirdi."
+  },
+  {
+    "id": "tanzimat-fermani-1839",
+    "civId": "osmanli-tanzimat",
+    "title": "Tanzimat Fermanı — Yeni Çağın Başlangıcı",
+    "year": 1839,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "3 Kasım 1839'da Mustafa Reşit Paşa tarafından Gülhane Parkı'nda okunan Tanzimat Fermanı (Gülhane Hattı Hümayunu), Osmanlı tarihinde yönetimde hukukun üstünlüğünün ilk kez resmen kabul edildiği belgedir. Can, mal, ırz güvencesi, adil vergi ve açık mahkeme ilkeleri tüm Osmanlı vatandaşları için güvence altına alındı. Amaç Avrupa devletlerinin güvenini kazanmak ve azınlık isyanlarını önlemekti."
+  },
+  {
+    "id": "londra-ant-1840",
+    "civId": "osmanli-tanzimat",
+    "secondaryCivId": "kavalali-misir",
+    "title": "Londra Antlaşması — Mısır Sorunu Çözüldü",
+    "year": 1840,
+    "type": "antlaşma",
+    "coordinates": [0, 51],
+    "description": "İngiltere, Avusturya, Prusya ve Rusya'nın Osmanlı ile birlikte imzaladığı Londra Antlaşması ile Mısır Sorunu sona erdi. Kavalalı Mehmet Ali Paşa'ya Mısır kalıtsal valilik hakkıyla bırakıldı; Suriye geri alındı. Fransa'nın antlaşmayı imzalamaması uluslararası dengelerin karmaşıklığını yansıtıyordu."
+  },
+  {
+    "id": "londra-bogaz-1841",
+    "civId": "osmanli-tanzimat",
+    "title": "Londra Boğazlar Sözleşmesi — Boğazlar Çok Taraflı Güvence Altında",
+    "year": 1841,
+    "type": "antlaşma",
+    "coordinates": [0, 51],
+    "description": "Avrupalı devletlerin 1841'de imzaladığı bu sözleşme ile Boğazların Osmanlı egemenliğinde olduğu teyit edildi; barış döneminde tüm savaş gemilerine kapatılması ilkesi benimsendi. Hünkar İskelesi Antlaşması'nın Rusya'ya verdiği ayrıcalıklar böylece iptal edildi ve Boğazlar meselesi çok taraflı bir dengeye oturtuldu."
+  },
+  {
+    "id": "kirim-savasi-1853",
+    "civId": "osmanli-tanzimat",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Kırım Savaşı Başladı — İngiltere ve Fransa Yanımızda",
+    "year": 1853,
+    "type": "savaş",
+    "coordinates": [34, 45],
+    "description": "I. Nikola'nın Kudüs'teki Ortodoks Hristiyanların koruyuculuğu iddiasıyla başlayan gerilim, 1853'te Osmanlı-Rus savaşına dönüştü. İngiltere, Fransa ve İtalyan prensliği Piyemonte Osmanlı'nın yanında savaşa katıldı. Sinop'ta Osmanlı donanması büyük yenilgiye uğrasa da müttefiklerin desteğiyle savaş nihayetinde Osmanlı lehine sonuçlandı."
+  },
+  {
+    "id": "ilk-dis-borc-1854",
+    "civId": "osmanli-tanzimat",
+    "title": "İlk Dış Borç — Mali Bağımlılık Başlıyor",
+    "year": 1854,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Kırım Savaşı'nın finansmanı için İngiltere'den alınan ilk dış borç, Osmanlı'nın Batı mali sistemine bağımlılığının başlangıcıdır. Tanzimat dönemi boyunca artan borçlanma, 1875'te mali iflasla ve 1881'de Duyun-u Umumiye idaresinin kurulmasıyla sonuçlandı."
+  },
+  {
+    "id": "paris-ant-1856",
+    "civId": "osmanli-tanzimat",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Paris Antlaşması — Osmanlı Avrupa Hukukuna Dahil Oldu",
+    "year": 1856,
+    "type": "antlaşma",
+    "coordinates": [2, 48],
+    "description": "Kırım Savaşı'nı sona erdiren Paris Antlaşması ile Osmanlı toprak bütünlüğü Avrupalı devletlerce Rusya'ya karşı güvence altına alındı; Osmanlı, Avrupa devletler hukukuna resmen dahil edildi. Karadeniz tarafsızlaştırıldı; Rusya savaş gemisi bulundurma hakkından vazgeçti."
+  },
+  {
+    "id": "islahat-fermani-1856",
+    "civId": "osmanli-tanzimat",
+    "title": "Islahat Fermanı — Azınlıklara Genişletilmiş Haklar",
+    "year": 1856,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Paris Konferansı öncesinde ilan edilen Islahat Fermanı, Paris Antlaşması metnine ek olarak da yer aldı. Gayrimüslimler devlet memurluğuna kabul edildi, cizye kaldırılarak askerlikte nakdi bedel hakkı tanındı, azınlık kurumları onarım güvencesine kavuştu. Osmanlıcılık düşüncesiyle hazırlanan ferman, azınlık haklarını genişleterek dış müdahale gerekçelerini azaltmayı hedefledi."
+  },
+  {
+    "id": "i-mesrutiyet-1876",
+    "civId": "osmanli-abdulhamit",
+    "title": "I. Meşrutiyet — Kanun-i Esasi İlan Edildi",
+    "year": 1876,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Genç Osmanlıların yoğun baskısı sonucunda Abdülaziz tahttan indirildi. Kısa süre padişahlık yapan V. Murat'ın ardından meşrutiyeti vaat eden II. Abdülhamit tahta çıktı. 23 Aralık 1876'da Sadrazam Mithat Paşa başkanlığındaki kurul tarafından hazırlanan Kanun-i Esasi ilan edildi; iki meclisli bir yapı (Ayan ve Mebusan) kuruldu. Ancak padişah meclisi açıp kapama yetkisini elinde tuttu."
+  },
+  {
+    "id": "93-harbi-1877",
+    "civId": "osmanli-abdulhamit",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "93 Harbi — Osmanlı Ağır Yenilgiye Uğradı",
+    "year": 1877,
+    "type": "savaş",
+    "coordinates": [28, 44],
+    "description": "1877-1878 Osmanlı-Rus Savaşı (Hicri 1293 yılına denk geldiğinden '93 Harbi' olarak anılır), Osmanlı ordusunun ağır yenilgisiyle sonuçlandı. Rus ordusu Edirne'ye kadar ilerledi; İstanbul kapılarına dayandı. Bu savaş hem ülke içinde büyük bir göç dalgasına yol açtı hem de meşrutiyet dönemini fiilen bitirdi."
+  },
+  {
+    "id": "ayastefanos-1878",
+    "civId": "osmanli-abdulhamit",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Ayastefanos Antlaşması — Rusya Zirveye Ulaştı",
+    "year": 1878,
+    "type": "antlaşma",
+    "coordinates": [29, 41],
+    "description": "Yeşilköy'de (Ayastefanos) imzalanan bu antlaşma ile Rusya Osmanlı'ya çok ağır koşullar dayattı: Büyük Bulgaristan kuruldu, Sırbistan, Karadağ ve Romanya bağımsız oldu; Kars, Ardahan ve Batum Rusya'ya bırakıldı. Rusya'yı güçlendiren bu antlaşma İngiltere ve Avusturya tarafından tanınmadı; Berlin Kongresi toplandı."
+  },
+  {
+    "id": "berlin-ant-1878",
+    "civId": "osmanli-abdulhamit",
+    "title": "Berlin Antlaşması — Dengeler Yeniden Kuruldu",
+    "year": 1878,
+    "type": "antlaşma",
+    "coordinates": [13, 52],
+    "description": "Avrupalı büyük güçlerin Berlin Kongresi'nde aldığı kararlar Ayastefanos'u törpüledi: Büyük Bulgaristan üçe bölündü, Rusya Kars, Ardahan ve Batum'u aldı (Elviye-i Selase), Sırbistan-Karadağ-Romanya bağımsızlıklarını korudu. İngiltere 1878'de Kıbrıs'ı aldı. Kongre, Ermeni meselesini de gündeme taşıyarak Osmanlı iç işlerine müdahale kapısını araladı."
+  },
+  {
+    "id": "kibris-1878",
+    "civId": "osmanli-abdulhamit",
+    "title": "İngiltere Kıbrıs'ı Devraldı",
+    "year": 1878,
+    "type": "siyasi",
+    "coordinates": [33, 35],
+    "description": "Berlin Kongresi öncesinde İngiltere ile yapılan gizli anlaşma çerçevesinde Kıbrıs İngiliz yönetimine bırakıldı. İngiltere bu hamleyle Doğu Akdeniz'de kilit bir üs kazandı. Bu gelişme, Osmanlı'nın uluslararası baskılar karşısında toprak tavizi vermek zorunda kaldığının somut bir göstergesidir."
+  },
+  {
+    "id": "duyun-umumiye-1881",
+    "civId": "osmanli-abdulhamit",
+    "title": "Duyun-u Umumiye İdaresi Kuruldu",
+    "year": 1881,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "1875'te ilan edilen mali iflasın (Muharrem Kararnamesi, 1881) ardından alacaklı Avrupalı devletlerin baskısıyla Duyun-u Umumiye (Genel Borçlar) İdaresi kuruldu. Bu kurum Osmanlı gelirlerinin önemli bir bölümünü (tuz, tütün, ipek, balık avcılığı vergileri vb.) doğrudan alacaklılara aktardı. Osmanlı mali egemenliğini büyük ölçüde yitirdi."
+  },
+  {
+    "id": "misir-1882",
+    "civId": "osmanli-abdulhamit",
+    "title": "İngiltere Mısır'ı İşgal Etti",
+    "year": 1882,
+    "type": "siyasi",
+    "coordinates": [31, 30],
+    "description": "İngiltere 1882'de Mısır'ı işgal etti; böylece 1840'tan beri Osmanlı'ya bağlı kalan Mısır fiilen İngiliz kontrolüne geçti. Daha önce Fransa 1830'da Cezayir'i, 1881'de Tunus'u almıştı. Bu işgaller Osmanlı'nın Kuzey Afrika'daki varlığını hızla eritiyordu."
+  },
+  {
+    "id": "itc-kurulus-1889",
+    "civId": "osmanli-abdulhamit",
+    "title": "İttihat ve Terakki Cemiyeti Kuruldu",
+    "year": 1889,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "2 Haziran 1889'da İstanbul Askeri Tıbbiye'de İshak Sükûti, İbrahim Temo, Abdullah Cevdet ve Çerkez Mehmed Reşid öncülüğünde kurulan İttihat ve Terakki Cemiyeti, Türkçülük ideolojisini benimsedi. İstibdat rejimine karşı muhalefet bayrağını taşıyan cemiyet, II. Meşrutiyet'in ilanında ve ardından Osmanlı siyasetinde belirleyici bir rol oynadı."
+  },
+  {
+    "id": "domeke-1897",
+    "civId": "osmanli-abdulhamit",
+    "title": "Dömeke Savaşı — Yunanistan'a Karşı Zafer",
+    "year": 1897,
+    "type": "savaş",
+    "coordinates": [22, 39],
+    "description": "Yunanistan'ın Girit'e saldırısıyla başlayan Osmanlı-Yunan savaşında Osmanlı, Dömeke'de zafer kazandı. Ancak Avrupalı devletlerin baskısı sonucunda Girit özerk bir yönetime kavuşturuldu; Osmanlı askeri zaferini siyasi başarıya dönüştüremedi. Bu durum Avrupa devletlerinin Osmanlı iç işlerine müdahalesinin sürdüğünü gözler önüne serdi."
+  },
+  {
+    "id": "ii-mesrutiyet-1908",
+    "civId": "osmanli-abdulhamit",
+    "title": "II. Meşrutiyet İlanı — 30 Yıllık İstibdat Sona Erdi",
+    "year": 1908,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "İngiltere ile Rusya'nın 1908'deki Reval Görüşmeleri'nde Panslavizm konusunda uzlaşması İttihatçıları alarma geçirdi. Makedonya'da silahlanan İttihat ve Terakki subayları isyan bayrağını açtı. II. Abdülhamit 23 Temmuz 1908'de Kanun-i Esasi'yi yeniden yürürlüğe koyarak II. Meşrutiyet'i ilan etmek zorunda kaldı. Osmanlı'da ilk kez çok partili siyasi hayata geçildi."
+  },
+  {
+    "id": "31-mart-1909",
+    "civId": "osmanli-abdulhamit",
+    "title": "31 Mart Ayaklanması — İlk Gerici İsyan Bastırıldı",
+    "year": 1909,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "13 Nisan 1909'da (Rumi takvimle 31 Mart) din adamları ve muhafazakâr askerlerden oluşan gruplar İstanbul'da ayaklandı. Balkan politikası, parti anlaşmazlıkları ve halkın dinî duygularının istismarı tetikleyici etkenler arasındaydı. Selanik'te kurulan ve kurmay başkanlığını Mustafa Kemal'in yaptığı Hareket Ordusu isyanı bastırdı."
+  },
+  {
+    "id": "abdulhamit-hal-1909",
+    "civId": "osmanli-abdulhamit",
+    "title": "II. Abdülhamit Tahttan İndirildi — 1909 Anayasa Değişiklikleri",
+    "year": 1909,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "31 Mart Ayaklanması'nın bastırılmasının ardından meclis II. Abdülhamit'i tahttan indirdi; yerine V. Mehmet (Reşat) geçti. Aynı yıl gerçekleştirilen anayasa değişiklikleriyle padişahın meclisi kapatma yetkisi sınırlandırıldı, hükümet padişaha değil meclise karşı sorumlu kılındı ve yargı güvencesi pekiştirildi. İttihat ve Terakki fiilen iktidarı ele geçirdi."
+  }
+]

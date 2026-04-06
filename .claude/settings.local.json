@@ -15,7 +15,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:api.github.com)",
       "Bash(xargs grep:*)",
-      "Bash(\"C:/Users/yigitt/Documents/GitHub/kpsstarihweb/src/lib/chaikin.ts\")"
+      "Bash(\"C:/Users/yigitt/Documents/GitHub/kpsstarihweb/src/lib/chaikin.ts\")",
+      "Bash(grep -E \"\\\\.ts$\")"
     ]
   }
 }

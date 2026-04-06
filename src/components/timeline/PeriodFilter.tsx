@@ -9,6 +9,7 @@ const DEDICATED_ROUTES: Record<string, string> = {
   "ilk-turk-islam-devletleri": "/egitim/ilk-turk-islam-devletleri",
   "osmanli-kurulus-yukselme": "/egitim/osmanli-kurulus-yukselme",
   "osmanli-duraklama-gerileme": "/egitim/osmanli-duraklama-gerileme",
+  "osmanli-19yy-istibdat": "/egitim/osmanli-19yy-istibdat",
 };
 
 interface PeriodFilterProps {

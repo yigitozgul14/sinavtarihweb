@@ -1,0 +1,118 @@
+[
+  {
+    "id": "osmanli-ii-mahmut",
+    "name": "Osmanlı İmparatorluğu (II. Mahmut)",
+    "startYear": 1808,
+    "endYear": 1839,
+    "color": "#C8102E",
+    "centroid": [32, 40],
+    "mapFocus": { "center": [28, 40], "scale": 420 },
+    "territoryPolygon": [
+      [14, 36], [54, 22], [56, 42], [40, 50], [26, 50], [14, 44], [14, 36]
+    ],
+    "ruler": "II. Mahmut (1808–1839)",
+    "location": "Balkanlar, Anadolu, Orta Doğu, Kuzey Afrika",
+    "summary": "II. Mahmut dönemi köklü reform girişimleriyle şekillenmiştir. Yeniçeri Ocağı'nın kaldırılması (Vakay-ı Hayriye, 1826) ve modern devlet kurumlarının tesisi en belirleyici adımlardır. Dışta ise Yunan bağımsızlığı, Mısır Sorunu ve Rusya ile yaşanan gerilimler padişahın önündeki başlıca krizleri oluşturmuştur.",
+    "facts": [
+      "1808'de Sened-i İttifak ile ayanların gücü resmen tanındı; padişah yetkileri tarihte ilk kez kâğıda döküldü",
+      "1826'da Vakay-ı Hayriye ile Yeniçeri Ocağı kaldırılarak Asâkir-i Mansure-i Muhammediye ordusu kuruldu",
+      "1829 Edirne Antlaşması ile Yunanistan bağımsızlığını kazandı; Osmanlı'dan ayrılan ilk azınlık oldu",
+      "1831'de ilk nüfus sayımı ve Takvim-i Vekayi (resmi gazete) yayımlandı",
+      "1833 Hünkar İskelesi Antlaşması ile Rusya, Boğazları kapama konusunda ayrıcalık elde etti",
+      "1838 Balta Limanı Sözleşmesi İngiliz mallara geniş ayrıcalıklar tanıyarak Osmanlı ekonomisini olumsuz etkiledi"
+    ]
+  },
+  {
+    "id": "kavalali-misir",
+    "name": "Kavalalı Mısır (Mısır Sorunu)",
+    "startYear": 1830,
+    "endYear": 1840,
+    "color": "#D97706",
+    "centroid": [30, 28],
+    "mapFocus": { "center": [32, 30], "scale": 550 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [24, 22], [36, 22], [38, 30], [36, 32], [30, 34], [24, 30], [24, 22]
+    ],
+    "ruler": "Kavalalı Mehmet Ali Paşa",
+    "location": "Mısır, Suriye, Hicaz",
+    "summary": "Kavalalı Mehmet Ali Paşa, 1830 yılında Osmanlı yönetimine karşı isyan başlatarak Suriye'ye kadar ilerledi. Bu kriz Osmanlı'nın kendi içinde çözemeyeceği bir dış sorun haline geldi. 1839 Nizip Muharebesi'nde Osmanlı ordusu ağır yenilgiye uğradı; Avrupa devletlerinin müdahalesiyle 1840 Londra Antlaşması imzalanarak Mısır Sorunu sona erdi.",
+    "facts": [
+      "Kavalalı Mehmet Ali Paşa, Mora Ayaklanması'nı bastırması karşılığında Mora yerine Suriye'yi istedi",
+      "1832'de İbrahim Paşa komutasındaki Mısır ordusu Konya'ya kadar ilerledi",
+      "1833 Kütahya Antlaşması ile geçici barış sağlandı; Suriye Mısır'a bırakıldı",
+      "1839 Nizip'te Osmanlı ordusu İbrahim Paşa tarafından imha edildi",
+      "1840 Londra Antlaşması ile Mısır, Kavalalı hanedanına kalıtsal valilikte bırakıldı; Suriye geri alındı"
+    ]
+  },
+  {
+    "id": "osmanli-tanzimat",
+    "name": "Osmanlı İmparatorluğu (Tanzimat)",
+    "startYear": 1839,
+    "endYear": 1876,
+    "color": "#B91C1C",
+    "centroid": [32, 40],
+    "mapFocus": { "center": [28, 40], "scale": 420 },
+    "territoryPolygon": [
+      [14, 36], [54, 22], [56, 42], [40, 50], [26, 50], [14, 44], [14, 36]
+    ],
+    "ruler": "Abdülmecit (1839–1861) · Abdülaziz (1861–1876)",
+    "location": "Balkanlar, Anadolu, Orta Doğu, Kuzey Afrika",
+    "summary": "Tanzimat Fermanı'nın (1839) ilanıyla başlayan bu dönemde Osmanlı, Avrupa hukuku ve kurumlarından esinlenen köklü reformları hayata geçirdi. Kırım Savaşı (1853-56), Paris Antlaşması ve Islahat Fermanı (1856) bu dönemi uluslararası alanda şekillendirdi. Genç Osmanlıların baskısıyla I. Meşrutiyet'e uzanan süreç başladı.",
+    "facts": [
+      "3 Kasım 1839'da Mustafa Reşit Paşa tarafından okunan Tanzimat Fermanı hukukun üstünlüğünü kabul etti",
+      "1853-56 Kırım Savaşı'nda İngiltere ve Fransa'nın desteğiyle Rusya'ya karşı zafer kazanıldı",
+      "1856 Paris Antlaşması ile Osmanlı toprak bütünlüğü Avrupalı devletlerce güvence altına alındı",
+      "1856 Islahat Fermanı gayrimüslimlere devlet memurluğu ve askerlik muafiyeti hakkı tanıdı",
+      "İlk dış borç 1854'te İngiltere'den alındı; Osmanlı mali bağımlılığı bu dönemde başladı",
+      "1863'te Darülfünun ve 1868'de Galatasaray Sultanisi açıldı"
+    ]
+  },
+  {
+    "id": "carlik-rusyasi",
+    "name": "Çarlık Rusyası",
+    "startYear": 1808,
+    "endYear": 1878,
+    "color": "#166534",
+    "centroid": [46, 56],
+    "mapFocus": { "center": [46, 56], "scale": 350 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [28, 48], [62, 46], [66, 58], [44, 64], [28, 60], [24, 52], [28, 48]
+    ],
+    "ruler": "I. Aleksandr · I. Nikola · II. Aleksandr",
+    "location": "Doğu Avrupa, Kafkasya, Orta Asya",
+    "summary": "19. yüzyılda Rusya, Panslavizm politikasıyla Balkan halklarını Osmanlı'ya karşı sürekli kışkırttı. 1853 Kırım Savaşı'nda yenilgiye uğrayan Rusya, 1877-78 93 Harbi'nde ağır bir zafer kazandı. Ayastefanos Antlaşması Rusya'yı güçlendirdi; ancak Berlin Antlaşması bu kazanımları törpüledi.",
+    "facts": [
+      "I. Nikola 1853'te 'Hasta Adam' benzetmesini kullanarak Osmanlı'nın çöküşünü ilan etti",
+      "Navarin'de (1827) Osmanlı donanmasını yakmak Rusya'nın Yunan bağımsızlığına desteğinin simgesiydi",
+      "1829 Edirne Antlaşması ile Yunanistan bağımsız oldu; Rusya balkanları denetim altına aldı",
+      "1853-56 Kırım Savaşı'nda İngiltere ve Fransa'nın desteğiyle durdurulan Rusya Paris'te geri adım attı",
+      "1877-78 93 Harbi'nde Osmanlı'yı ağır yenilgiye uğratan Rusya Yeşilköy'e kadar ilerledi",
+      "Berlin Antlaşması Rusya'nın Ayastefanos kazanımlarını kıstı ama Kars, Ardahan ve Batum'u aldı"
+    ]
+  },
+  {
+    "id": "osmanli-abdulhamit",
+    "name": "Osmanlı İmparatorluğu (İstibdat)",
+    "startYear": 1876,
+    "endYear": 1909,
+    "color": "#7F1D1D",
+    "centroid": [32, 40],
+    "mapFocus": { "center": [30, 40], "scale": 430 },
+    "territoryPolygon": [
+      [14, 36], [48, 22], [50, 40], [36, 48], [26, 48], [14, 44], [14, 36]
+    ],
+    "ruler": "II. Abdülhamit (1876–1909)",
+    "location": "Balkanlar (daralan), Anadolu, Orta Doğu, Kuzey Afrika",
+    "summary": "II. Abdülhamit 1876'da I. Meşrutiyet'i ilan etse de 1878'de meclisi kapatarak 30 yıllık baskı ve sansür rejimine (İstibdat) girdi. İslamcılık politikası, Duyun-u Umumiye ve Almanya yakınlaşması dönemin belirleyici unsurlarıdır. 1908'de İttihat ve Terakki baskısıyla II. Meşrutiyet ilan edildi; 1909'da 31 Mart Ayaklanması'nın ardından tahttan indirildi.",
+    "facts": [
+      "1878'de 93 Harbi'ni bahane ederek meclisi kapattı; 1878-1908 arası İstibdat Dönemi başladı",
+      "1881'de Muharrem Kararnamesi ile mali iflas ilan edildi; 1881'de Duyun-u Umumiye kuruldu",
+      "Osmanlıcılık yerine İslamcılık (Ümmetçilik) politikasını benimsedi; halifelik kimliğini ön plana çıkardı",
+      "1883'te Berlin-Bağdat Demiryolu projesiyle Almanya ile yakınlaştı",
+      "1889'da kurulan İttihat ve Terakki Cemiyeti'nin baskısıyla 1908'de II. Meşrutiyet ilan edildi",
+      "1909'da 31 Mart Ayaklanması'nın Hareket Ordusu tarafından bastırılmasının ardından tahttan indirildi"
+    ]
+  }
+]

@@ -56,6 +56,15 @@ export const PERIODS: Period[] = [
     description: "Sokullu'nun vefatından Nizam-ı Cedit'e: Karlofça, Lale Devri ve XVIII. yy ıslahatları",
   },
   {
+    id: "osmanli-19yy-istibdat",
+    slug: "osmanli-19yy-istibdat",
+    name: "Osmanlı 19. YY ve İstibdat",
+    startYear: 1808,
+    endYear: 1909,
+    color: "#991B1B",
+    description: "II. Mahmut'tan II. Meşrutiyet'e ıslahatlar, Tanzimat ve İstibdat dönemi",
+  },
+  {
     id: "osmanlı-dağılma",
     slug: "osmanli-dagilma",
     name: "Osmanlı Dağılma",
