@@ -98,7 +98,7 @@ export function usePeriodPlayback({
           setIsPlaying(false);
           return maxYear;
         }
-        return y + getIncrement(y, speed, entities) * (delta / 100);
+        return y + getIncrement(y, speed, entities, events) * (delta / 100);
       });
 
       rafId = requestAnimationFrame(frame);
@@ -106,7 +106,7 @@ export function usePeriodPlayback({
 
     rafId = requestAnimationFrame(frame);
     return () => cancelAnimationFrame(rafId);
-  }, [isPlaying, speed, entities, maxYear]);
+  }, [isPlaying, speed, entities, events, maxYear]);
 
   // Spacebar toggle
   const togglePlay = useCallback(() => {

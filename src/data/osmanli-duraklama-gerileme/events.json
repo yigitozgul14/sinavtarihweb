@@ -1,0 +1,192 @@
+[
+  {
+    "id": "ferhat-pasa-1590",
+    "civId": "osmanli-duraklama",
+    "secondaryCivId": "safevi-iran",
+    "title": "Ferhat Paşa Antlaşması — Doğuda Zirve",
+    "year": 1590,
+    "type": "antlaşma",
+    "coordinates": [45, 37],
+    "description": "Osmanlı-Safevi savaşını sona erdiren bu antlaşma ile Osmanlı, doğu cephesinde tarihsel olarak en geniş sınırlara ulaştı. Tebriz, Azerbaycan ve Luristan gibi topraklar Osmanlı kontrolüne geçti; bu antlaşma imparatorluğun doğu kanadındaki stratejik zirvesini temsil eder."
+  },
+  {
+    "id": "zitvatorok-1606",
+    "civId": "osmanli-duraklama",
+    "title": "Zitvatorok Antlaşması — Diplomatik Kırılma",
+    "year": 1606,
+    "type": "antlaşma",
+    "coordinates": [18, 47],
+    "description": "Osmanlı-Avusturya savaşını sona erdiren bu antlaşmayla Osmanlı Sultanı, Avusturya Arşidükü'nü 'Sezar' (İmparator) olarak tanıdı. Bu diplomatik mütekabiliyet, Sultan'ın 'Evrensel Hükümdar' iddiasını ve siyasi üstünlüğünü sona erdiren kritik bir kırılma noktasıdır."
+  },
+  {
+    "id": "genc-osman-katli-1622",
+    "civId": "osmanli-duraklama",
+    "title": "II. Osman'ın İdamı — Hanedan Prestijine Darbe",
+    "year": 1622,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Hotin Seferi'ndeki (1621) Yeniçeri disiplinsizliğine öfkelenerek Yeniçeri Ocağı'nı kaldırmayı planlayan II. Osman, Yeniçeriler tarafından uykusundan uyandırılıp sokaklarda sürüklenerek Yedikule zindanlarında idam edildi. Bu olay padişahın 'Zillullah fil-Arz' (Tanrı'nın yeryüzündeki gölgesi) sıfatıyla taşıdığı kutsiyet zırhını parçaladı."
+  },
+  {
+    "id": "kasri-sirin-1639",
+    "civId": "osmanli-duraklama",
+    "secondaryCivId": "safevi-iran",
+    "title": "Kasr-ı Şirin Antlaşması — Kalıcı Doğu Sınırı",
+    "year": 1639,
+    "type": "antlaşma",
+    "coordinates": [46, 34],
+    "description": "Osmanlı-Safevi savaşlarını kalıcı olarak sona erdiren bu antlaşmayla Irak Osmanlı'da, Azerbaycan ise Safeviler'de kaldı. Büyük ölçüde günümüz Türkiye-İran sınırını belirleyen bu hat, bölgeye uzun vadeli istikrar getirmiştir."
+  },
+  {
+    "id": "girit-feth-1669",
+    "civId": "osmanli-duraklama",
+    "title": "Girit'in Fethi — 24 Yıllık Kuşatma Tamamlandı",
+    "year": 1669,
+    "type": "savaş",
+    "coordinates": [25, 35],
+    "description": "1645'te başlayan 24 yıllık Venedik kuşatması Köprülü Fazıl Ahmet Paşa önderliğinde tamamlandı. Bu süreçte kadırga tabanlı Osmanlı donanmasının Venedik'in modern yelkenli gemilerine karşı lojistik ve teknolojik açıdan yetersiz kaldığı ortaya çıktı."
+  },
+  {
+    "id": "vasvar-1664",
+    "civId": "osmanli-duraklama",
+    "title": "Vasvar Antlaşması — Son Avantajlı Batı Antlaşması",
+    "year": 1664,
+    "type": "antlaşma",
+    "coordinates": [17, 47],
+    "description": "Osmanlı ile Avusturya arasında imzalanan Vasvar Antlaşması, XVII. yüzyılda Avusturya'ya karşı kazanılan son avantajlı ve kazançlı diplomatik metindir. Bu tarihten sonra Osmanlı'nın Batı'daki üstünlüğü giderek zayıflamaya başlamıştır."
+  },
+  {
+    "id": "bucas-1672",
+    "civId": "osmanli-duraklama",
+    "title": "Bucaş Antlaşması — Batıda Zirvesi",
+    "year": 1672,
+    "type": "antlaşma",
+    "coordinates": [26, 49],
+    "description": "Lehistan ile imzalanan Bucaş Antlaşması, Osmanlı'nın batı cephesinde ulaştığı en geniş sınırı temsil eden mutlak zirve noktasıdır. Podolya ve Ukrayna'nın bir bölümü Osmanlı'ya katıldı; bu tarihten itibaren geri sayım başlamıştır."
+  },
+  {
+    "id": "ikinci-viyana-1683",
+    "civId": "osmanli-duraklama",
+    "secondaryCivId": "kutsal-ittifak",
+    "title": "II. Viyana Kuşatması — Dönüm Noktası",
+    "year": 1683,
+    "type": "savaş",
+    "coordinates": [16, 48],
+    "description": "Merzifonlu Kara Mustafa Paşa komutasındaki Osmanlı ordusu Viyana önlerinde Kutsal İttifak kuvvetleri tarafından ağır bir yenilgiye uğratıldı. Bu yenilgi Osmanlı'nın Batı'daki geri çekilişinin başlangıcı oldu; Merzifonlu idam edildi ve Kutsal İttifak harekete geçti."
+  },
+  {
+    "id": "zenta-1697",
+    "civId": "osmanli-duraklama",
+    "secondaryCivId": "kutsal-ittifak",
+    "title": "Zenta Savaşı — Karlofça'nın Habercisi",
+    "year": 1697,
+    "type": "savaş",
+    "coordinates": [20, 46],
+    "description": "Prens Eugen komutasındaki Avusturya ordusu, Osmanlı kuvvetlerini Zenta'da ağır bir yenilgiye uğrattı. Bu yenilgi Karlofça barış görüşmelerini kaçınılmaz kılan ve Osmanlı'nın müzakere masasındaki gücünü yok eden son darbeydi."
+  },
+  {
+    "id": "karlofca-1699",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "kutsal-ittifak",
+    "title": "Karlofça Antlaşması — Tarihsel Kırılma",
+    "year": 1699,
+    "type": "antlaşma",
+    "coordinates": [20, 45],
+    "description": "Osmanlı ile Kutsal İttifak (Avusturya, Lehistan, Venedik) arasında imzalanan Karlofça, Batı'da ilk kez büyük çaplı toprak kaybının yaşandığı antlaşmadır. Macaristan Avusturya'ya bırakıldı; Osmanlı stratejisi 'fetih genişlemesi'nden 'mevcudu korumaya' evrildi."
+  },
+  {
+    "id": "istanbul-ant-1700",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "İstanbul Antlaşması — Rusya Karadeniz'e İndi",
+    "year": 1700,
+    "type": "antlaşma",
+    "coordinates": [37, 47],
+    "description": "Osmanlı ile Rusya arasında imzalanan bu antlaşmayla Azak Kalesi Ruslara bırakıldı. Bu gelişme, Rusya'nın sıcak denizlere açılma hedefinin ilk somut başarısı ve Karadeniz'in 'Türk Gölü' vasfının sarsılmaya başlamasının işareti oldu."
+  },
+  {
+    "id": "prut-1711",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Prut Antlaşması — Azak Geri Alındı",
+    "year": 1711,
+    "type": "antlaşma",
+    "coordinates": [28, 47],
+    "description": "Büyük Petro'nun ordusunun Prut Nehri kıyısında kuşatılmasıyla imzalanan antlaşmayla Azak Kalesi Osmanlı'ya geri verildi. Bu gelişme, XVII. yüzyılda kaybedilen toprakların geri alınabileceğine dair kısa süreli bir umut yarattı."
+  },
+  {
+    "id": "pasarofca-1718",
+    "civId": "osmanli-gerileme",
+    "title": "Pasarofça Antlaşması — Lale Devri Başlıyor",
+    "year": 1718,
+    "type": "antlaşma",
+    "coordinates": [22, 44],
+    "description": "Petervaradin yenilgisinin (1716) ardından Avusturya ile imzalanan bu antlaşmayla Osmanlı bazı Balkan topraklarını kaybetti. Batı askeri üstünlüğünün fiilen kabul edilmesiyle Lale Devri (1718-1730) başladı ve Batı tarzı reformlar gündemine girdi."
+  },
+  {
+    "id": "matbaa-1727",
+    "civId": "osmanli-gerileme",
+    "title": "İlk Türk Matbaası Kuruldu",
+    "year": 1727,
+    "type": "kültür",
+    "coordinates": [29, 41],
+    "description": "Lale Devri'nde İbrahim Müteferrika ve Said Efendi tarafından kurulan ilk Türk matbaasında (Darü't-Tıbaati'l-Amire) din dışı eserler basılmaya başlandı. İlk basılan eser Vankulu Lügati'dir. Hattatların işini kaybetmemesi için dini eserlerin basılması yasaklandı."
+  },
+  {
+    "id": "patrona-halil-1730",
+    "civId": "osmanli-gerileme",
+    "title": "Patrona Halil İsyanı — Lale Devri Sona Erdi",
+    "year": 1730,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Yeniçeri kalyoncu esnafı Patrona Halil önderliğinde patlak veren isyan, Nevşehirli Damat İbrahim Paşa'nın idam edilmesi ve III. Ahmet'in tahttan indirilmesiyle sonuçlandı. Bu isyanla Lale Devri kapandı ve ıslahat süreci sekteye uğradı."
+  },
+  {
+    "id": "belgrad-1739",
+    "civId": "osmanli-gerileme",
+    "title": "Belgrad Antlaşması — Son Büyük Zafer",
+    "year": 1739,
+    "type": "antlaşma",
+    "coordinates": [21, 45],
+    "description": "I. Mahmut döneminde gerçekleştirilen Belgrad Savaşı'nda Osmanlı hem Rusya hem Avusturya'ya karşı üstünlük sağladı. Bu antlaşma, Osmanlı'nın gerileme döneminde Batı'ya karşı kazandığı son büyük diplomatik zaferi temsil etmektedir."
+  },
+  {
+    "id": "kucuk-kaynarca-1774",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Küçük Kaynarca Antlaşması — Ağır Kayıplar",
+    "year": 1774,
+    "type": "antlaşma",
+    "coordinates": [28, 44],
+    "description": "1768-74 Osmanlı-Rus savaşının ardından imzalanan bu antlaşmayla: Kırım bağımsız ilan edildi (ilk kez tamamı Türk-Müslüman bir toprak kaybedildi), Osmanlı ilk kez savaş tazminatı ödedi, Rusya İstanbul'da elçilik ve Balkanlar'da konsolosluk hakkı kazandı. Orijinal metinde olmayan 'Ortodoksların dini lideri Rusya'dır' maddesi 1775'te antlaşmaya eklendi."
+  },
+  {
+    "id": "aynalikavak-1779",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Aynalıkavak Tenkihnamesi — Kırım Özerk",
+    "year": 1779,
+    "type": "antlaşma",
+    "coordinates": [34, 44],
+    "description": "Şahin Giray Han'ın Kırım Hanı olarak Osmanlı tarafından tanınmasıyla Kırım özerk hale getirildi. 'Tenkihname' (sözleşme) adıyla anılan bu belge, Rusya'nın Kırım üzerindeki etkisini meşrulaştıran kritik bir aşamadır. 1783'te Rusya Kırım'ı tamamen ilhak etti."
+  },
+  {
+    "id": "nizami-cedit-1789",
+    "civId": "osmanli-gerileme",
+    "title": "Nizam-ı Cedit — Köklü Dönüşüm Başlıyor",
+    "year": 1789,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "III. Selim'in tahta çıkmasıyla başlayan Nizam-ı Cedit hareketi, Osmanlı tarihinde ilk köklü (radikal) modernleşme girişimidir. Yerli ve yabancı uzmanlara hazırlattığı layihalar (raporlar) doğrultusunda: Nizam-ı Cedit ordusu kuruldu, İrad-ı Cedid Hazinesi oluşturuldu, Avrupa'da daimi elçilikler açıldı (ilk daimi elçi: Londra - Yusuf Agah Efendi) ve Mühendishane-i Berr-i Hümayun faaliyete geçirildi."
+  },
+  {
+    "id": "yas-1792",
+    "civId": "osmanli-gerileme",
+    "secondaryCivId": "carlik-rusyasi",
+    "title": "Yaş Antlaşması — Kırım Rusya'nın Oldu",
+    "year": 1792,
+    "type": "antlaşma",
+    "coordinates": [28, 47],
+    "description": "1787-92 Osmanlı-Rusya-Avusturya savaşını sona erdiren bu antlaşmayla Osmanlı, Kırım'ın Rusya'ya ait olduğunu resmen kabul etti. Fransız İhtilali'nden (1789) etkilenen Avusturya daha önce 1791 Ziştovi Antlaşması ile ayrılmış ve aldığı toprakları Osmanlı'ya geri vermişti."
+  }
+]

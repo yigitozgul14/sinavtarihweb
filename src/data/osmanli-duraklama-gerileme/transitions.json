@@ -1,0 +1,30 @@
+[
+  {
+    "from": "osmanli-kurulus-yukselme",
+    "to": "osmanli-duraklama",
+    "type": "bağlantı",
+    "label": "Sokullu'nun vefatıyla duraklama başladı (1579)",
+    "year": 1579
+  },
+  {
+    "from": "osmanli-duraklama",
+    "to": "koprululer",
+    "type": "restorasyon",
+    "label": "Köprülüler dönemi — duraklama içinde yükselme (1656)",
+    "year": 1656
+  },
+  {
+    "from": "osmanli-duraklama",
+    "to": "osmanli-gerileme",
+    "type": "yıkılış",
+    "label": "Karlofça ile Batı'da ilk büyük toprak kaybı (1699)",
+    "year": 1699
+  },
+  {
+    "from": "osmanli-gerileme",
+    "to": "carlik-rusyasi",
+    "type": "hakimiyet-geçişi",
+    "label": "Kırım önce bağımsız (1774), sonra Rusya'ya (1783)",
+    "year": 1774
+  }
+]

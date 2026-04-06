@@ -1,0 +1,141 @@
+[
+  {
+    "id": "osmanli-duraklama",
+    "name": "Osmanlı İmparatorluğu (Duraklama)",
+    "startYear": 1579,
+    "endYear": 1699,
+    "color": "#C8102E",
+    "centroid": [34, 40],
+    "mapFocus": { "center": [30, 40], "scale": 380 },
+    "territoryPolygon": [
+      [14, 36], [56, 22], [58, 44], [42, 52], [26, 52], [14, 46], [14, 36]
+    ],
+    "ruler": "III. Murat · III. Mehmet · I. Ahmet · II. Osman · IV. Murat · İbrahim · IV. Mehmet · II. Süleyman",
+    "location": "Üç Kıta: Avrupa, Asya, Afrika",
+    "summary": "Sokullu Mehmet Paşa'nın vefatı (1579) ile başlayan duraklama döneminde merkezi otorite sarsıldı. Köprülüler ile kısa süreli toparlanma yaşandı; ancak 1683 II. Viyana yenilgisi ve ardından gelen Karlofça Antlaşması (1699) ile batıda ilk büyük toprak kayıpları yaşandı.",
+    "facts": [
+      "1579'da Sokullu Mehmet Paşa'nın vefatıyla merkezi otorite zayıflamaya başladı",
+      "Çocuk yaşta tahta çıkışlar ve saray kadınlarının yönetimi (Kadınlar Saltanatı) karar mekanizmasını sarstı",
+      "Yeniçeriler 'Devlet ocak içindir' anlayışıyla 1622'de II. Osman'ı idam etti",
+      "1639 Kasr-ı Şirin ile günümüz Türkiye-İran sınırı büyük ölçüde belirlendi",
+      "1656'dan itibaren Köprülüler dönemi ile geçici bir toparlanma yaşandı",
+      "1672 Bucaş Antlaşması ile Batı'da en geniş sınırlara ulaşıldı",
+      "1683 II. Viyana kuşatması yenilgisi geri çekilişin başlangıcı oldu",
+      "1699 Karlofça ile Batı'da ilk kez büyük çaplı toprak kaybedildi"
+    ]
+  },
+  {
+    "id": "koprululer",
+    "name": "Köprülüler Dönemi",
+    "startYear": 1656,
+    "endYear": 1683,
+    "color": "#B45309",
+    "centroid": [29, 41],
+    "mapFocus": { "center": [29, 41], "scale": 600 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [28, 40], [30, 40], [30, 42], [28, 42], [28, 40]
+    ],
+    "ruler": "Köprülü Mehmet Paşa · Köprülü Fazıl Ahmet Paşa · Merzifonlu Kara Mustafa Paşa",
+    "location": "Osmanlı İmparatorluğu (Sadrazamlık makamı)",
+    "summary": "Köprülü Mehmet Paşa'nın 1656'da tam yetki alarak sadrazam olmasıyla başlayan bu dönem, duraklama içinde bir yükselme dönemi yaşatmıştır. Venedik ablukasının kaldırılması, maliyenin düzeltilmesi ve Girit'in fethiyle (1669) önemli başarılar elde edilmiştir. Merzifonlu Kara Mustafa Paşa'nın 1683 II. Viyana kuşatmasını kaybetmesi ve idamıyla Köprülüler dönemi fiilen sona ermiştir.",
+    "facts": [
+      "Köprülü Mehmet Paşa saraya şartlar sürerek sadrazam oldu ve tam yetki aldı",
+      "Venedik'in Çanakkale'ye uyguladığı deniz ablukası kaldırıldı",
+      "Maliye ve Yeniçeri disiplini yeniden sağlandı",
+      "1669'da 24 yıllık kuşatmanın ardından Girit fethedildi",
+      "1672 Bucaş ile Batıda en geniş Osmanlı sınırları çizildi",
+      "Merzifonlu Kara Mustafa Paşa 1683 II. Viyana'yı kaybedip idam edildi"
+    ]
+  },
+  {
+    "id": "kutsal-ittifak",
+    "name": "Kutsal İttifak",
+    "startYear": 1683,
+    "endYear": 1699,
+    "color": "#1D4ED8",
+    "centroid": [22, 48],
+    "mapFocus": { "center": [22, 48], "scale": 500 },
+    "hideFromMap": true,
+    "territoryPolygon": [
+      [16, 46], [28, 46], [28, 52], [16, 52], [16, 46]
+    ],
+    "ruler": "Habsburg Avusturya · Lehistan · Venedik · Rusya",
+    "location": "Orta ve Doğu Avrupa, Adriyatik",
+    "summary": "1683 II. Viyana kuşatması yenilgisinin ardından Papa XI. Innocentius önderliğinde Avusturya, Lehistan, Venedik ve Rusya'nın oluşturduğu Kutsal İttifak kuruldu. 1697 Zenta Savaşı'nın kaybedilmesiyle süreç Karlofça'ya taşındı ve Osmanlı büyük toprak kayıplarını kabul etmek zorunda kaldı.",
+    "facts": [
+      "1683 II. Viyana kuşatması yenilgisinin ardından kuruldu",
+      "Üyeler: Avusturya, Lehistan, Venedik, Rusya (MEB müfredatına göre Malta da dahil)",
+      "1697 Zenta Savaşı Osmanlı'nın ağır yenilgisiyle sonuçlandı",
+      "1699 Karlofça ile Osmanlı Batı'da büyük topraklar kaybetti"
+    ]
+  },
+  {
+    "id": "osmanli-gerileme",
+    "name": "Osmanlı İmparatorluğu (Gerileme)",
+    "startYear": 1699,
+    "endYear": 1792,
+    "color": "#C8102E",
+    "centroid": [32, 40],
+    "mapFocus": { "center": [28, 40], "scale": 400 },
+    "territoryPolygon": [
+      [14, 36], [54, 24], [56, 42], [38, 48], [26, 50], [14, 44], [14, 36]
+    ],
+    "ruler": "III. Ahmet · I. Mahmut · III. Osman · III. Mustafa · I. Abdülhamit · III. Selim",
+    "location": "Balkanlar, Anadolu, Orta Doğu, Kuzey Afrika",
+    "summary": "Karlofça (1699) sonrası dönem, Batı üstünlüğünün kabul edildiği ve ıslahat arayışlarının yoğunlaştığı bir süreçtir. 1718-1730 Lale Devri ile Batı tarzı reformlar başladı. Küçük Kaynarca (1774) ile Kırım kaybedildi ve Osmanlı ilk kez savaş tazminatı ödedi. III. Selim'in Nizam-ı Cedit hareketi (1789) köklü dönüşümün zeminini hazırladı.",
+    "facts": [
+      "1700 İstanbul Ant. ile Azak Kalesi Rusya'ya bırakıldı; Karadeniz hegemonyası sarsıldı",
+      "1718 Pasarofça sonrası Batı üstünlüğü kabul edilerek Lale Devri'ne girildi",
+      "1727'de İbrahim Müteferrika ve Said Efendi tarafından ilk Türk matbaası kuruldu",
+      "1774 Küçük Kaynarca ile ilk kez savaş tazminatı ödendi ve Kırım kaybedildi",
+      "1783'te Rusya Kırım'ı ilhak etti; 1792 Yaş Ant. ile Osmanlı bunu resmen kabul etti",
+      "III. Selim'in Nizam-ı Cedit hareketi Osmanlı'da köklü modernleşmenin başlangıcı sayılır"
+    ]
+  },
+  {
+    "id": "carlik-rusyasi",
+    "name": "Çarlık Rusyası",
+    "startYear": 1700,
+    "endYear": 1792,
+    "color": "#166534",
+    "centroid": [46, 56],
+    "mapFocus": { "center": [46, 56], "scale": 350 },
+    "territoryPolygon": [
+      [28, 48], [62, 46], [66, 56], [44, 62], [28, 60], [24, 52], [28, 48]
+    ],
+    "ruler": "Büyük Petro · Anna · Elizaveta · II. Katerina (Büyük Katerina)",
+    "location": "Doğu Avrupa, Güney Rusya, Ukrayna",
+    "summary": "Büyük Petro'nun modernleşme politikalarının ardından Rusya, Karadeniz'e inme hedefini somutlaştırdı. 1700 İstanbul Ant. ile Azak'ı alan Rusya, 1774 Küçük Kaynarca ile Kırım'ı fiilen kontrolü altına aldı ve 1783'te ilhak etti. II. Katerina döneminde Rusya'nın güneye yönelik yayılması Osmanlı'nın en büyük stratejik tehdidi haline geldi.",
+    "facts": [
+      "Büyük Petro, Rusya'yı Avrupalı bir güce dönüştürmek için köklü modernleşme politikaları izledi",
+      "1700 İstanbul Ant. ile Azak Kalesi'ni alarak Karadeniz'e ilk adımı attı",
+      "1711 Prut'ta yenilgiye uğrayarak Azak'ı geçici olarak Osmanlı'ya geri verdi",
+      "1774 Küçük Kaynarca ile Kırım özerk ilan edildi; Rusya elçilik ve konsolosluk hakkı kazandı",
+      "1783'te Kırım Rusya tarafından ilhak edildi",
+      "1792 Yaş Ant. ile Osmanlı Kırım'ın Rusya'ya ait olduğunu resmen kabul etti"
+    ]
+  },
+  {
+    "id": "safevi-iran",
+    "name": "Safevi Devleti / İran",
+    "startYear": 1579,
+    "endYear": 1750,
+    "color": "#10B981",
+    "centroid": [52, 35],
+    "mapFocus": { "center": [52, 35], "scale": 420 },
+    "territoryPolygon": [
+      [44, 26], [60, 24], [64, 38], [58, 44], [44, 42], [44, 26]
+    ],
+    "ruler": "Şah Abbas I · Şah Abbas II · Nadir Şah",
+    "location": "İran, Azerbaycan, Irak, Afganistan",
+    "summary": "Osmanlı'nın doğu komşusu Safevi Devleti, XVII. yüzyılda Şah Abbas döneminde güç kazandı. 1639 Kasr-ı Şirin ile Osmanlı-İran sınırı büyük ölçüde belirlendi ve uzun süreli istikrar sağlandı. 1746 Kerden Antlaşması iki devlet arasındaki son antlaşmadır.",
+    "facts": [
+      "Şah Abbas I döneminde Safeviler Osmanlı'ya karşı güç kazandı",
+      "1590 Ferhat Paşa ile Osmanlı doğuda en geniş sınırlara ulaştı",
+      "1639 Kasr-ı Şirin Antlaşması bugünkü Türkiye-İran sınırını büyük ölçüde belirledi",
+      "1746 Kerden Antlaşması Osmanlı-İran arasındaki son antlaşmadır ('II. Kasr-ı Şirin')",
+      "XVIII. yüzyılda Nadir Şah döneminde Safevi Devleti çöküşe geçti"
+    ]
+  }
+]

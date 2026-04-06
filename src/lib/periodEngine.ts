@@ -10,6 +10,9 @@ export const MAX_BUFFER = 50;
 export const SLOW_ZONE_YEARS = 15;
 export const SLOW_ZONE_FACTOR = 0.2; // increment'i 5x yavaşlat
 
+// Event slow zone: önemli olaylara yaklaşıldığında da yavaşla (entity slow zone'dan daha dar pencere)
+export const SLOW_ZONE_YEARS_EVENT = 8;
+
 /**
  * Bir entity için asimetrik fade penceresi hesaplar.
  * fadeIn  = startYear'dan kaç yıl önce görünmeye başlasın
@@ -45,18 +48,26 @@ export function getEntityFadeWindow(
 /**
  * Mevcut yıl ve hız için hesaplanan increment değeri (yıl/100ms).
  * Aktif entity'lerin en kısa ömürlüsü ekranda en az MIN_SCREEN_SECONDS kalsın.
- * Slow zone'larda otomatik yavaşlar.
+ * Entity başlangıç/bitiş yıllarına ve önemli olaylara yaklaşıldığında otomatik yavaşlar.
  */
 export function getIncrement(
   year: number,
   speed: number,
-  entities: PeriodEntity[]
+  entities: PeriodEntity[],
+  pauseEvents?: Array<{ year: number }>
 ): number {
-  const inSlowZone = entities.some(
+  const inEntitySlowZone = entities.some(
     (e) =>
       Math.abs(year - e.startYear) <= SLOW_ZONE_YEARS ||
       Math.abs(year - e.endYear) <= SLOW_ZONE_YEARS
   );
+
+  const inEventSlowZone =
+    pauseEvents != null && pauseEvents.length > 0
+      ? pauseEvents.some((e) => Math.abs(year - e.year) <= SLOW_ZONE_YEARS_EVENT)
+      : false;
+
+  const inSlowZone = inEntitySlowZone || inEventSlowZone;
 
   const activeEntities = entities.filter(
     (e) => e.startYear <= year && e.endYear >= year
