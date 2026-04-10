@@ -1,0 +1,284 @@
+[
+  {
+    "id": "31-mart-hareketi-1909",
+    "civId": "osmanli-20yy",
+    "title": "31 Mart Ayaklanması — İlk Gerici İsyan ve Taht Değişikliği",
+    "year": 1909,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "13 Nisan 1909'da (Rumi takvimle 31 Mart) patlak veren bu ayaklanma, II. Meşrutiyet'e karşı yapılan ilk gerici isyandır. Balkanlardaki siyasi bunalım, Volkan ve Serbesti gazetelerinin kışkırtıcı yazıları ile halkın dinî duygularının istismarı tetikleyici etkenler arasındaydı. Selanik'te kurulan, komutanı Mahmut Şevket Paşa, kurmay başkanı Mustafa Kemal olan Hareket Ordusu isyanı bastırdı; II. Abdülhamit tahttan indirilerek yerine V. Mehmet (Reşat) geçirildi."
+  },
+  {
+    "id": "anayasa-1909",
+    "civId": "osmanli-20yy",
+    "title": "1909 Anayasa Değişiklikleri — Parlamenter Sisteme Adım",
+    "year": 1909,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "31 Mart Ayaklanması'nın ardından İttihatçıların girişimiyle yapılan anayasa değişiklikleriyle Osmanlı parlamenter sisteme önemli bir adım attı. Padişahın meclisi kapatma yetkisi sınırlandırıldı, hükümet padişaha değil meclise karşı sorumlu kılındı, uluslararası antlaşmaların imzalanması meclise bırakıldı ve siyasi parti kurmanın önündeki engeller kaldırıldı. Bu değişikliklerle İttihat ve Terakki fiilen iktidarın tek sahibi haline geldi."
+  },
+  {
+    "id": "trablusgarb-saldirii-1911",
+    "civId": "italya-20yy",
+    "secondaryCivId": "osmanli-20yy",
+    "title": "Trablusgarb Savaşı Başladı — İtalyan Saldırısı",
+    "year": 1911,
+    "type": "savaş",
+    "coordinates": [13, 32],
+    "description": "Birliğini geç tamamlayan İtalya, sömürge edinmek amacıyla 1911'de Osmanlı'nın Kuzey Afrika toprağı Trablusgarb'a (bugünkü Libya) saldırdı. İngiltere ve Fransa, İtalya'yı Almanya'nın yanından kendi saflarına çekmek için bu girişime seyirci kaldı. Osmanlı; donanması olmadığından denizden, sınır bağlantısı bulunmadığından karadan bölgeye düzenli asker sevk edemeyince teşkilatçı subaylarını bölgeye gönderdi."
+  },
+  {
+    "id": "mk-derne-tobruk-1911",
+    "civId": "osmanli-20yy",
+    "title": "Mustafa Kemal — Derne ve Tobruk Savunması",
+    "year": 1911,
+    "type": "savaş",
+    "coordinates": [22, 32],
+    "description": "Trablusgarb Savaşı'nda bölgeye gizlice geçen Osmanlı subaylarından Mustafa Kemal, Derne ve Tobruk'ta yerel kuvvetlerin komutanlığını üstlendi. Bu, Mustafa Kemal'in sömürgeciliğe karşı verdiği ilk silahlı mücadeledir. Enver Bey ise Bingazi bölgesinde yerel kuvvetleri örgütleyerek İtalyanları uzun süre durdurdu."
+  },
+  {
+    "id": "enver-bingazi-1911",
+    "civId": "osmanli-20yy",
+    "title": "Enver Bey — Bingazi Savunması",
+    "year": 1911,
+    "type": "savaş",
+    "coordinates": [20, 31],
+    "description": "Enver Bey, Trablusgarb Savaşı'nda Bingazi bölgesinde gönüllü Osmanlı subayları ve yerel güçleri örgütleyerek İtalyan kuvvetlerini uzun süre durdurdu. Osmanlı devletinin düzenli ordu gönderemedği bu cephede gerillavarî bir direniş sürdürüldü. Bu savaş, Osmanlı'nın Kuzey Afrika'daki son toprağını koruma çabasının simgesi oldu."
+  },
+  {
+    "id": "italya-rodos-1912",
+    "civId": "italya-20yy",
+    "secondaryCivId": "osmanli-20yy",
+    "title": "İtalya Rodos ve Onikiadalar'ı İşgal Etti",
+    "year": 1912,
+    "type": "savaş",
+    "coordinates": [28, 36],
+    "description": "Trablusgarb'da kesin sonuç alamayan İtalya, Osmanlı'yı barışa zorlamak amacıyla Ege'deki Rodos ve Onikiadalar'ı işgal etti. Bu adımla hem Osmanlı deniz yollarını tehdit etti hem de müzakere masasında pazarlık gücü elde etti. Adaların el değiştirmesi, Osmanlı'nın Ege'deki askeri varlığını tamamen sona erdirdi."
+  },
+  {
+    "id": "usi-antlasmasi-1912",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "italya-20yy",
+    "title": "Uşi (Ouchy) Antlaşması — Trablusgarb İtalya'ya Bırakıldı",
+    "year": 1912,
+    "type": "antlaşma",
+    "coordinates": [6, 46],
+    "description": "18 Ekim 1912'de Balkan Savaşları'nın patlak vermesi üzerine Osmanlı ile İtalya arasında Uşi Antlaşması imzalandı. Trablusgarb İtalya'ya bırakıldı; Osmanlı Devleti böylece Kuzey Afrika'daki son toprağını yitirdi. Onikiadalar, Balkan savaşlarının sonuna kadar geçici olarak İtalya'da kalacak; bölgenin Osmanlı halifeliğine dini bağı sürecekti. İtalya, Osmanlı'nın Duyun-u Umumiye borcunu da üstlendi."
+  },
+  {
+    "id": "i-balkan-savasi-1912",
+    "civId": "balkan-ittifaki",
+    "secondaryCivId": "osmanli-20yy",
+    "title": "I. Balkan Savaşı — Osmanlı Çöküşte",
+    "year": 1912,
+    "type": "savaş",
+    "coordinates": [22, 42],
+    "description": "Rusya'nın kışkırtıcı politikası ve Avrupalı devletlerin desteğiyle Yunanistan, Bulgaristan, Sırbistan ve Karadağ'dan oluşan Balkan İttifakı, Ekim 1912'de Osmanlı'ya savaş ilan etti. Ordu içindeki siyasi çekişmeler, 60 bin askerin önceden terhis edilmesi, dört cephede birden savaşılması ve ikmal yetersizlikleri Osmanlı'nın hızla çökmesine yol açtı. Bu savaş yer almayan tek Balkan devleti Romanya'dır."
+  },
+  {
+    "id": "catalca-1912",
+    "civId": "osmanli-20yy",
+    "title": "Çatalca Hattına Çekilme — Midye-Enez Savunması",
+    "year": 1912,
+    "type": "savaş",
+    "coordinates": [28, 41],
+    "description": "I. Balkan Savaşı'nda Osmanlı ordusu ağır yenilgiler alarak Edirne, Kırklareli, Selanik ve Makedonya'yı kaybetti; son savunma hattı olarak Midye-Enez (Çatalca) hattına çekildi. Arnavutluk bu süreçte bağımsızlığını ilan etti. İmroz ve Bozcaada dışındaki tüm Ege adaları elden çıktı. Yenilgi iç siyaseti de sarstı ve Bab-ı Ali Baskını'na zemin hazırladı."
+  },
+  {
+    "id": "londra-ant-1913",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "balkan-ittifaki",
+    "title": "Londra Antlaşması — I. Balkan Savaşı Sona Erdi",
+    "year": 1913,
+    "type": "antlaşma",
+    "coordinates": [0, 51],
+    "description": "Avrupalı devletlerin müdahalesiyle 1913'te Londra Antlaşması imzalanarak I. Balkan Savaşı sona erdi. Osmanlı, Ege adaları ve Makedonya dahil geniş Balkan topraklarını kaybetti. Edirne, Kırklareli ve Batı Trakya elden çıktı. Bu antlaşma Osmanlı'nın Avrupa'daki varlığını neredeyse tamamen sona erdirdi."
+  },
+  {
+    "id": "bab-i-ali-baskini-1913",
+    "civId": "osmanli-20yy",
+    "title": "Bab-ı Ali Baskını — İttihatçı Darbesi",
+    "year": 1913,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "23 Ocak 1913'te Enver Bey liderliğindeki İttihatçı subaylar, Bab-ı Ali'yi (Sadaret) basarak Kamil Paşa hükümetini düşürdü. Bu darbenin ardından İttihat ve Terakki iktidarın tek ve rakipsiz sahibi oldu. Mustafa Kemal, bu darbenin ardından İttihatçılarla yollarını ayırdı."
+  },
+  {
+    "id": "ii-balkan-savasi-1913",
+    "civId": "balkan-ittifaki",
+    "title": "II. Balkan Savaşı — Balkan Devletleri Birbirine Düştü",
+    "year": 1913,
+    "type": "savaş",
+    "coordinates": [23, 43],
+    "description": "I. Balkan Savaşı'ndan en kârlı çıkan Bulgaristan'ın aşırı toprak kazanması, diğer Balkan devletlerini rahatsız etti. Haziran 1913'te Yunanistan, Sırbistan, Karadağ ve Romanya, Bulgaristan'a karşı II. Balkan Savaşı'nı başlattı. Osmanlı da bu karışıklıktan yararlandı; Enver Bey komutasındaki kuvvetler Edirne ve Kırklareli'ni geri aldı, Meriç'e kadar ilerledi."
+  },
+  {
+    "id": "edirne-geri-1913",
+    "civId": "osmanli-20yy",
+    "title": "Edirne ve Kırklareli Geri Alındı — Enver Bey Harekâtı",
+    "year": 1913,
+    "type": "savaş",
+    "coordinates": [26, 42],
+    "description": "II. Balkan Savaşı'ndaki Balkan devletleri arası çatışmadan yararlanan Osmanlı, Enver Bey komutasındaki kuvvetlerle Edirne ve Kırklareli'ni geri aldı, Meriç nehrine kadar ilerledi. 21 Temmuz 1913'te Mustafa Kemal de Bolayır Kolordusu Kurmay Başkanı olarak Edirne'nin geri alınmasında etkin rol oynadı."
+  },
+  {
+    "id": "bükres-ant-1913",
+    "civId": "balkan-ittifaki",
+    "title": "Bükreş Antlaşması — Balkanlar Yeniden Çizildi",
+    "year": 1913,
+    "type": "antlaşma",
+    "coordinates": [26, 44],
+    "description": "10 Ağustos 1913'te Balkan devletleri arasında imzalanan Bükreş Antlaşması ile II. Balkan Savaşı sona erdi. Bulgaristan ağır toprak kayıplarına uğradı; Sırbistan, Yunanistan ve Romanya topraklarını genişletti. Bu antlaşma Balkan devletleri arasında iç çözüme kavuştu; Osmanlı ise ayrı antlaşmalarla sınırlarını düzenledi."
+  },
+  {
+    "id": "istanbul-ant-bulgar-1913",
+    "civId": "osmanli-20yy",
+    "title": "İstanbul Antlaşması — Bulgaristan ile Sınır Çizildi",
+    "year": 1913,
+    "type": "antlaşma",
+    "coordinates": [29, 41],
+    "description": "Osmanlı ile Bulgaristan arasında imzalanan 1913 İstanbul Antlaşması ile Meriç nehri iki devlet arasında sınır olarak kabul edildi. Edirne, Kırklareli ve Dimetoka Osmanlı'da kaldı. Bu antlaşma Osmanlı'nın Balkanlarda elde tutabildiği toprakların kesin hukuki çerçevesini oluşturdu."
+  },
+  {
+    "id": "atina-ant-yunan-1913",
+    "civId": "osmanli-20yy",
+    "title": "Atina Antlaşması — Yunanistan ile Barış",
+    "year": 1913,
+    "type": "antlaşma",
+    "coordinates": [23, 38],
+    "description": "1913 Atina Antlaşması ile Osmanlı ve Yunanistan arasında barış sağlandı. Yanya, Selanik ve Girit Adası'nın Yunanistan'a ait olduğu resmen kabul edildi. Ege adaları sorunu ve Balkanlarda kalan Türk azınlık meselesi bu antlaşmanın ardından ortaya çıktı; söz konusu sorunlar günümüzde de sürmektedir."
+  },
+  {
+    "id": "turk-alman-ittifak-1914",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "ittifak-devletleri",
+    "title": "Türk-Alman Gizli İttifakı — Savaşa Doğru",
+    "year": 1914,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Savaş başladığında Osmanlı tarafsızdı; İtilaf devletleri de başlangıçta bunu istiyordu. Ancak Enver, Talat ve Cemal Paşaların yönetimini ele geçirdiği İttihat ve Terakki, Almanya'nın savaşı kazanacağına inanıyordu. 2 Ağustos 1914'te gizlice Türk-Alman ittifakı imzalandı. Almanya ise yeni cepheler açmak, Boğazlara ve Süveyş'e hâkim olmak, halifelik kurumundan yararlanmak ve Berlin-Bağdat demiryolu için Osmanlı'ya ihtiyaç duyuyordu."
+  },
+  {
+    "id": "goben-breslaw-1914",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "itilaf-devletleri",
+    "title": "Goben-Breslaw Olayı — Osmanlı Savaşa Girdi",
+    "year": 1914,
+    "type": "savaş",
+    "coordinates": [33, 41],
+    "description": "Osmanlı'ya sığınan Alman savaş gemileri Goben (Yavuz) ve Breslaw (Midilli), Osmanlı bayrağı altında talim bahanesiyle Karadeniz'e açıldı ve Rus limanlarını (Sivastopol, Odessa) bombaladı. Bu provokasyonun ardından İtilaf devletleri Osmanlı'ya savaş ilan etti; Osmanlı fiilen I. Dünya Savaşı'na Almanya'nın yanında girmiş oldu (Ekim 1914)."
+  },
+  {
+    "id": "sarikamis-1914",
+    "civId": "osmanli-20yy",
+    "title": "Sarıkamış Harekâtı — Kafkas Cephesi Felâketi",
+    "year": 1914,
+    "type": "savaş",
+    "coordinates": [43, 40],
+    "description": "Enver Paşa komutasındaki Osmanlı kuvvetleri, Rusları Kafkaslardan çıkarmak, Bakü petrollerini ele geçirmek ve Turancılık ideali doğrultusunda Sarıkamış Harekâtı'nı başlattı. Kış koşulları ve yetersiz ikmal nedeniyle harekât büyük bir facia ile sonuçlandı. Daha sonra Ruslar saldırıya geçerek Erzurum, Erzincan, Muş, Bitlis ve Trabzon'u işgal etti."
+  },
+  {
+    "id": "canakkale-deniz-1915",
+    "civId": "itilaf-devletleri",
+    "secondaryCivId": "osmanli-20yy",
+    "title": "Çanakkale — Deniz Harekâtı Püskürtüldü",
+    "year": 1915,
+    "type": "savaş",
+    "coordinates": [26, 40],
+    "description": "İtilaf devletleri; İstanbul ve boğazları ele geçirerek Osmanlı'yı savaş dışına çıkarmak, Rusya'ya yardım götürmek ve Balkan devletlerini kendi saflarına çekmek amacıyla Çanakkale'ye saldırdı. Donanma yoluyla boğazları geçmeye çalışan İtilaf gemileri, Nusret mayın gemisinin döşediği mayınlara çarparak ve Türk topçusunun yoğun ateşi karşısında ağır kayıplar vererek geri çekildi."
+  },
+  {
+    "id": "canakkale-kara-mk-1915",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "itilaf-devletleri",
+    "title": "Çanakkale — Mustafa Kemal'in Kara Savunması",
+    "year": 1915,
+    "type": "savaş",
+    "coordinates": [26, 40],
+    "description": "Deniz harekâtında başarısız olan İtilaf devletleri kara harekâtına yöneldi. 19. Tümen Komutanı Mustafa Kemal, Anafartalar, Kireçtepe, Conkbayırı ve Arıburnu gibi kritik noktalarda düzenlediği savunmayla İtilaf kuvvetlerini durdurdu. 'Sana ben taarruz emretmiyorum, ölmeyi emrediyorum' sözleriyle tarihe geçen bu savunma, askerî ve siyasi açıdan belirleyici oldu."
+  },
+  {
+    "id": "canakkale-zafer-1915",
+    "civId": "osmanli-20yy",
+    "title": "Çanakkale Zaferi — İtilaf Kuvvetleri Çekildi",
+    "year": 1915,
+    "type": "savaş",
+    "coordinates": [26, 40],
+    "description": "Sekiz ay süren Çanakkale muharebelerinde büyük kayıplar veren İtilaf kuvvetleri Aralık 1915'te yarımadayı tahliye etti. Bu zafer I. Dünya Savaşı'nın süresini uzattı, Rusya'ya yardım götürülemediği için Bolşevik İhtilali önlenemedi ve Bulgaristan'ın İttifak safına geçmesini beraberinde getirdi. Mustafa Kemal'in gösterdiği olağanüstü başarı onu Türkiye içinde ve dışında tanıttı; ileride Millî Mücadele'nin liderliğine giden yolu açtı."
+  },
+  {
+    "id": "kanal-cephesi-1915",
+    "civId": "osmanli-20yy",
+    "title": "Kanal (Süveyş) Cephesi — Mısır'ı Geri Alma Girişimi",
+    "year": 1915,
+    "type": "savaş",
+    "coordinates": [32, 30],
+    "description": "Almanya'nın isteğiyle açılan Kanal Cephesi'nde Osmanlı'nın hedefi Mısır'ı geri almak ve Süveyş Kanalı'nı ele geçirmekti. Cemal Paşa komutasındaki Osmanlı ordusu kanal harekâtına yöneldi; ancak beklenen Alman yardımı gelmeyince İngilizlere karşı başarı sağlanamadı. İngilizler Sina Yarımadası'nı ele geçirerek Suriye-Filistin cephesinde kuzeye doğru ilerlemeye başladı."
+  },
+  {
+    "id": "kutul-amare-1916",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "itilaf-devletleri",
+    "title": "Kut-ül Amare — İngilizlere Büyük Darbe",
+    "year": 1916,
+    "type": "savaş",
+    "coordinates": [46, 32],
+    "description": "Irak (Basra) Cephesi'nde Halil Paşa komutasındaki Osmanlı kuvvetleri, Kut-ül Amare'de İngiliz tümgeneral Townshend komutasındaki 13.000 kişilik bir İngiliz birliğini kuşatarak teslim aldı. Bu, I. Dünya Savaşı'nın en büyük İngiliz askeri yenilgilerinden biriydi. Ancak takviye İngiliz kuvvetleri ve Arap işbirliğiyle Bağdat ilerleyen dönemde Osmanlı'nın elinden çıktı."
+  },
+  {
+    "id": "mus-bitlis-mk-1916",
+    "civId": "osmanli-20yy",
+    "title": "Mustafa Kemal — Muş ve Bitlis'i Kurtardı",
+    "year": 1916,
+    "type": "savaş",
+    "coordinates": [42, 38],
+    "description": "Çanakkale'den Kafkas cephesine atanan Mustafa Kemal, Rus işgali altındaki Muş ve Bitlis'i geri aldı. Bu başarı Mustafa Kemal'in komuta kabiliyetini bir kez daha kanıtlaması bakımından önemliydi. Rusya'da 1917 Bolşevik İhtilali'nin çıkmasıyla Kafkas Cephesi kapandı; Sovyet Rusya 1918 Brest-Litovsk Antlaşması ile savaştan çekildi."
+  },
+  {
+    "id": "abd-savasa-1917",
+    "civId": "itilaf-devletleri",
+    "title": "ABD Savaşa Girdi — Güç Dengesi Değişti",
+    "year": 1917,
+    "type": "siyasi",
+    "coordinates": [-77, 39],
+    "description": "Almanya'nın sınırsız denizaltı savaşı kapsamında 2 ABD sivil gemisini de batırması, ABD'yi Nisan 1917'de İtilaf safında savaşa soktu. ABD'nin katılımı cephelerdeki güç dengesini İtilaf lehine kesin biçimde değiştirdi. Aynı yılın sonunda Başkan Wilson 14 İlkesi'ni açıkladı; bu ilkeler ileride Paris Barış Konferansı'nın çerçevesini belirledi."
+  },
+  {
+    "id": "wilson-ilkeleri-1918",
+    "civId": "itilaf-devletleri",
+    "title": "Wilson İlkeleri — Yeni Dünya Düzeni",
+    "year": 1918,
+    "type": "siyasi",
+    "coordinates": [-77, 39],
+    "description": "ABD Başkanı Woodrow Wilson, 8 Ocak 1918'de 14 İlkesi'ni açıkladı. Bu ilkelere göre kazanan devletler tazminat ve toprak almayacak, azınlıklar kendi devletlerini kurabilecek, Türklerin yaşadığı yerlerin bağımsızlığı tanınacak, sömürgecilik yasaklanacak, gizli antlaşmalar yapılmayacak ve Milletler Cemiyeti kurulacaktı. İttifak devletleri bu ilkeleri kabul edilebilir bularak ateşkes istedi; ancak İtilaf devletleri ilkeleri kendi çıkarları doğrultusunda yorumladı."
+  },
+  {
+    "id": "brest-litovsk-1918",
+    "civId": "osmanli-20yy",
+    "title": "Brest-Litovsk Antlaşması — Kars, Ardahan, Batum Geri Alındı",
+    "year": 1918,
+    "type": "antlaşma",
+    "coordinates": [24, 52],
+    "description": "1917 Bolşevik İhtilali'nin ardından kurulan Sovyet Rusya ile 3 Mart 1918'de imzalanan Brest-Litovsk Antlaşması ile Rusya Doğu Cephesi'nden çekildi. Osmanlı, 1878 Berlin Antlaşması ile Rusya'ya kaptırdığı Kars, Ardahan ve Batum'u (Elviye-i Selase) bu antlaşmayla geri aldı. Bu gelişme Kafkas Cephesi'nin kapanmasını sağladı."
+  },
+  {
+    "id": "mondros-1918",
+    "civId": "osmanli-20yy",
+    "secondaryCivId": "itilaf-devletleri",
+    "title": "Mondros Ateşkesi — Osmanlı Fiilen Çöktü",
+    "year": 1918,
+    "type": "antlaşma",
+    "coordinates": [25, 39],
+    "description": "30 Ekim 1918'de Limni Adası'nın Mondros Limanı'nda imzalanan ateşkes, Bahriye Nazırı Rauf Bey (Orbay) tarafından Osmanlı adına, İngiliz Amiral Calthorpe tarafından İtilaf adına imzalandı. Sadrazam Ahmet İzzet Paşa'nın talebiyle gündeme gelen Mondros, boğazların açılması, ordunun terhisi ve İtilaf devletlerine stratejik noktaları işgal yetkisi veren 7. madde ile Osmanlı'yı savunmasız bıraktı. Mustafa Kemal, 31 Ekim'de Yıldırım Orduları Grup Komutanlığı'na getirilmişti."
+  },
+  {
+    "id": "paris-konferansi-1919",
+    "civId": "itilaf-devletleri",
+    "secondaryCivId": "osmanli-20yy",
+    "title": "Paris Barış Konferansı — Osmanlı Toprakları Paylaşılıyor",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [2, 48],
+    "description": "18 Ocak 1919'da toplanan Paris Barış Konferansı'nda Avrupa'nın siyasi haritası yeniden çizildi ve Milletler Cemiyeti kurulması kararlaştırıldı. İtilaf devletleri, daha önce yapılan gizli antlaşmaların İtalya'ya vaat ettiği Batı Anadolu'yu Yunanistan'a bıraktı. Ermeni temsilciler Doğu Anadolu'da bir Ermeni devleti talep etti. ABD ve İtalya beklentilerini tam karşılayamadığından İtilaf devletleri arasında görüş ayrılıkları su yüzüne çıktı."
+  }
+]
