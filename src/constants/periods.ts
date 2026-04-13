@@ -83,6 +83,15 @@ export const PERIODS: Period[] = [
     description: "Osmanlı İmparatorluğu'nun dağılma dönemi",
   },
   {
+    id: "milli-mucadele-hazirlik",
+    slug: "milli-mucadele-hazirlik",
+    name: "Milli Mücadele Hazırlık",
+    startYear: 1919,
+    endYear: 1921,
+    color: "#16A34A",
+    description: "Samsun'dan TBMM'ye: Kongreler, Misak-ı Milli ve Örgütlenme Dönemi",
+  },
+  {
     id: "kurtulus-savasi",
     slug: "kurtulus-savasi",
     name: "Kurtuluş Savaşı",

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "dortyol-ilk-direnis",
+    "civId": "kuvayi-milliye",
+    "title": "İlk Direniş: Dörtyol (Hatay) — Fransız Kuvvetlerine Karşı",
+    "year": 1918,
+    "type": "savaş",
+    "coordinates": [36, 37],
+    "description": "Mondros Ateşkesi'nin ardından Fransız kuvvetleri Dörtyol'a (Hatay) çıkarma yapmak isteyince bölge halkı ve yerli Müslüman Türkler silahlı direniş gösterdi. Bu direniş, işgallere karşı Anadolu'daki ilk silahlı karşı koyma olarak tarihe geçmiştir. Batı Cephesinde ise ilk direniş Ayvalık'ta gerçekleşecekti."
+  },
+  {
+    "id": "izmir-isgali-1919",
+    "civId": "yunanistan-bati",
+    "secondaryCivId": "kuvayi-milliye",
+    "title": "İzmir'in Yunan Kuvvetlerince İşgali (15 Mayıs 1919)",
+    "year": 1919,
+    "type": "savaş",
+    "coordinates": [27, 38],
+    "description": "İtilaf devletlerinin izniyle 15 Mayıs 1919'da İzmir'e çıkan Yunan kuvvetleri, kentte Türk sivillere yönelik vahşet eylemleri gerçekleştirdi. Bu haber tüm Anadolu'da büyük öfke yarattı ve milli direniş bilincinin güçlenmesinde belirleyici rol oynadı. İzmir'in işgali, Mustafa Kemal'in Samsun'a çıkmadan dört gün önce yaşandı ve ona hazırladığı Samsun Raporu'nda işgalin haksızlığını vurgulamasına zemin hazırladı."
+  },
+  {
+    "id": "mk-samsun-1919",
+    "civId": "temsil-kurulu",
+    "title": "Mustafa Kemal Samsun'a Çıktı — Milli Mücadelenin Fiili Başlangıcı (19 Mayıs 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [36, 41],
+    "description": "İngilizler, Doğu Karadeniz'de Pontus Rum çeteleriyle Türkler arasındaki çatışmaları gerekçe göstererek bölgenin işgal edileceğini duyurdu. İstanbul Hükümeti, asayişi sağlamak amacıyla Mustafa Kemal'i 9. Ordu Müfettişi olarak bölgeye gönderdi. 19 Mayıs 1919'da Samsun'a çıkan Mustafa Kemal'in bu adımı, Milli Mücadele'nin fiili başlangıcı olarak kabul edilmektedir."
+  },
+  {
+    "id": "samsun-raporu",
+    "civId": "temsil-kurulu",
+    "title": "Samsun Raporu — İşgalin Haksızlığı Belgelendi (22 Mayıs 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [36, 41],
+    "description": "Samsun'daki incelemeleri sonucunda Mustafa Kemal bir rapor hazırladı. Bu rapora göre; bölgedeki çatışmaların temel nedeni Rumların silahlanarak Türk köylerini basmasıydı, Türkler yalnızca kendilerini savunmak için silah kullanmaktaydı. Ayrıca İzmir'in işgalinin haksız olduğunu açıkça belirtti. Rapor, Temsil Kurulu'nun uluslararası arenada kullandığı ilk diplomatik belgelerden biri oldu."
+  },
+  {
+    "id": "havza-genelgesi",
+    "civId": "temsil-kurulu",
+    "title": "Havza Genelgesi — Mitinglerle İşgale Protesto (28-29 Mayıs 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [35, 41],
+    "description": "25 Mayıs'ta Havza'ya geçen Mustafa Kemal, 28-29 Mayıs'ta bu genelgeyi yayımladı. Genelgeye göre başta İzmir'in işgali olmak üzere tüm işgallere karşı mitingler düzenlenecek; İstanbul Hükümeti ile İtilaf devletlerine protesto telgrafları çekilecekti. Azınlıklara zarar verilmemesi şartı ayrıca vurgulandı. Genelge, İngilizlerin baskısıyla İstanbul Hükümeti'nin Mustafa Kemal'i geri çağırmasına yol açtı."
+  },
+  {
+    "id": "ayvalik-direnis",
+    "civId": "kuvayi-milliye",
+    "secondaryCivId": "yunanistan-bati",
+    "title": "Ayvalık — Batı Cephesinde İlk Direniş Kurşunu",
+    "year": 1919,
+    "type": "savaş",
+    "coordinates": [26, 39],
+    "description": "Batı Cephesinde ilk silahlı direniş Ayvalık'ta gerçekleşti. 'Kel Ali' lakabıyla tanınan Ali Çetinkaya, İzmir'in işgalinin ardından bölgedeki yerel kuvvetleri örgütleyerek Yunan kuvvetlerine ilk kurşunu attı. Bu direniş daha sonra batı cephesinin omurgasını oluşturacak yerel örgütlenmelerin öncüsü kabul edilir."
+  },
+  {
+    "id": "amasya-tamimi",
+    "civId": "temsil-kurulu",
+    "title": "Amasya Tamimi — Milli Mücadelenin İhtilal Beyannamesi (21-22 Haziran 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [35, 40],
+    "description": "12 Haziran'da Amasya'ya geçen Mustafa Kemal, 21-22 Haziran'da bu tarihi tamimi (genelgeyi) yayımladı. İmzacılar arasında Rauf Orbay, Refet Bele ve Ali Fuat Cebesoy yer alırken, Kazım Karabekir ve Mersinli Cemal Paşa tamimi telgrafla onayladı. Temel ilkeler: vatanın bütünlüğü tehlikededir, İstanbul Hükümeti sorumluluğunu yerine getirememektedir, ulusun bağımsızlığını yine ulusun azmi kurtaracaktır, Sivas'ta ulusal bir kongre toplanacaktır. Tamim, milli mücadelenin ihtilal beyannamesi olarak değerlendirilmekte ve üstü kapalı biçimde ulus egemenliğine ilk kez atıf yapmaktadır."
+  },
+  {
+    "id": "erzurum-kongresi",
+    "civId": "temsil-kurulu",
+    "title": "Erzurum Kongresi — Milli Sınırlar İlk Kez İlan Edildi (23 Temmuz - 7 Ağustos 1919)",
+    "year": 1919,
+    "type": "kuruluş",
+    "coordinates": [41, 40],
+    "description": "Ermeni ve Pontus Rum tehditine karşı halkı uyarmak ve doğu illerinin bütünlüğünü korumak amacıyla toplanan kongrenin başkanlığına Mustafa Kemal seçildi. Toplanış amacı bölgesel olmasına karşın aldığı kararlar ulusal nitelikteydi. 'Milli sınırlar içinde vatan bir bütündür, bölünemez' ilkesi ilk kez burada ilan edildi. Kongre ayrıca 9 kişilik bir Temsil Kurulu oluşturdu. Manda ve himayenin kesinlikle reddedilmesi, Osmanlı Mebusan Meclisi'nin açılması çağrısı da bu kongreden çıktı."
+  },
+  {
+    "id": "balikesir-kongresi",
+    "civId": "kuvayi-milliye",
+    "title": "Balıkesir Kongresi — Batı Cephesi Örgütleniyor (26-31 Temmuz 1919)",
+    "year": 1919,
+    "type": "kuruluş",
+    "coordinates": [28, 39],
+    "description": "Hacım Muhittin Çarıklı Bey'in öncülüğünde toplanan bu mahalli kongre, Yunan işgaline karşı mücadele etme kararı aldı. Kongre sırasında padişaha bağlılık telgrafı da çekildi. Balıkesir'de işgale karşı 'İzmir'e Doğru' adında bir gazete çıkarıldı. Alaşehir Kongresiyle birlikte Batı Cephesi'nin temellerini attı."
+  },
+  {
+    "id": "nazilli-kongresi",
+    "civId": "kuvayi-milliye",
+    "title": "Nazilli Kongresi — Yunan İşgaline Karşı Güney Cephesi (6 Ağustos 1919)",
+    "year": 1919,
+    "type": "kuruluş",
+    "coordinates": [28, 38],
+    "description": "Galip Hoca'nın (Celal Bayar) önderlik ettiği Nazilli Kongresi'nde amaç, bölgenin Yunan işgalinden kurtarılmasıydı. Milis güçlere asker sağlanması, Kuva-i Milliye birliklerinin uyumlu hareket etmesi ve Kurtuluş Savaşı'na destek için vergi toplanması kararı alındı. Sonraki dönemde bölge, Güney Cephesi'nin önemli dayanak noktalarından biri haline geldi."
+  },
+  {
+    "id": "alasehir-kongresi",
+    "civId": "kuvayi-milliye",
+    "title": "Alaşehir Kongresi — Batı Cephesi Güçlendi (16-25 Ağustos 1919)",
+    "year": 1919,
+    "type": "kuruluş",
+    "coordinates": [29, 38],
+    "description": "Hacım Muhittin Bey'in yine öncülük ettiği Alaşehir Kongresi, Balıkesir Kongresi'nin kararlarını tekrarlayarak bölge teşkilatını güçlendirmeyi amaçladı. Erzurum'da kurulan Temsil Heyeti ile irtibata geçilerek Sivas Kongresi'ne temsilci gönderildi. Kongrede gerekirse İtilaf devletlerinden Yunan işgaline karşı yardım alınabileceği de belirtildi. Balıkesir ile birlikte bu kongre, Batı Cephesi'nin fiilen oluşmasını sağladı."
+  },
+  {
+    "id": "sivas-kongresi",
+    "civId": "temsil-kurulu",
+    "title": "Sivas Kongresi — Milli Mücadele Tek Merkezden Yönetiliyor (4-11 Eylül 1919)",
+    "year": 1919,
+    "type": "kuruluş",
+    "coordinates": [37, 39],
+    "description": "Amasya Tamimi'nde çağrısı yapılan bu kongre milli nitelikte toplandı. İstanbul Hükümeti kongreyi yasadışı ilan edip Elazığ Valisi Ali Galip ve Ankara Valisi Muhittin Paşa'yı kongreyi engellemeyle görevlendirdi; ancak bu girişimler sonuçsuz kaldı. Kararlar: tüm cemiyetler Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti altında birleştirildi; Temsil Kurulu'nun üye sayısı 15'e yükseltildi; Ali Fuat Paşa Batı Cephesi Kuva-i Milliye komutanlığına atandı; İrade-i Milliye gazetesinin çıkarılmasına karar verildi. Kongrenin baskısıyla Damat Ferit istifa etti — Temsil Kurulu'nun ilk siyasi başarısı."
+  },
+  {
+    "id": "damat-ferit-istifa",
+    "civId": "istanbul-hukumeti",
+    "title": "Damat Ferit İstifa Etti — Temsil Kurulu'nun İlk Siyasi Zaferi (Ekim 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Sivas Kongresi'nin ardından Temsil Kurulu, İstanbul ile haberleşmeyi kesti. Anadolu'daki idarecilerin Damat Ferit'in emirlerine uymayacağını açıklaması üzerine Sadrazam Damat Ferit Paşa, 2 Ekim 1919'da istifa etmek zorunda kaldı. Bu gelişme, Temsil Heyeti'nin siyasi alanda kaydettiği ilk somut başarıdır. Yerine Ali Rıza Paşa Hükümeti kuruldu."
+  },
+  {
+    "id": "ali-riza-hukumeti",
+    "civId": "istanbul-hukumeti",
+    "title": "Ali Rıza Paşa Hükümeti Kuruldu — Diyalog Kapısı Aralandı",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Damat Ferit'in istifasının ardından kurulan Ali Rıza Paşa Hükümeti, Temsil Kurulu ile diyaloga açık daha ılımlı bir tutum sergiledi. Bu dönemde İstanbul ile Anadolu arasında haberleşme yeniden başladı ve Amasya Görüşmeleri gerçekleşti."
+  },
+  {
+    "id": "amasya-gorusmesi",
+    "civId": "temsil-kurulu",
+    "secondaryCivId": "istanbul-hukumeti",
+    "title": "Amasya Görüşmesi — İstanbul Temsil Kurulunu Tanıdı (20-22 Ekim 1919)",
+    "year": 1919,
+    "type": "antlaşma",
+    "coordinates": [35, 40],
+    "description": "İstanbul Hükümeti adına Salih Paşa ile Temsil Kurulu adına Mustafa Kemal Amasya'da buluştu. Varılan anlaşmalar: Türk illeri terk edilmeyecek, manda ve himaye kabul edilmeyecek; İstanbul Hükümeti Müdafaa-i Hukuk Cemiyeti'ni ve Sivas Kongresi kararlarını benimseyecek; İtilaf devletleriyle barış görüşmelerine Temsil Kurulu'nun onaylamadığı kişiler katılmayacak; seçimler serbestçe yapılacak; Mebusan Meclisi için güvenlik kaygısı kabul edilecek. Önem: İstanbul Hükümeti, Temsil Kurulu'nu resmen tanımıştır — taraflar ilk kez birlikte hareket etmiştir."
+  },
+  {
+    "id": "temsil-heyeti-ankara",
+    "civId": "temsil-kurulu",
+    "title": "Temsil Heyeti Ankara'ya Geldi — Milli Mücadelenin Kalbi Ankara (27 Aralık 1919)",
+    "year": 1919,
+    "type": "siyasi",
+    "coordinates": [33, 40],
+    "description": "Sivas'ta komutanlarla yapılan toplantının ardından Temsil Heyeti, Ankara'nın merkez olmasına karar verdi. Ankara'nın seçilmesinde belirleyici etkenler: merkezi ve güvenli konumu, Batı Cephesi'ne yakınlığı, ulaşım ve haberleşme olanakları ile İstanbul'la demiryolu bağlantısının bulunmasıydı. Temsil Heyeti 27 Aralık 1919'da Ankara'ya yerleşti; bu tarihten itibaren Ankara milli mücadelenin gerçek başkenti oldu."
+  },
+  {
+    "id": "son-mebusan-meclisi",
+    "civId": "istanbul-hukumeti",
+    "title": "Son Osmanlı Mebusan Meclisi Açıldı — Felah-ı Vatan Grubu (12 Ocak 1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Amasya Görüşmesi'nin ardından padişahın izniyle yapılan seçimlerden Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyeti mensupları başarıyla çıktı. Mustafa Kemal Erzurum milletvekili seçildi ancak İstanbul'a geçmedi. Meclis 12 Ocak 1920'de açıldı; Reşat Hikmet meclis başkanı seçildi. Müdafaa-i Hukuk Grubu değil, 'Felah-ı Vatan Grubu' kuruldu. Mustafa Kemal'in meclis başkanlığı ve Müdafaa-i Hukuk Grubu kurulması talepleri karşılık bulmadı."
+  },
+  {
+    "id": "misak-i-milli",
+    "civId": "istanbul-hukumeti",
+    "secondaryCivId": "temsil-kurulu",
+    "title": "Misak-ı Milli İlan Edildi — Milli Sınırların Belgesi (28 Ocak 1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "Erzurum ve Sivas kongrelerinin bir sonucu olarak Mustafa Kemal tarafından hazırlanan Misak-ı Milli metni, Son Osmanlı Mebusan Meclisi'nin 28 Ocak 1920 tarihli gizli toplantısında Felah-ı Vatan grubunun desteğiyle kabul edildi. Temel maddeler: Mondros'ta işgal edilmemiş Türk ve Müslüman çoğunluklu topraklar bölünemez; Kars, Ardahan, Batum ile Batı Trakya için halk oylaması; azınlık hakları karşılıklılık ilkesiyle; kapitülasyonlar reddedildi; boğazlar güvenlik şartıyla serbest geçişe açılabilir. Milli mücadelenin kabul edeceği barış şartlarını belirledi ve Türk milletinin bağımsızlığa kararlılığını dünyaya ilan etti."
+  },
+  {
+    "id": "istanbul-isgali",
+    "civId": "itilaf-isgali",
+    "secondaryCivId": "istanbul-hukumeti",
+    "title": "İstanbul Resmen İşgal Edildi — Meclis Basıldı (16 Mart 1920)",
+    "year": 1920,
+    "type": "savaş",
+    "coordinates": [29, 41],
+    "description": "Misak-ı Milli'nin ilanının ardından endişelenen İtilaf devletleri, 16 Mart 1920'de İstanbul'u resmen işgal etti. Osmanlı Mebusan Meclisi basıldı; bazı milletvekilleri Malta'ya sürgüne gönderildi. Kaçabilen bazı aydınlar, yazarlar, milletvekilleri ve komutanlar Ankara'ya geçti. Salih Paşa'nın yerine yeniden Damat Ferit Hükümeti kuruldu; padişah meclisi kapattığını açıkladı. Temsil Kurulu İstanbul'la haberleşmeyi kesti, itilaf subaylarını tutuklatıp demiryollarını tahrip etti, Osmanlı ve Ziraat Bankası varlıklarına el koydu."
+  },
+  {
+    "id": "tbmm-acilis",
+    "civId": "temsil-kurulu",
+    "title": "TBMM'nin Açılışı — Ulusal Egemenliğin Kurumsallaşması (23 Nisan 1920)",
+    "year": 1920,
+    "type": "kuruluş",
+    "coordinates": [33, 40],
+    "description": "Mustafa Kemal'in 19 Mart'taki çağrısının ardından yeni seçilen milletvekilleri ve İstanbul'dan kaçabilen vekillerle 23 Nisan 1920'de TBMM açıldı. En yaşlı üye Sinop milletvekili Şerif Bey açılış toplantısına başkanlık etti. 24 Nisan'da Mustafa Kemal meclis başkanlığına seçildi. Meclis; yasama ve yürütme yetkilerini bünyesinde topladı (kuvvetler birliği), meclis hükümeti sistemini benimsedi ve TBMM'nin üstünde hiçbir güç tanımadığını ilan etti. TBMM ulusal, kurucu, ihtilalci ve halkçı bir meclistir."
+  },
+  {
+    "id": "hiyanet-vataniye",
+    "civId": "temsil-kurulu",
+    "title": "Hıyanet-i Vataniye Kanunu — İsyanlara Karşı Hukuki Silah (29 Nisan 1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [33, 40],
+    "description": "TBMM'nin ilk günlerinde çıkardığı bu kanun, milli harekete karşı çıkanlara vatan hainliği suçlamasını getirdi. İstanbul Hükümeti ve İtilaf devletlerinin kışkırtmalarıyla Anadolu'da patlak veren çeşitli ayaklanmaları bastırmak, asker kaçaklığını önlemek ve meclisin otoritesini güçlendirmek amacıyla çıkarıldı. Kanun, daha sonra kurulan İstiklal Mahkemeleri'nin hukuki dayanağını oluşturdu. TBMM'nin çıkardığı ilk kanun, 24 Nisan 1920'de Ağnam Vergisi'nin arttırılmasıydı."
+  },
+  {
+    "id": "sevr-antlasmasi",
+    "civId": "istanbul-hukumeti",
+    "secondaryCivId": "itilaf-isgali",
+    "title": "Sevr Antlaşması — Osmanlı'nın Resmen Parçalanması (10 Ağustos 1920)",
+    "year": 1920,
+    "type": "antlaşma",
+    "coordinates": [29, 41],
+    "description": "İtilaf devletlerinin San Remo Konferansı'nda belirlediği koşullar doğrultusunda Osmanlı heyeti bu antlaşmayı imzaladı. Temel maddeler: Doğu Trakya ve Batı Anadolu Yunanistan'a; İç Batı Anadolu, Antalya ve Onikiadalar İtalya'ya; Çukurova'dan Sivas'a uzanan bölge ile Suriye-Lübnan Fransa'ya; Musul dahil Irak ve Arabistan İngiltere'ye bırakılıyor; Doğu Anadolu'da Ermeni devleti ve Kürt özerk bölgesi kurulacak; Osmanlı ordusu en fazla 50.700 kişi olacak; kapitülasyonlar en geniş haliyle yeniden tanındı. Osmanlı Mebusan Meclisi onaylamadığından hukuken geçersizdi. TBMM imzalayanları vatan haini ilan etti. Antlaşma hiçbir zaman yürürlüğe girmedi."
+  },
+  {
+    "id": "kuvayi-inzibatiye",
+    "civId": "istanbul-hukumeti",
+    "title": "Kuva-i İnzibatiye (Hilafet Ordusu) — Milli Harekete Karşı Silahlı Kuvvet (1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [29, 41],
+    "description": "İstanbul Hükümeti ve İtilaf devletleri, Milli Mücadele'yi bastırmak amacıyla 'Kuva-i İnzibatiye' adıyla bir kuvvet oluşturdu. Aznavur ayaklanması ve Kuva-i İnzibatiye, doğrudan İstanbul Hükümeti tarafından çıkarılan ve İtilaf devletlerinin de desteklediği silahlı hareketlerdir. Çerkez Ethem ve Ali Fuat Paşa'ya bağlı Kuva-i Milliye birlikleri bu ayaklanmaları bastırdı."
+  },
+  {
+    "id": "istiklal-mahkemeleri",
+    "civId": "temsil-kurulu",
+    "title": "İstiklal Mahkemeleri Kuruldu — Ayaklanmalara Karşı Yargı (18 Eylül 1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [33, 40],
+    "description": "TBMM'ye karşı çıkan ayaklanmaları bastırmak, asker kaçaklığını önlemek ve meclisin otoritesini güçlendirmek amacıyla kurulan İstiklal Mahkemeleri, üyelerini meclis içinden seçti. Genellikle olayın yaşandığı yerde kurulan, herkese açık ve kararları kesin ve anında uygulanan bu mahkemeler; milli harekete karşı silahlı isyanların yanı sıra Kuva-i Milliye'nin savunma dışındaki yetkilerini de sonlandırdı."
+  },
+  {
+    "id": "duzenli-ordu-karari",
+    "civId": "temsil-kurulu",
+    "title": "Düzenli Ordu Kararı — Kuva-i Milliye'nin Sonu, Nizami Ordunun Başlangıcı (8 Kasım 1920)",
+    "year": 1920,
+    "type": "siyasi",
+    "coordinates": [33, 40],
+    "description": "8 Kasım 1920'de TBMM, düzenli ordunun kurulmasına karar verdi. Bu karar, Kuva-i Milliye birliklerinin düzenli orduya dahil edilmesini zorunlu kıldı. Düzensiz yapısı ve tek merkezden yönetilmemesi nedeniyle zaman zaman halka baskı uygulayan ve milli harekete karşı isyan eden bazı Kuva-i Milliye komutanları (Çerkez Ethem, Demirci Mehmet Efe) bu süreçte tasfiye edildi. Milli Mücadele bundan sonra merkezi komuta altında düzenli savaşlarla sürdürüldü."
+  }
+]

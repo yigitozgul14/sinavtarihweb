@@ -1,0 +1,37 @@
+[
+  {
+    "from": "kuvayi-milliye",
+    "to": "temsil-kurulu",
+    "type": "siyasi",
+    "label": "Sivas Kongresi — Ali Fuat Paşa batı cephesi komutanlığına atandı (1919)",
+    "year": 1919
+  },
+  {
+    "from": "istanbul-hukumeti",
+    "to": "temsil-kurulu",
+    "type": "antlaşma",
+    "label": "Amasya Görüşmesi — İstanbul Hükümeti Temsil Kurulu'nu resmen tanıdı (1919)",
+    "year": 1919
+  },
+  {
+    "from": "itilaf-isgali",
+    "to": "istanbul-hukumeti",
+    "type": "siyasi",
+    "label": "İstanbul İşgali — Damat Ferit yeniden iktidara, meclis kapatıldı (1920)",
+    "year": 1920
+  },
+  {
+    "from": "istanbul-hukumeti",
+    "to": "itilaf-isgali",
+    "type": "antlaşma",
+    "label": "Sevr Antlaşması — Osmanlı toprakları fiilen bölündü (1920)",
+    "year": 1920
+  },
+  {
+    "from": "kuvayi-milliye",
+    "to": "temsil-kurulu",
+    "type": "siyasi",
+    "label": "Düzenli Ordu Kararı — Kuva-i Milliye birlikleri nizami orduya katıldı (1920)",
+    "year": 1920
+  }
+]
