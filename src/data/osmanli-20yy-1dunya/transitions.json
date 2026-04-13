@@ -1,0 +1,30 @@
+[
+  {
+    "from": "italya-20yy",
+    "to": "osmanli-20yy",
+    "type": "antlaşma",
+    "label": "Uşi Antlaşması — Trablusgarb İtalya'ya bırakıldı (1912)",
+    "year": 1912
+  },
+  {
+    "from": "balkan-ittifaki",
+    "to": "osmanli-20yy",
+    "type": "antlaşma",
+    "label": "Londra Antlaşması — I. Balkan Savaşı sona erdi (1913)",
+    "year": 1913
+  },
+  {
+    "from": "osmanli-20yy",
+    "to": "ittifak-devletleri",
+    "type": "siyasi",
+    "label": "Türk-Alman Gizli İttifakı — Osmanlı savaşa çekildi (1914)",
+    "year": 1914
+  },
+  {
+    "from": "osmanli-20yy",
+    "to": "itilaf-devletleri",
+    "type": "antlaşma",
+    "label": "Mondros Ateşkesi — Osmanlı fiilen çöktü (1918)",
+    "year": 1918
+  }
+]

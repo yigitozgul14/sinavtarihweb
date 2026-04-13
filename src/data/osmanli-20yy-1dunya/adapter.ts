@@ -72,11 +72,11 @@ export async function loadBundle(): Promise<PeriodDataBundle> {
     culturePages,
     quizQuestions,
     config: {
-      minYear: 1579,
-      maxYear: 1792,
-      mapCenter: [32, 43],
-      mapScale: 450,
-      autoPauseEventTypes: ["savaş", "antlaşma", "siyasi", "kültür"],
+      minYear: 1905,
+      maxYear: 1923,
+      mapCenter: [33, 39],
+      mapScale: 480,
+      autoPauseEventTypes: ["savaş", "antlaşma", "siyasi"],
     },
   };
 }

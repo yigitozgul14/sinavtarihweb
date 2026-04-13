@@ -12,6 +12,7 @@ const DEDICATED_ROUTES: Record<string, string> = {
   "osmanli-kurulus-yukselme": "/egitim/osmanli-kurulus-yukselme",
   "osmanli-duraklama-gerileme": "/egitim/osmanli-duraklama-gerileme",
   "osmanli-19yy-istibdat": "/egitim/osmanli-19yy-istibdat",
+  "osmanli-20yy-1dunya": "/egitim/osmanli-20yy-1dunya",
 };
 
 export default function Header() {

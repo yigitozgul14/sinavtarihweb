@@ -5,6 +5,7 @@ import type {
   PeriodEntityTransition,
 } from "@/types/period-data";
 import type { Civilization, CivEvent, CivTransition } from "@/types";
+import { spreadSameYearEvents } from "@/lib/spreadEvents";
 
 function civToEntity(civ: Civilization): PeriodEntity {
   return {
@@ -65,7 +66,7 @@ export async function loadBundle(): Promise<PeriodDataBundle> {
 
   return {
     entities:    (civsRaw as Civilization[]).map(civToEntity),
-    events:      (eventsRaw as CivEvent[]).map(civEventToEntityEvent),
+    events:      spreadSameYearEvents((eventsRaw as CivEvent[]).map(civEventToEntityEvent)),
     transitions: (transitionsRaw as CivTransition[]).map(civTransitionToEntityTransition),
     culturePages,
     quizQuestions,

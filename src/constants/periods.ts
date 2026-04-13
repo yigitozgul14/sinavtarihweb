@@ -65,6 +65,15 @@ export const PERIODS: Period[] = [
     description: "II. Mahmut'tan II. Meşrutiyet'e ıslahatlar, Tanzimat ve İstibdat dönemi",
   },
   {
+    id: "osmanli-20yy-1dunya",
+    slug: "osmanli-20yy-1dunya",
+    name: "Osmanlı 20. YY ve 1. Dünya Savaşı",
+    startYear: 1909,
+    endYear: 1920,
+    color: "#7F1D1D",
+    description: "31 Mart'tan Mondros'a: Trablusgarb, Balkan Savaşları ve 1. Dünya Savaşı",
+  },
+  {
     id: "osmanlı-dağılma",
     slug: "osmanli-dagilma",
     name: "Osmanlı Dağılma",

@@ -13,4 +13,6 @@ export const PERIOD_DATA_REGISTRY: Record<string, PeriodDataLoader> = {
     import("@/data/osmanli-duraklama-gerileme/adapter").then((m) => m.loadBundle()),
   "osmanli-19yy-istibdat": () =>
     import("@/data/osmanli-19yy-istibdat/adapter").then((m) => m.loadBundle()),
+  "osmanli-20yy-1dunya": () =>
+    import("@/data/osmanli-20yy-1dunya/adapter").then((m) => m.loadBundle()),
 };

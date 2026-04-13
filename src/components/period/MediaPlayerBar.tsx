@@ -127,7 +127,7 @@ export default function MediaPlayerBar({
                         {EVENT_ICONS[e.type] ?? "●"}
                       </span>
                       <span className="font-sans text-[10px] font-semibold" style={{ color: entity?.color ?? "#E8C88A" }}>
-                        {e.year < 0 ? `MÖ ${Math.abs(e.year)}` : `MS ${e.year}`}
+                        {e.year < 0 ? `MÖ ${Math.abs(Math.round(e.year))}` : `MS ${Math.round(e.year)}`}
                       </span>
                       {entity && (
                         <span className="font-sans text-[10px] text-white/40">· {entity.name}</span>

@@ -48,18 +48,17 @@ export function usePeriodPlayback({
 
   // Auto-pause on event detection
   useEffect(() => {
-    const prevYear = Math.floor(prevYearRef.current);
-    const currYear = Math.floor(currentYear);
+    const prevYear = prevYearRef.current;
     prevYearRef.current = currentYear;
 
     if (!isPlayingRef.current) return;
-    if (currYear === prevYear) return;
+    if (currentYear <= prevYear) return;
 
     const triggered = events.find(
       (e) =>
         autoPauseSet.has(e.type) &&
         e.year > prevYear &&
-        e.year <= currYear &&
+        e.year <= currentYear &&
         !pausedForEventsRef.current.has(e.id)
     );
 
@@ -134,7 +133,7 @@ export function usePeriodPlayback({
       prevYearRef.current = year;
       for (const eventId of [...pausedForEventsRef.current]) {
         const ev = events.find((e) => e.id === eventId);
-        if (ev && ev.year >= Math.floor(year)) {
+        if (ev && ev.year >= year) {
           pausedForEventsRef.current.delete(eventId);
         }
       }
