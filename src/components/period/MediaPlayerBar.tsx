@@ -77,7 +77,7 @@ export default function MediaPlayerBar({
       {/* Year display */}
       <div className="flex-shrink-0 w-24 text-right">
         <span className="font-display text-lg text-ochre font-medium leading-none">
-          {formatYear(Math.round(currentYear))}
+          {formatYear(currentYear)}
         </span>
       </div>
 
@@ -127,7 +127,7 @@ export default function MediaPlayerBar({
                         {EVENT_ICONS[e.type] ?? "●"}
                       </span>
                       <span className="font-sans text-[10px] font-semibold" style={{ color: entity?.color ?? "#E8C88A" }}>
-                        {e.year < 0 ? `MÖ ${Math.abs(Math.round(e.year))}` : `MS ${Math.round(e.year)}`}
+                        {e.year < 0 ? `MÖ ${Math.abs(Math.trunc(e.year))}` : `MS ${Math.trunc(e.year)}`}
                       </span>
                       {entity && (
                         <span className="font-sans text-[10px] text-white/40">· {entity.name}</span>
