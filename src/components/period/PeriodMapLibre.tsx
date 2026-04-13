@@ -93,7 +93,8 @@ const MAX_BUFFER = 50;
 /* ─── Utilities ───────────────────────────────────────────────── */
 
 function formatYear(year: number): string {
-  return year < 0 ? `MÖ ${Math.abs(year)}` : `MS ${year}`;
+  const y = Math.trunc(year);
+  return y < 0 ? `MÖ ${Math.abs(y)}` : `MS ${y}`;
 }
 
 function getEntityFadeWindow(
